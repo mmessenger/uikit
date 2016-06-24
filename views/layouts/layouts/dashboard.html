@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en" class="app" id="ng-app" ng-app="spark" >
+
+    <head>
+        <!-- Required meta tags always come first -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <link rel="stylesheet" href="../../../lib/css/bootstrap.css">
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' type='text/css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css" type="text/css">
+        <link rel="stylesheet" href="../../../lib/vendor/kendo/2016.1.125/kendo.common.min.css" type='text/css'>
+        <link rel="stylesheet" href="../../../lib/css/app.css" type='text/css'>
+        <link rel="stylesheet" href="../../../lib/css/override.css" type='text/css'>
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-route.js"></script>
+        <script type="text/javascript" src="../../../app/main.js"></script>
+        <script type="text/javascript" src="../../..//lib//vendor/kendo/2016.1.125/kendo.all.min.js"></script>
+        <script type="text/javascript" src="../../../lib/js/app.js"></script>
+        <script type="text/javascript" src="../../../lib/js/tether.js"></script>
+        <script type="text/javascript" src="../../../lib/js/bootstrap.js"></script>
+    </head>
+
+    <body>
+        <section class="vbox">
+            <header class="header p-a-0 b-b b-light navbar navbar-fixed-top-xs">
+                <nav class="navbar navbar-header navbar-light bg-white p-a-0 text-xs-center">
+                    <ul class="nav navbar-nav pull-xs-right">
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" class="nav-link"><i class="fa fa-search fa-fw"></i></a>
+                        </li>
+                        <li class="nav-item hidden-sm-down">
+                            <a href="javascript:void(0)" class="nav-link">
+                                <span class="avatar img-circle">
+                                    <img class="img-fluid" src="lib/images/avatar_default.jpg" alt="">
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav pull-xs-left hidden-md-up">
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" class="nav-link navbar-toggler" data-toggle="class:nav-off-screen,open" data-target="#navbarSideBar,html">
+                                <i class="fa fa-bars fa-fw "></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="javascript:void(0)" class="navbar-brand aside-sm hidden-sm-down m-l m-r" data-toggle="fullscreen"> <img src="../../../lib/images/logo_dark.png" class="img-fluid pull-left"></a>
+                    <a href="javascript:void(0)" class="navbar-brand w-48 hidden-md-up pull-xs-none" data-toggle="fullscreen"> <img src="../../../lib/images/logo_dark_sm.png" class="img-fluid"></a>
+                </nav>
+            </header>
+            <section id="content" class="">
+                <section class="hbox stretch b-t">
+                    <aside class="nav-sidebar nav-xs bg-dark hidden-sm-down b-r" id="navbarSideBar">
+                        <section class="vbox">
+                            <section class="scrollable">
+                                <nav class="" role="navigation">
+                                    <ul class="nav" data-ride="collapse">
+                                        <li class="active nav-item">
+                                            <a href="javascript:void(0)" class="nav-link">
+                                                <i class="fa fa-home fa-fw "></i> Home
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="javascript:void(0)" class="nav-link">
+                                                <i class="fa fa-file-text-o fa-fw "></i> Orders
+                                            </a>
+                                        </li>
+                                        <li class=" nav-item">
+                                            <a href="javascript:void(0)" class="nav-link">
+                                                <i class="fa fa-tags fa-fw "></i> Inventory
+                                                <b class="label bg-light pull-right hidden-nav">NEW</b>
+                                            </a>
+                                        </li>
+                                        <li class=" nav-item">
+                                            <a href="javascript:void(0)" class="nav-link">
+                                                <i class="fa fa-dollar fa-fw "></i> Invoicing
+                                                <b class="label label-pill bg-danger pull-right hidden-nav">4</b>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="javascript:void(0)" class="nav-link">
+                                                <i class="fa fa-user fa-fw "></i> Employees
+                                            </a>
+                                        </li>
+                                        <li class=" nav-item">
+                                            <a href="javascript:void(0)" class="nav-link">
+                                                <i class="fa fa-bar-chart fa-fw "></i> Reports
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="line dk hidden-nav"></div>
+                                </nav>
+                            </section>
+                        </section>
+                    </aside>
+                    <section>
+                        <section class="vbox flex">
+
+                            <section class="scrollable bg-light">
+                                <section>
+                                    <section class="vbox">
+
+                                        <div class="padder-lg m-t-lg animated fadeIn">
+                                            <div class="row row-sm card-grid">
+
+                                                <div class="col-lg-4 col-md-6">
+                                                    <section class="card ">
+                                                        <div class="card-block">
+                                                            <h5 class="card-title font-bold">Quick Tasks </h5>
+                                                            <div class="row row-sm card-grid text-xs-center">
+                                                                <div class="col-xs-6">
+                                                                    <a href="#/orders/browse" class="card card-block">
+                                                                        <i class="fa fa-inbox fa-3x m-t-sm m-b-xs block"></i>
+                                                                        <span class=" m-b-xxs block">My Orders</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="col-xs-6">
+                                                                    <a href="#/orders/newOrder" class="card card-block">
+                                                                        <i class="fa fa-edit fa-3x m-t-sm m-b-xs block"></i>
+                                                                        <span class=" m-b-xxs block">New Order</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="col-xs-6">
+                                                                    <a href="#/products/newProduct" class="card card-block m-b-0">
+                                                                        <i class="fa fa-tag fa-3x m-t-sm m-b-xs block"></i>
+                                                                        <span class=" m-b-xxs block">New Product</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="col-xs-6">
+                                                                    <a href="" class="card card-block m-b-0">
+                                                                        <i class="fa fa-users fa-3x m-t-sm m-b-xs block"></i>
+                                                                        <span class=" m-b-xxs block">New Employee</span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+                                                </div>
+
+                                                <div class="col-lg-4 col-md-6">
+                                                    <section class="card ">
+                                                        <div class="card-block">
+                                                            <small class="pull-right text-muted"><i class="fa fa-calendar "></i> This Month</small>
+                                                            <h5 class="card-title font-bold">Sales Pipeline</h5>
+                                                            <div id="before" class="w-full" style="height: 180px;"></div>
+                                                            <script>
+                                                                var dataBefore = [{
+                                                                    description: "Contacted",
+                                                                    visitors: 225000,
+                                                                    color: "#9B59B6"
+                                                                }, {
+                                                                    description: "Open",
+                                                                    visitors: 160000,
+                                                                    color: "#007ba9"
+                                                                }, {
+                                                                    description: "Qualifying",
+                                                                    visitors: 85000,
+                                                                    color: "#00a0dc"
+                                                                }, {
+                                                                    description: "Nurturing",
+                                                                    visitors: 45000,
+                                                                    color: "#6EE429"
+                                                                }];
+
+
+                                                                function createChart(chartName, data, description) {
+                                                                    $("#" + chartName).kendoChart({
+                                                                        /*chartArea: {
+                                                                            height: 100
+                                                                        },*/
+                                                                        transitions: true,
+                                                                        title: {
+                                                                            text: description,
+                                                                            align: "left",
+                                                                            margin: {
+                                                                                top: 10,
+                                                                                bottom: 10,
+                                                                                left: -5
+                                                                            },
+                                                                            visible: false
+                                                                        },
+                                                                        legend: {
+                                                                            visible: true,
+                                                                            position: "right"
+                                                                        },
+                                                                        dataSource: {
+                                                                            data: data
+                                                                        },
+                                                                        series: [{
+                                                                            type: "funnel",
+                                                                            //neckRatio: .6,
+                                                                            dynamicSlope: true,
+                                                                            dynamicHeight: false,
+                                                                            field: "visitors",
+                                                                            categoryField: "description",
+                                                                            segmentSpacing: 2,
+                                                                            labels: {
+                                                                                color: "white",
+                                                                                visible: true,
+                                                                                background: "transparent",
+                                                                                template: "$#=value #",
+                                                                                //format: "{0:c}",
+                                                                                align: "center",
+                                                                            }
+                                                                        }],
+                                                                        tooltip: {
+                                                                            visible: false,
+                                                                            template: "#= category # #= kendo.format('{0:p}',value/dataItem.parent()[0].visitors)#"
+                                                                        }
+                                                                    });
+                                                                }
+
+                                                                function createCharts() {
+                                                                    createChart("before", dataBefore, "Before optimization");
+                                                                }
+
+                                                                // Resize the chart whenever window is resized
+                                                                $(window).resize(function(){
+                                                                    $("#before").data("kendoChart").refresh();
+                                                                });
+
+                                                                $(document).ready(createCharts);
+                                                            </script>
+                                                        </div>
+                                                        <div class="card-footer bg-light lter">
+                                                            <div class="row text-xs-center">
+                                                                <div class="col-xs-6 b-r b-light">
+                                                                    <div class="h5">$515k</div>
+                                                                    <small class="text-muted">Total Opportunities</small>
+                                                                </div>
+                                                                <div class="col-xs-6">
+                                                                    <div class="h5">$96.5k</div>
+                                                                    <small class="text-muted">New Opportunities</small>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+                                                </div>
+
+                                                <div class="col-lg-4 col-md-6">
+                                                    <section class="card ">
+                                                        <div class="card-block">
+                                                            <small class="pull-right text-muted"><i class="fa fa-calendar "></i> This Month</small>
+                                                            <h5 class="card-title font-bold">Actuals vs. Quota</h5>
+                                                            <div id="gauge" class=""></div>
+                                                            <script>
+                                                                function createGauge(labelPosition) {
+                                                                    $("#gauge").kendoRadialGauge({
+                                                                        transitions: true,
+                                                                        gaugeArea: {
+                                                                            height: 180
+                                                                        },
+                                                                        pointer: {
+                                                                            value: 26843
+                                                                        },
+                                                                        scale: {
+                                                                            minorUnit: 0,
+                                                                            startAngle: -30,
+                                                                            endAngle: 210,
+                                                                            max: 150000,
+                                                                            labels: {
+                                                                                position: labelPosition || "inside",
+                                                                                template: "#= shortLabels(value) #"
+                                                                            },
+                                                                            ranges: [{
+                                                                                from: 0,
+                                                                                to: 10000,
+                                                                                color: "#e8583c"
+                                                                            }, {
+                                                                                from: 83000,
+                                                                                to: 150000,
+                                                                                color: "#6EE429"
+                                                                            }]
+                                                                        }
+                                                                    });
+
+                                                                }
+
+                                                                function shortLabels(value) {
+                                                                    return (value / 1000) + 'k'
+                                                                }
+
+                                                                // Resize the chart whenever window is resized
+                                                                $(window).on("resize", function() {
+                                                                  kendo.resize($("#gauge"));
+                                                                });
+
+                                                                $(document).ready(function() {
+                                                                    createGauge();
+                                                                     $("#gauge").addClass("m-auto")
+                                                                });
+                                                            </script>
+                                                        </div>
+                                                        <div class="card-footer bg-light lter">
+                                                            <div class="row text-xs-center">
+                                                                <div class="col-xs-4 b-r b-light">
+                                                                    <div class="h5 ">$26.8k</div>
+                                                                    <small class="text-muted bock">Mothly Actual</small>
+                                                                </div>
+                                                                <div class="col-xs-4 b-r b-light">
+                                                                    <div class="h5 ">$335.5k</div>
+                                                                    <small class="text-muted ">YTD Actual</small>
+                                                                </div>
+                                                                <div class="col-xs-4">
+                                                                    <div class="h5 ">$1M</div>
+                                                                    <small class="text-muted ">YTD Goal</small>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+                                                </div>
+
+                                                <div class="col-lg-4 col-md-6">
+                                                    <section class="card ">
+                                                        <div class="card-block">
+                                                            <small class="pull-right text-muted"><i class="fa fa-calendar "></i> This Month</small>
+                                                            <h5 class="card-title font-bold">Open Opportunities</h5>
+                                                            <table class="table table-striped table-sm m-b-none b-t">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="font-normal text-u-c text-sm">Company</th>
+                                                                        <th width="70" class="text-xs-right font-normal text-u-c text-sm">Probability</th>
+                                                                        <th width="70" class="text-xs-right font-normal text-u-c text-sm">Amount</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td><a href="">Quinu</a></td>
+                                                                        <td class="text-xs-right">10% <i class="fa fa-caret-down fa-lg text-danger"></i></td>
+                                                                        <td class="text-xs-right"><span class="">$150K</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="">Eadel Enterprises</a></td>
+                                                                        <td class="text-xs-right">61% <i class="fa fa-caret-up fa-lg text-success"></i></td>
+                                                                        <td class="text-xs-right"><span class="">$110K</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="">Aivee Inc</a></td>
+                                                                        <td class="text-xs-right">42% <i class="fa fa-caret-up fa-lg text-success"></i></td>
+                                                                        <td class="text-xs-right"><span class="">$65K</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="">Talane Sports</a></td>
+                                                                        <td class="text-xs-right">60% <i class="fa fa-caret-up fa-lg text-success"></i></td>
+                                                                        <td class="text-xs-right"><span class="">$24.2K</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="">Wikizz Resources</a></td>
+                                                                        <td class="text-xs-right">20% <i class="fa fa-caret-down fa-lg text-warning"></i></td>
+                                                                        <td class="text-xs-right"><span class="">$12K</span></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="card-footer">
+                                                            <small class="text-u-c">Total</small>
+                                                            <div class="pull-right">$515K</div>
+                                                        </div>
+                                                    </section>
+                                                </div>
+
+                                                <div class="col-lg-4 col-md-6">
+                                                    <section class="card ">
+                                                        <div class="card-block">
+                                                            <small class="pull-right text-muted"><i class="fa fa-calendar "></i> This Week</small>
+                                                            <h5 class="card-title font-bold">Open Activities</h5>
+                                                            <table class="table table-striped table-sm m-b-none b-t">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="font-normal text-u-c text-sm">Company</th>
+                                                                        <th width="70" class="text-xs-right font-normal text-u-c text-sm">Count</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td><a href="">Quinu</a></td>
+                                                                        <td class="text-xs-right"><span class="">5</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="">Eadel Enterprises</a></td>
+                                                                        <td class="text-xs-right"><span class="">5</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="">Aivee Inc</a></td>
+                                                                        <td class="text-xs-right"><span class="">4</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="">Talane Sports</a></td>
+                                                                        <td class="text-xs-right"><span class="">4</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="">Wikizz Resources</a></td>
+                                                                        <td class="text-xs-right"><span class="">2</span></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+
+                                                        </div>
+                                                        <div class="card-footer">
+                                                            <small class="text-u-c">Total</small>
+                                                            <div class="pull-right">20</div>
+                                                        </div>
+                                                    </section>
+                                                </div>
+
+                                                <div class="col-lg-4 col-md-6">
+                                                    <section class="card ">
+                                                        <div class="card-block">
+                                                            <small class="pull-right text-muted"><i class="fa fa-calendar "></i> This Month</small>
+                                                            <h5 class="card-title font-bold">Closed Opportunities</h5>
+                                                            <table class="table table-striped table-sm m-b-none b-t">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="font-normal text-u-c text-sm">Company</th>
+                                                                        <th width="70" class="text-xs-right font-normal text-u-c text-sm">Amount</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td><a href="">Quinu</a></td>
+                                                                        <td class="text-xs-right"><span class="">$12K</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="">Eadel Enterprises</a></td>
+                                                                        <td class="text-xs-right"><span class="">$5K</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="">Aivee Inc</a></td>
+                                                                        <td class="text-xs-right"><span class="">$4.4K</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="">Talane Sports</a></td>
+                                                                        <td class="text-xs-right"><span class="">$2.3K</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="">Wikizz Resources</a></td>
+                                                                        <td class="text-xs-right"><span class="">$2K</span></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="card-footer">
+                                                            <small class="text-u-c">Total</small>
+                                                            <div class="pull-right">$26K</div>
+                                                        </div>
+                                                    </section>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </section>
+                                </section>
+                            </section>
+
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </section>
+
+    </body>
+
+</html>

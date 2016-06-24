@@ -1,0 +1,70 @@
+.c-input {
+    padding-left: 1.8rem;
+
+    > input:focus {
+        ~ .c-indicator {
+          -webkit-box-shadow: none;
+                  box-shadow: none;
+        }
+    }
+    > input:active {
+        ~ .c-indicator {
+            border-color: @brand-primary;
+            background-color: #fff;
+            color: @brand-primary;
+        }
+    }
+    > input:checked {
+        ~ .c-indicator {
+            border-color: @brand-primary;
+            background-color: #fff;
+            background-image: none;
+        }
+    }
+    > input:disabled {
+        ~ .c-indicator {
+            border-color: @border-color;
+            background: @brand-light;
+            cursor: not-allowed;
+        }
+    }
+    &.disabled {
+        color: @text-muted;
+    }
+}
+
+.c-indicator {
+    width: 1.3rem;
+    height: 1.3rem;
+    background-color: #fff;
+    border: 1px solid @border-color;
+}
+
+.c-checkbox .c-indicator {
+    border-radius: 0;
+}
+    
+.c-checkbox, .c-radio {
+    input:checked {
+        ~ .c-indicator:before {
+            font-family: 'FontAwesome';
+            color: @brand-primary;
+            line-height: 1.2rem;
+        }
+    }
+    input:checked:disabled {
+        ~ .c-indicator:before {
+            color: @border-color;
+        }
+    }
+}
+
+.c-checkbox input:checked ~ .c-indicator:before {
+    content: "\f00c";
+    font-size: @font-size-sm;
+}
+
+.c-radio input:checked ~ .c-indicator:before {
+    content: "\f111";
+    font-size: @font-size-sm;
+}

@@ -1,0 +1,228 @@
+
+/*.card{
+  &.card-default{
+    border-color: @card-border;
+    > .card-header,
+    > .card-footer {
+      border-color: @card-border;
+    }
+  }
+  > .list-group{
+    .list-group-item:first-child{
+      border-top: 0;
+    }
+  }
+  .list-group-item{
+    border-color: lighten(@border-color, 3%);
+  }
+  border-radius: @card-border-radius;
+  &.no-borders{
+    border-width: 0;
+    .card-header,
+    .card-footer{
+      border-width: 0;
+    }
+  }
+  .table{
+    td,
+    th {
+      padding:8px 15px;
+      border-top: 1px solid @border-color;
+    }
+    thead > tr > th{
+      border-bottom: 1px solid @border-color;
+    }
+  }
+  .table-striped{
+    > tbody {
+      > tr{
+        &:nth-child(odd){
+          > td,
+          > th{
+            background-color: lighten(@brand-light, 2%);
+          }
+        }
+      }
+    }
+    > thead {
+      th{
+        background-color: lighten(@brand-light, 2%);
+        border-right: 1px solid @border-color;
+        &:last-child{
+          border-right: none
+        }
+      }
+    }
+  }
+}
+*/
+
+
+
+.card {
+	border: 1px solid @card-border;;
+	border-radius: @border-radius-base;
+	.box-shadow(0 1px 1px rgba(0,0,0,.05));
+
+}
+
+.card-header{
+	border-width: 1px;
+	border-color: @card-border;
+	border-radius: 0 0 @card-border-radius @card-border-radius;
+	background-color: transparent;
+	border-radius: @card-border-radius @card-border-radius 0 0;
+	&.no-border{
+		margin:-1px -1px 0 -1px;
+		border: none;
+	}
+
+	.nav{
+		margin: -10px  -15px;    
+	}
+
+	.nav-tabs{
+		margin: -11px  -16px;
+		&.nav-justified{
+			width: auto;
+		}
+		> li{
+			> a {
+		        margin: 0;
+		        padding-top: 11px;
+		        padding-bottom: 11px;
+			}
+	    }
+	}
+
+	.list-group {
+	    background: transparent;
+	}
+}
+
+.card-footer {
+	border-width: 1px;
+	border-color: @card-border;
+	border-radius: 0 0 @card-border-radius @card-border-radius;
+	background-color: transparent;
+}
+
+.card-default {
+	background-color: #fff;
+}
+
+.card-light {
+	.color-variant(@brand-light, 1.5%, 3%, 2.5%, 5%);
+	//.font-variant(@border-color, @text-color, @text-color, @text-color);	
+	color: @text-color;
+	border-color: @brand-light;
+}
+
+.card-dark {
+	.color-variant(@brand-dark, 5%, 10%, 5%, 10%);
+	.font-variant(@brand-dark, lighten(@brand-dark,40%), lighten(@brand-dark,50%), #fff);
+	border-color: @brand-dark;
+}
+
+.card-black {
+	.color-variant(@brand-black, 5%, 10%, 5%, 10%);
+	.font-variant(@brand-black, lighten(@brand-black,40%), lighten(@brand-black,50%), #fff);
+	border-color: @brand-black;
+}
+
+.card-primary {
+	.color-variant(@brand-primary, 5%, 10%, 5%, 10%);
+	&-ltest{
+		background-color: @brand-primary-ltest;
+	}
+	.font-variant(@brand-primary, lighten(@brand-primary,40%), lighten(@brand-primary,50%), #fff);	
+	border-color: @brand-primary;
+}
+
+.card-success {
+	.color-variant(@brand-success, 5%, 10%, 5%, 10%);
+	&-ltest{
+		background-color: @brand-success-ltest;
+	}
+	.font-variant(@brand-success, lighten(@brand-success,40%), lighten(@brand-success,50%), #fff);
+	border-color: @brand-success;
+}
+
+.card-info {
+	.color-variant(@brand-info, 5%, 10%, 5%, 10%);
+	&-ltest{
+		background-color: @brand-info-ltest;
+	}
+	.font-variant(@brand-info, lighten(@brand-info,40%), lighten(@brand-info,50%), #fff);
+	border-color: @brand-info;
+}
+
+.card-warning {
+	.color-variant(@brand-warning, 5%, 10%, 5%, 10%);
+	&-ltest{
+		background-color: @brand-warning-ltest;
+	}
+	.font-variant(@brand-warning, lighten(@brand-warning,40%), lighten(@brand-warning,50%), #fff);
+	border-color: @brand-warning;
+}
+
+.card-danger {
+	.color-variant(@brand-danger, 5%, 10%, 5%, 10%);
+	&-ltest{
+		background-color: @brand-danger-ltest;
+	}
+	.font-variant(@brand-danger, lighten(@brand-danger,40%), lighten(@brand-danger,50%), #fff);
+	border-color: @brand-danger;
+}
+
+.card-stack {
+	margin-bottom: 1rem;
+
+	&:after, &:before{
+	    content: "";
+	    height: 100%;
+	    display: block;
+	    border-radius: 0.25rem;
+	    position: absolute;
+	    bottom: -4px;
+	    right: -4px;
+	    left: 3px;
+	    transition: 0.1s ease-in-out;
+	    z-index: -1;
+	    border: 1px solid rgba(0,0,0,.1);
+	    background: inherit;
+	}
+	&:after {
+		left: 7px;
+	    right: -7px;
+	    bottom: -7px;
+    }
+	&:after {
+	    clear: both;
+	    z-index: -2;
+	}
+}
+
+.card-grid {
+	@media (min-width: 576px) { // Larger Screens
+		display: flex;
+	    justify-content: flex-start;
+	    flex-flow: row wrap;
+	    align-items: stretch;
+
+	    &.row > div[class*='col-'] {
+		    display: flex;
+		    flex: 1 0 auto;
+	    }
+
+	    .card {
+		    display: flex;
+		    flex-direction: column;
+		    min-height: 100%;
+		    width: 100%;
+	    }
+	    .card-block {
+	        flex: 1;
+	    }
+    }
+}

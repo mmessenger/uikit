@@ -1,0 +1,38 @@
+.breadcrumb{
+  background-color: transparent;
+  li {
+  	position: relative;
+  }
+  > li + li:before,
+  > .active{
+     content: "\f105";
+     font-family: "fontawesome";
+     color: inherit;
+  }
+}
+
+.breadcrumb-arrow {
+	> li + li {
+		padding-left: 20px;
+		&:before,
+		&:after {
+			position: absolute;
+		    left: 3px;
+		    top: -5px;
+		    content: '';
+		    border-left: 10px solid;
+		    font-family: inherit;
+		    border-top: 15px solid transparent;
+		    border-bottom: 15px solid transparent;
+		}
+		&:before {
+		    z-index: 1;
+		    border-left-color: @border-color;
+		}
+		&:after {
+		    z-index: 3;
+		    left: 2px;
+		    border-left-color: #fff;
+		}
+	}
+}

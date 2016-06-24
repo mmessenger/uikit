@@ -1,0 +1,115 @@
+.list-group{
+  border-radius: @border-radius-base;  
+  
+  &.no-radius {
+    .list-group-item{
+      border-radius: 0 !important;
+    }
+  }
+  &.no-borders {
+    .list-group-item{
+      border: none;
+    }
+  }
+  
+  &.no-border{
+    .list-group-item{
+      border-width: 1px 0;
+    }
+  }
+  
+  &.no-bg{
+    .list-group-item{
+      background-color: transparent;
+    }
+  }
+}
+
+.list-group-flush .list-group-item {
+  border-width: 1px 0;
+}
+
+.list-group-item{
+  border-color: @border-color;
+  border-width: 1;
+  a&{
+    .list-group-item-heading {
+      color: inherit;
+    }
+    &:hover,
+    &:focus{
+      background-color: lighten(@brand-light, 2%)
+    }
+  }
+  &.active {
+    color: inherit;
+    border-color: @border-color !important;
+    background-color: @list-group-active-color !important;
+    .text-muted{
+      color: lighten(@list-group-active-color, 30%);
+    }
+    .list-group-item-text {
+      color: inherit;
+    }
+    a{
+      color: #fff;
+    }
+    &:hover {
+      color: inherit;
+      .list-group-item-text {
+        color: inherit;
+      }
+    }  
+  }
+  &.disabled {
+    .list-group-item-text {
+      color: inherit;
+    }
+    &:hover {
+      .list-group-item-text {
+        color: inherit;
+      }
+    }
+  }
+
+  .list-group-item-heading {
+    font-size: 1.2em;
+  }
+
+  .list-group-item-text {
+    font-size: .9em;
+  }
+
+  .list-group-alt & {
+    &:nth-child(2n+2){
+      background-color: rgba(0,0,0,0.02) !important;
+    }
+  }
+
+  .list-group-lg & {
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    font-size: 1.2rem
+  }
+
+  .list-group-sm & {
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+    font-size: .8rem
+  }
+
+  .list-group-sp & {
+    margin-bottom: .5rem;
+    border-radius: @border-radius-base;
+  }
+  > .label{
+    margin-right: 0;
+  }
+
+}
+
+.list-group-item-contextual-variant(primary; @brand-primary-ltest; @brand-primary);
+.list-group-item-contextual-variant(success; @brand-success-ltest; @brand-success);
+.list-group-item-contextual-variant(info; @brand-info-ltest; @brand-info);
+.list-group-item-contextual-variant(warning; @brand-warning-ltest; @brand-warning);
+.list-group-item-contextual-variant(danger; @brand-danger-ltest; @brand-danger);

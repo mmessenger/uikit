@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en" class="app" id="ng-app" ng-app="spark" >
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="../../../lib/css/bootstrap.css">
+    <link rel='stylesheet' href='https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans:400,600,700,300,800' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="../../../lib/vendor/kendo/2016.1.125/kendo.common.min.css" type='text/css'>
+    <link rel="stylesheet" href="../../../lib/css/app.css" type='text/css'>
+    <link rel="stylesheet" href="../../../lib/css/override.css" type='text/css'>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-route.js"></script>
+    <script type="text/javascript" src="../../../app/main.js"></script>
+    <script type="text/javascript" src="../../..//lib//vendor/kendo/2016.1.125/kendo.all.min.js"></script>
+    <script type="text/javascript" src="../../../lib/js/app.js"></script>
+    <script type="text/javascript" src="../../../lib/js/tether.js"></script>
+    <script type="text/javascript" src="../../../lib/js/bootstrap.js"></script>
+</head>
+
+<body>
+<link href="//www.fuelcdn.com/fuelux/3.13.0/css/fuelux.min.css" rel="stylesheet">
+
+	<div class="fuelux">
+		<div id="steps" class="steps-container">
+
+            <ul>
+                <li>
+                    Step 1
+                </li>
+                <li>
+                    Step 2
+                </li>
+                <li>
+                    Step 3
+                </li>
+                <li>
+                    Step 4
+                </li>
+            </ul>
+            <div>
+                    Step 1
+                    <button class="selectTab1 btn btn-info btn-next" type="button" data-step="1">Next</button>
+            </div>
+            <div>
+                    Step 2
+                    <button class="selectTab2 btn btn-info btn-next" type="button" data-step="2">Next</button>
+            </div>
+            <div>
+                    Step 3
+                    <button class="selectTab3 btn btn-info btn-next" type="button" data-step="3">Next</button>
+            </div>
+            <div>
+                    Step 4
+                    <button class="selectTab4 btn btn-info btn-next" type="button" data-step="4">Complete</button>
+            </div>
+
+		</div>
+
+	</div>
+
+<script id="template" type="text/x-kendo-template">
+	#=Name# <br>
+  #=Content#
+</script>  
+
+    
+<script>
+
+    $("#steps").kendoTabStrip({
+      	/*select: function(e){
+          var template = kendo.template($("#template").html()); 
+        	$(e.contentElement).html(template(this.dataSource.at($(e.item).index())));
+        	console.log(e)
+      	},*/
+      	//select: enableTab,
+      	activate: enableTab,
+      	animation: false,
+        /*dataSource: [
+          { Name: "Tab1", Content: "Tab1: content" },
+	      { Name: "Tab2", Content: "Tab2: content" }
+        ]*/
+    }).data("kendoTabStrip").select(0);
+
+	$("#steps").parent().removeClass( "k-tabstrip-wrapper" ).addClass("wizard");
+	$("#steps").removeClass( "k-widget k-header k-tabstrip k-floatwrap k-tabstrip-top k-tabstrip-items k-reset" )
+	$("#steps ul").removeClass("k-tabstrip-items k-reset").addClass("steps");
+
+	$(".selectTab1").click(function(){
+	    console.log('clicked')
+	    var tab = $("#steps").kendoTabStrip().data("kendoTabStrip").select().index() + 1;
+	    enableTab (tab)
+	});
+
+    function enableTab (tab){
+
+	    var tabStrip = $("#steps").kendoTabStrip().data("kendoTabStrip");
+
+    	if (tab) {
+    		var activeTab = tab
+    	} else {
+	    	console.log(tabStrip.select().index())
+	    	console.log(tab)
+	    	var activeTab = tabStrip.select().index()
+    	}
+    	//.data("kendoTabStrip").disable($("#steps2").kendoTabStrip().data("kendoTabStrip").tabGroup.children())
+    	tabStrip.disable(tabStrip.tabGroup.children());
+    	 tabStrip.enable(tabStrip.tabGroup.children().eq(activeTab));
+    	 //activeTab.addClass("active")
+    	//tabStrip.disable(tabStrip.tabGroup.children().eq(0));
+    }
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,455 @@
+<div class="">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="p-x-3">
+            <h1 class="display-5">General Components</h1>
+            <p class="lead">Text</p>
+        </div>
+    </div>
+    <div class="hbox stretch">
+        <section class="p-x-3">
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- BEGIN TOOLTIPS card-->
+                    <div class="card light bordered">
+                        <div class="card-title">
+                            <div class="caption">
+                                <i class="icon-share font-green-sharp"></i>
+                                <span class="caption-subject font-green-sharp bold uppercase">Tooltips</span>
+                            </div>
+
+                        </div>
+                        <div class="card-block">
+                            <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top" tooltip>
+                          Tooltip on top
+                        </button>
+                            <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on right" tooltip>
+                          Tooltip on right
+                        </button>
+                            <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom" tooltip>
+                          Tooltip on bottom
+                        </button>
+                            <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Tooltip on left" tooltip>
+                          Tooltip on left
+                        </button>
+                        </div>
+                    </div>
+                    <!-- END TOOLTIPS card-->
+                    <!-- BEGIN POPOVERS card-->
+                    <div class="card light bordered">
+                        <div class="card-title">
+                            <div class="caption">
+                                <i class="icon-share font-red-sunglo"></i>
+                                <span class="caption-subject font-red-sunglo bold uppercase">Popovers</span>
+                            </div>
+
+                        </div>
+                        <div class="card-block">
+                            <p> Tight pants next level keffiyeh
+                                <a href="javascript:void(0)" class="popovers" data-container="body" data-content="Popover body goes here! Popover body goes here!" data-original-title="Default Popover"> trigger me on click </a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel
+                                <a href="javascript:void(0)" class="popovers" data-container="body" data-trigger="hover" data-content="Popover body goes here! Popover body goes here!" data-original-title="Another Popover"> trigger me on hover </a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa. </p>
+                            <button class="btn btn-default popovers" data-container="body" data-trigger="hover" data-placement="top" data-content="Popover body goes here! Popover body goes here!" data-original-title="Popover in top">Top</button>
+                            <button class="btn btn-default popovers" data-container="body" onClick=" " data-trigger="hover" data-placement="left" data-content="Popover body goes here! Popover body goes here!" data-original-title="Popover in left">Left</button>
+                            <button class="btn btn-default popovers" data-container="body" data-trigger="hover" data-placement="right" data-content="Popover body goes here! Popover body goes here!" data-original-title="Popover in right">Right</button>
+                            <button class="btn btn-default popovers" data-container="body" data-trigger="hover" data-placement="bottom" data-content="Popover body goes here! Popover body goes here!" data-original-title="Popover in bottom">Bottom</button>
+                            <div class="inline-block popovers" data-container="body" data-trigger="hover" data-placement="bottom" data-content="Popover body goes here! Popover body goes here!" data-original-title="Popover in bottom">
+                                <button type="button" class="btn btn-default disabled">Disabled</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END POPOVERS card-->
+                </div>
+                <div class="col-md-6">
+                    <!-- END card-->
+                    <!-- BEGIN PROGRESS BARS card-->
+                    <div class="card light bordered">
+                        <div class="card-block">
+                            <h4 class="card-title">Progress Bar Styles</h4>
+                            <hr>
+                            <h5>Basic</h5>
+                            <progress class="progress progress-primary" value="25" max="100">
+                                <div class="progress">
+                                    <span class="progress-bar" style="width: 25%;">25%</span>
+                                </div>
+                            </progress>
+                            <progress class="progress progress-success" value="25" max="100">
+                                <div class="progress">
+                                    <span class="progress-bar" style="width: 25%;">25%</span>
+                                </div>
+                            </progress>
+                            <progress class="progress progress-info" value="25" max="100">
+                                <div class="progress">
+                                    <span class="progress-bar" style="width: 25%;">25%</span>
+                                </div>
+                            </progress>
+                            <progress class="progress progress-warning" value="25" max="100">
+                                <div class="progress">
+                                    <span class="progress-bar" style="width: 25%;">25%</span>
+                                </div>
+                            </progress>
+                            <progress class="progress progress-danger" value="25" max="100">
+                                <div class="progress">
+                                    <span class="progress-bar" style="width: 25%;">25%</span>
+                                </div>
+                            </progress>
+                            <progress class="progress progress-dark" value="25" max="100">
+                                <div class="progress">
+                                    <span class="progress-bar" style="width: 25%;">25%</span>
+                                </div>
+                            </progress>
+                            <hr>
+                            <h5>Striped</h5>
+                            <progress class="progress progress-striped progress-primary" value="20" max="100">10%</progress>
+                            <progress class="progress progress-striped progress-success" value="40" max="100">25%</progress>
+                            <progress class="progress progress-striped progress-info" value="60" max="100">50%</progress>
+                            <progress class="progress progress-striped progress-warning" value="80" max="100">75%</progress>
+                            <progress class="progress progress-striped progress-danger" value="90" max="100">100%</progress>
+                            <progress class="progress progress-striped progress-dark" value="100" max="100">100%</progress>
+                            <hr>
+                            <h5>Size</h5>
+                            <progress class="progress progress-xs" value="20" max="100">20%</progress>
+                            <progress class="progress progress-sm" value="40" max="100">40%</progress>
+                            <progress class="progress" value="60" max="100">60%</progress>
+                            <progress class="progress progress-lg" value="80" max="100">80%</progress>
+                            <progress class="progress progress-xl" value="100" max="100">100%</progress>
+
+                        </div>
+                    </div>
+                    <!-- END PROGRESS BARS card-->
+                    <!-- BEGIN LABELS AND BADGES card-->
+                    <div class="card light bordered">
+                        <div class="card-block">
+                            <h4 class="card-title">Label Styles</h4>
+                            <table class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th> Class </th>
+                                        <th> Labels </th>
+                                        <th> Sizing </th>
+                                        <th> Pills </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="bg-dark">
+                                        <td> White </td>
+                                        <td>
+                                            <span class="label label-white"> White </span>
+                                        </td>
+                                        <td>
+                                            <span class="label label-sm label-white"> 5 </span>
+                                        </td>
+                                        <td>
+                                            <span class="label label-white label-pill"> 3 </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td> Light </td>
+                                        <td>
+                                            <span class="label bg-light"> Light </span>
+                                        </td>
+                                        <td>
+                                            <span class="label label-sm bg-light"> 5 </span>
+                                        </td>
+                                        <td>
+                                            <span class="label bg-light label-pill"> 3 </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td> Default </td>
+                                        <td>
+                                            <span class="label label-default"> Default </span>
+                                        </td>
+                                        <td>
+                                            <span class="label label-sm label-default"> 5 </span>
+                                        </td>
+                                        <td>
+                                            <span class="label label-default label-pill"> 3 </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td> Primary </td>
+                                        <td>
+                                            <span class="label bg-primary"> Primary </span>
+                                        </td>
+                                        <td>
+                                            <span class="label label-sm bg-primary"> 4 </span>
+                                        </td>
+                                        <td>
+                                            <span class="label bg-primary label-pill"> Hot </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td> Info </td>
+                                        <td>
+                                            <span class="label bg-info"> Info </span>
+                                        </td>
+                                        <td>
+                                            <span class="label label-sm bg-info"> 6 </span>
+                                        </td>
+                                        <td>
+                                            <span class="label bg-info label-pill"> New </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td> Success </td>
+                                        <td>
+                                            <span class="label bg-success"> Success </span>
+                                        </td>
+                                        <td>
+                                            <span class="label label-sm bg-success"> 1 </span>
+                                        </td>
+                                        <td>
+                                            <span class="label bg-success label-pill"> 2 </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td> Danger </td>
+                                        <td>
+                                            <span class="label bg-danger"> Danger </span>
+                                        </td>
+                                        <td>
+                                            <span class="label label-sm bg-danger"> 3 </span>
+                                        </td>
+                                        <td>
+                                            <span class="label bg-danger label-pill"> 5 </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td> Warning </td>
+                                        <td>
+                                            <span class="label bg-warning"> Warning </span>
+                                        </td>
+                                        <td>
+                                            <span class="label label-sm bg-warning"> 12 </span>
+                                        </td>
+                                        <td>
+                                            <span class="label bg-warning label-pill"> 3 </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td> Dark </td>
+                                        <td>
+                                            <span class="label bg-dark"> Dark </span>
+                                        </td>
+                                        <td>
+                                            <span class="label label-sm bg-dark"> 12 </span>
+                                        </td>
+                                        <td>
+                                            <span class="label bg-dark label-pill"> 3 </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td> Black </td>
+                                        <td>
+                                            <span class="label bg-black"> Black </span>
+                                        </td>
+                                        <td>
+                                            <span class="label label-sm bg-black"> 12 </span>
+                                        </td>
+                                        <td>
+                                            <span class="label bg-black label-pill"> 3 </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- END LABELS AND BADGES card-->
+                    <!-- BEGIN PAGINATION card-->
+                    <div class="card light bordered">
+                        <div class="card-block">
+                            <h4 class="card-title">Pagination Styles</h4>
+                            <nav>
+                                <ul class="pagination">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="javascript:void(0)" aria-label="Previous">
+                                            <span aria-hidden="true"><i class="fa fa-angle-left"></i></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item active">
+                                        <a class="page-link" href="javascript:void(0)">1 <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">4</a></li>
+                                    <li class="page-item disabled"><a class="page-link" href="javascript:void(0)">5</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)" aria-label="Next">
+                                            <span aria-hidden="true"><i class="fa fa-angle-right"></i></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            </nav>
+                            <nav>
+                                <ul class="pagination pagination-sm">
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)" aria-label="Previous">
+                                            <span aria-hidden="true"><i class="fa fa-angle-left"></i></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)" aria-label="Next">
+                                            <span aria-hidden="true"><i class="fa fa-angle-right"></i></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <nav>
+                                <ul class="pagination pagination-lg">
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)" aria-label="Previous">
+                                            <span aria-hidden="true"><i class="fa fa-angle-left"></i></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)" aria-label="Next">
+                                            <span aria-hidden="true"><i class="fa fa-angle-right"></i></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <nav>
+                                <ul class="pager">
+                                    <li><a href="javascript:void(0)">Previous</a></li>
+                                    <li><a href="javascript:void(0)">Next</a></li>
+                                </ul>
+                            </nav>
+                            <nav>
+                                <ul class="pager">
+                                    <li class="pager-prev disabled"><a href="javascript:void(0)">Older</a></li>
+                                    <li class="pager-next"><a href="javascript:void(0)">Newer</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- END PAGINATION card-->
+                    <!-- BEGIN PAGINATION card-->
+                    <div class="card light bordered">
+                        <div class="card-title">
+                            <div class="caption">
+                                <i class="icon-share font-green-sharp"></i>
+                                <span class="caption-subject font-green-sharp bold uppercase">Pager With Aligned Links</span>
+                            </div>
+
+                        </div>
+                        <div class="card-block">
+                            <h4 class="block">Default</h4>
+                            <div class="well"> Tight pants next level keffiyeh trigger me on click haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. </div>
+                            <ul class="pager">
+                                <li class="previous">
+                                    <a href="javascript:void(0)"> ← Older </a>
+                                </li>
+                                <li class="next">
+                                    <a href="javascript:void(0)"> Newer → </a>
+                                </li>
+                            </ul>
+                            <h4 class="block">Optional Disabled State</h4>
+                            <div class="well"> Tight pants next level keffiyeh trigger me on click haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. </div>
+                            <ul class="pager">
+                                <li class="previous disabled">
+                                    <a href="javascript:void(0)"> ← Older </a>
+                                </li>
+                                <li class="next">
+                                    <a href="javascript:void(0)"> Newer → </a>
+                                </li>
+                            </ul>
+                            <h4 class="block">With Styled Buttons &amp; Icons</h4>
+                            <div class="well"> Tight pants next level keffiyeh trigger me on click haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. </div>
+                            <ul class="pager">
+                                <li class="previous">
+                                    <a href="javascript:void(0)" class="btn btn-info">
+                                        <i class="fa fa-angle-left"></i> Older </a>
+                                </li>
+                                <li class="next">
+                                    <a href="javascript:void(0)" class="btn btn-info"> Newer
+                                                        <i class="fa fa-angle-right"></i>
+                                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- END PAGINATION card-->
+                    <!-- BEGIN MEDIA card-->
+                    <div class="card light bordered">
+                        <div class="card-title">
+                            <div class="caption">
+                                <i class="icon-share font-red-sunglo"></i>
+                                <span class="caption-subject font-red-sunglo bold uppercase">Media Objects</span>
+                            </div>
+
+                        </div>
+                        <div class="card-block">
+                            <div class="note note-success">
+                                <p> Abstract object styles for building various types of components (like blog comments, Tweets, etc) that feature a left or right aligned image alongside textual content. </p>
+                            </div>
+                            <div class="clearfix">
+                                <ul class="media-list">
+                                    <li class="media">
+                                        <a class="pull-left" href="javascript:void(0)">
+                                            <img class="media-object" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSIjZWVlIi8+PHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iMzIiIHk9IjMyIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjEycHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9zdmc+" alt="64x64" data-src="../assets/global/plugins/holder.js/64x64" style="width: 64px; height: 64px;"> </a>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">Media heading</h4>
+                                            <p> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. </p>
+                                            <!-- Nested media object -->
+                                            <div class="media">
+                                                <a class="pull-left" href="javascript:void(0)">
+                                                    <img class="media-object" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSIjZWVlIi8+PHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iMzIiIHk9IjMyIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjEycHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9zdmc+" alt="64x64" data-src="../assets/global/plugins/holder.js/64x64" style="width: 64px; height: 64px;"> </a>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading">Nested media heading</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                                                    <!-- Nested media object -->
+                                                    <div class="media">
+                                                        <a class="pull-left" href="javascript:void(0)">
+                                                            <img class="media-object" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSIjZWVlIi8+PHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iMzIiIHk9IjMyIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjEycHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9zdmc+" alt="64x64" data-src="../assets/global/plugins/holder.js/64x64" style="width: 64px; height: 64px;"> </a>
+                                                        <div class="media-body">
+                                                            <h4 class="media-heading">Nested media heading</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Nested media object -->
+                                            <div class="media">
+                                                <a class="pull-left" href="javascript:void(0)">
+                                                    <img class="media-object" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSIjZWVlIi8+PHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iMzIiIHk9IjMyIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjEycHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9zdmc+" alt="64x64" data-src="../assets/global/plugins/holder.js/64x64" style="width: 64px; height: 64px;"> </a>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading">Nested media heading</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="media">
+                                        <a class="pull-right" href="javascript:void(0)">
+                                            <img class="media-object" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSIjZWVlIi8+PHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iMzIiIHk9IjMyIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjEycHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9zdmc+" alt="64x64" data-src="../assets/global/plugins/holder.js/64x64" style="width: 64px; height: 64px;"> </a>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">Media heading</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END MEDIA card-->
+                </div>
+            </div>
+        </section>
+        <aside class="aside-md b-l hidden-md-down nav-sidebar bg-white">
+            <nav class="nav-scroll affix w-full" role="navigation" jumpmenu>
+                <div class="text-muted text-u-c hidden-nav padder m-t-1 m-b-1">On This Page:</div>
+                <ul class="nav nav-main" data-ride="collapse">
+                    <li class="nav-item active">
+                        <a href="javascript:void(0)" data-target="#test" class="nav-link  active">test</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+</div>

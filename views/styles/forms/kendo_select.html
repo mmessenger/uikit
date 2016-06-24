@@ -1,0 +1,243 @@
+<form>
+
+    <div class="form-group row">
+        <label class="col-sm-2 form-control-label text-sm-right">Select</label>
+        <div class="col-sm-10">
+			<select id="kendoSelect" class="w-full no-padder" >
+		        <option>1</option>
+		        <option>2</option>
+		        <option>3</option>
+		        <option>4</option>
+		    </select>
+		    <script type="text/javascript">
+		    	$("#kendoSelect").kendoDropDownList();
+		    </script>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 form-control-label text-sm-right">Disabled</label>
+        <div class="col-sm-10">
+			<select id="kendoSelectDisabled" class="w-full no-padder" disabled>
+		        <option>1</option>
+		        <option>2</option>
+		        <option>3</option>
+		        <option>4</option>
+		    </select>
+		    <script type="text/javascript">
+		    	$("#kendoSelectDisabled").kendoDropDownList()
+		    </script>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 form-control-label text-sm-right">Select Large</label>
+        <div class="col-sm-10">
+			<select id="kendoSelectLarge" class="form-control-lg w-full no-padder" >
+		        <option>1</option>
+		        <option>2</option>
+		        <option>3</option>
+		        <option>4</option>
+		    </select>
+		    <script type="text/javascript">
+		    	$("#kendoSelectLarge").kendoDropDownList();
+		    </script>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 form-control-label text-sm-right">Select Small</label>
+        <div class="col-sm-10">
+			<select id="kendoSelectSmall" class="form-control-sm w-full no-padder" >
+		        <option>1</option>
+		        <option>2</option>
+		        <option>3</option>
+		        <option>4</option>
+		    </select>
+		    <script type="text/javascript">
+		    	$("#kendoSelectSmall").kendoDropDownList();
+		    </script>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 form-control-label text-sm-right">Multi Select</label>
+        <div class="col-sm-10">
+			<select id="kendoMultiSelect" class="w-full no-padder" >
+		        <option>1</option>
+		        <option>2</option>
+		        <option>3</option>
+		        <option>4</option>
+		    </select>
+		    <script type="text/javascript">
+		    	$("#kendoMultiSelect").kendoMultiSelect().data("kendoMultiSelect");
+		    </script>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 form-control-label text-sm-right">File Input</label>
+        <div class="col-sm-10">
+			<input id="kendoUpload" class="no-border" type="file" />
+			<script id="fileTemplate" type="text/x-kendo-template">
+                <span class='k-progress'></span>
+                <div class='file-wrapper'>
+                    <span class='fa fa-file-#=addExtensionClass(files[0].extension)# fa-lg text-primary'></span>
+                    <span class='file-heading file-name-heading m-l-sm'>#=name#</span>
+                    <button type='button' class='k-upload-action pull-right m-t-xs m-r l-h-2x'></button>
+                </div>
+            </script>
+		    <script type="text/javascript">
+                $("#kendoUpload").kendoUpload({
+                	multiple: true,
+                	async: {
+                        saveUrl: "save",
+                        removeUrl: "remove",
+                        autoUpload: false
+                    },
+                	template: kendo.template($('#fileTemplate').html())
+                });
+                $("#kendoUpload").closest(".k-upload").find("span").html('<i class="fa fa-paperclip "></i> <span class="m-l-xxs m-r-xs">Choose File</span>');
+
+                function addExtensionClass(extension) {
+                    switch (extension) {
+                        case '.jpg':
+                        case '.img':
+                        case '.png':
+                        case '.gif':
+                            return "image-o";
+                        case '.doc':
+                        case '.docx':
+                            return "word-o";
+                        case '.xls':
+                        case '.xlsx':
+                            return "excel-o";
+                        case '.pdf':
+                            return "pdf-o";
+                        case '.zip':
+                        case '.rar':
+                            return "archive-o";
+                        default:
+                            return "text-o";
+                    }
+                }
+		    </script>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 form-control-label text-sm-right">Combo Box</label>
+        <div class="col-sm-10">
+			<select id="kendoComboBox" class="w-full" >
+		        <option>1</option>
+		        <option>2</option>
+		        <option>3</option>
+		        <option>4</option>
+		    </select>
+		    <script type="text/javascript">
+		    	$("#kendoComboBox").kendoComboBox();
+		    </script>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 form-control-label text-sm-right">Date Picker</label>
+        <div class="col-sm-10">
+			<input id="kendoDatePicker" class="w-full" data-bind="value: today" />
+		    <script type="text/javascript">
+		    	$("#kendoDatePicker").kendoDatePicker();
+		    </script>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 form-control-label text-sm-right">Time Picker</label>
+        <div class="col-sm-10">
+			<input id="kendoTimePicker" class="w-full" data-bind="value: today" />
+		    <script type="text/javascript">
+		    	$("#kendoTimePicker").kendoTimePicker();
+		    </script>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 form-control-label text-sm-right">Spinner</label>
+        <div class="col-sm-10">
+			<input id="kendoNumericTextBox" class="w-full" type="number" min="0" max="10" value="5"  />
+		    <script type="text/javascript">
+		    	$("#kendoNumericTextBox").kendoNumericTextBox();
+		    </script>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 form-control-label text-sm-right">Autocomplete</label>
+        <div class="col-sm-10">
+			<input id="kendoAutoComplete" class="w-full form-control" />
+		    <script type="text/javascript">
+		    	$("#kendoAutoComplete").kendoAutoComplete({
+		    		dataSource: [
+                            "Albania",
+                            "Andorra",
+                            "Armenia",
+                            "Austria",
+                            "Azerbaijan",
+                            "Belarus",
+                        ],
+                    filter: "startswith",
+	                placeholder: "Select...",
+	                separator: ", "
+		    	});
+		    </script>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 form-control-label text-sm-right">Switch</label>
+        <div class="col-sm-10">
+			<input type="checkbox" data-role="switch" id="kendoMobileSwitch" checked="checked" />
+		    <script type="text/javascript">
+		    	$("#kendoMobileSwitch").kendoMobileSwitch({ 
+                    onLabel: "YES", 
+                    offLabel: "NO" 
+                });
+		    </script>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 form-control-label text-sm-right">Slider</label>
+        <div class="col-sm-10">
+			<input id="kendoSlider" class="" value="400" />
+		    <script type="text/javascript">
+		    	$("#kendoSlider").kendoSlider({
+                            min: 0,
+                            max: 500,
+                            smallStep: 1,
+                            largeStep: 1,
+                            tickPlacement: "none",
+                            showButtons: false,
+                        });
+		    </script>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 form-control-label text-sm-right">Editor</label>
+        <div class="col-sm-10">
+                <textarea id="editor" rows="5" cols="30" style="b-none">
+                    Go ahead…
+                </textarea>
+            <script>
+                $(document).ready(function() {
+                    // create Editor from textarea HTML element with default set of tools
+                    $("#editor").kendoEditor({ resizable: {
+                        content: true,
+                        toolbar: true
+                    }});
+                });
+            </script>
+        </div>
+    </div>
+
+</form>

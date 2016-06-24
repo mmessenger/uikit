@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en" class="" id="ng-app" ng-app="spark" style="overflow-x: scroll;">
+
+<head>
+    <link rel="stylesheet" href="/lib/css/bootstrap.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="/lib/vendor/kendo/2016.1.125/kendo.common.min.css" type='text/css'>
+    <link rel="stylesheet" href="/lib/vendor/kendo/2016.1.125/kendo.mobile.all.min.css" type='text/css'>
+    <link rel="stylesheet" href="/lib/css/app.css" type='text/css'>
+    <link rel="stylesheet" href="/lib/css/override.css" type='text/css'>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-route.js"></script>
+    <script type="text/javascript" src="/app/main.js"></script>
+    <script type="text/javascript" src="/lib//vendor/kendo/2016.1.125/kendo.all.min.js"></script>
+    <script type="text/javascript" src="/lib/js/app.js"></script>
+    <script type="text/javascript" src="/lib/js/tether.js"></script>
+    <script type="text/javascript" src="/lib/js/bootstrap.js"></script>
+
+    <style>
+        #fieldlist {
+            margin: 0 0 -2em;
+            padding: 0;
+        }
+        
+        #fieldlist li {
+            list-style: none;
+            padding-bottom: 2em;
+        }
+        
+        #fieldlist label {
+            display: block;
+            padding-bottom: 1em;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 12px;
+            color: #444;
+        }
+        
+        #fieldlist input {
+            width: 100%;
+        }
+    </style>
+
+
+</head>
+
+<body class="">
+
+    <div class="">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="p-x-3">
+                <h1 class="display-5">UI Kit Documentation</h1>
+                <p class="lead">This is an example of a UI Kit that represents all styling of UI components and content within in a given client project. </p>
+            </div>
+        </div>
+        <div class="hbox stretch">
+
+            <!-- Begin section -->
+            <section class="p-x-3">
+
+                <!-- Begin basic template -->
+                <div id="logo" class="h4 m-b-1 m-t-1">Basic Template Code</div>
+                <p class="m-b-1">This is the starter code for the page.</p>
+                <p class="h6 font-bold m-t-1 m-b-1">Example markup</p>
+                <pre class="code pre-scrollable p-a-1 b-a bg-light" ng-include src="'tiles/template.html'" maketext></pre>
+                <!-- End basic template -->
+
+
+                <!-- Begin logo -->
+                <div id="logo" class="h4 m-b-1 m-t-1">Logo</div>
+                <p class="m-b-1">These are the client's brand primary color values </p>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="h5 m-b-1">Logo for white and light colors</div>
+                        <div class=" wrapper-sm"><img src="../lib/images/logo.png" width="200px"></div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="h5 m-b-1">Logo for black and dark colors </div>
+                        <div class="wrapper-sm bg-black"><img src="../lib/images/logo_white.png" width="200px"></div>
+                    </div>
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4"></div>
+
+
+                </div>
+                <!-- End logo -->
+
+
+                <!-- Begin primary colors -->
+                <div id="brandcolors" class="h4 m-b-1 m-t-1">Primary Color</div>
+                <p class="m-b-1">This is the client's primary color value </p>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="h5 m-b-1">Primary Brand Color</div>
+                        <div class=" wrapper-md bg-primary"><span class="m-t-1 h6 text-black text-md"> .bg-primary</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- End primary colors -->
+
+                <!-- Begin secondary colors -->
+                <div id="brandcolors" class="h4 m-b-1 m-t-3">Secondary Color</div>
+                <p class="m-b-1">This is the client's secondary color value</p>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="h5 m-b-1">Secondary Brand Color</div>
+                        <div class="wrapper-md bg-light dker">
+                            <span class="m-t-1 h6 text-black text-md">.bg-light dker</span></div>
+                    </div>
+                </div>
+
+                <!-- End secondary colors -->
+
+
+                <!-- Begin semantic colors -->
+                <div id="brandcolors" class="h4 m-b-1 m-t-3">Semantic Colors</div>
+                <p class="m-b-1">These are semantic color values. </p>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="h5 m-b-1">Danger</div>
+                        <div class=" wrapper-md bg-danger"><span class="m-t-1 h6 text-white text-md"> .bg-danger</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="h5 m-b-1">Success</div>
+                        <div class="wrapper-md bg-success"> <span class="m-t-1 h6 text-white text-md"> .bg-success</span></div>
+
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="h5 m-b-1">Information </div>
+                        <div class="wrapper-md bg-info"> <span class="m-t-1 h6 text-white text-md"> .bg-info</span></div>
+
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="h5 m-b-1">Warning </div>
+                        <div class=" wrapper-md bg-warning"><span class="m-t-1 h6 text-white text-md"> .bg-warning</span></div>
+
+                    </div>
+
+                </div>
+
+                <!-- End primary colors -->
+
+
+                <!-- Begin typography -->
+                <div id="typography" class="h4 m-b-1 m-t-3">Typography</div>
+
+                <!--Begin table -->
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th style="width: 50px;">Description</th>
+                                <th style="width: 500px;">Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p>Used for page headlines.<code>h2</code></p>
+                                </td>
+                                <td>
+                                    <p class="m-b-1 h2">This is a Headline Example </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Used for paragraph titles.<code>h4</code> <code>strong</code></p>
+                                </td>
+                                <td>
+                                    <h4><strong>This is a Title Example</strong></h4></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Paragraph text. <code>p</code></p>
+                                </td>
+                                <td>
+                                    <p>This is a paragraph example.</p>
+                                    <p>Suspendisse a pretium dui. Nullam vitae lacinia purus. Nullam non tellus neque. Maecenas aliquam orci ex, a malesuada mauris malesuada et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consequat ante arcu, id sollicitudin odio commodo in. Phasellus posuere magna sit amet urna iaculis, id pretium leo euismod.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Links <code>a</code></p>
+                                </td>
+                                <td>
+                                    <p><a href="#">This is a link example</a></p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--End table -->
+                <!-- End typography -->
+
+                <!-- Begin buttons -->
+                <div id="buttons" class="h4 m-b-1 m-t-3">Button examples</div>
+                <p class="m-b-1">This is the primary and secondary buttons.</p>
+                <div class="">
+                    <a href="#" class="btn btn-w-sm btn-primary m-b-xs m-r-1">Primary Button</a>
+                    <a href="#" class="btn btn-w-sm btn-secondary m-b-xs m-r-1">Secondary Button</a>
+                    <a href="#" class="btn btn-w-sm btn-danger m-b-xs m-r-1">Critical Button</a>
+                    <a href="#" class="btn btn-w-sm btn-default disabled m-b-xs m-r-1">Disabled Button</a>
+                    <a href="#" class="btn btn-w-sm btn-info m-b-xs m-r-1">Next Button</a>
+                    <a href="#" class="btn btn-w-sm btn-light m-b-xs m-r-1">Cancel Button</a>
+                    <div class="row">
+                        <div class="col-sm-2 wrapper-md m-t-1 bg-black"> <a href="#" class="btn btn-w-sm btn-white m-r-1">White Button</a> </div>
+                        <div class="col-sm-10"></div>
+                    </div>
+                </div>
+                <p class="h6 font-bold m-t-1 m-b-1">Example markup</p>
+                <pre class="code pre-scrollable p-a-1 b-a bg-light" ng-include src="'tiles/buttons.html'" maketext></pre>
+                <!-- End buttons -->
+
+                <!-- Begin top navigation -->
+                <div id="topnavigation" class="h4 m-b-1 m-t-3"> Top Navigation</div>
+                <p class="m-b-1">This is top navigation.</p>
+                <div class="">
+
+                    <header class="header r b-a p-a-0">
+                        <nav class="navbar navbar-header bg-white p-a-0 text-xs-center auto">
+                            <ul class="nav navbar-nav pull-xs-right">
+                                <li class="nav-item">
+                                    <a href="javascript:void(0)" class="nav-link"><i class="fa fa-search fa-fw"></i></a>
+                                </li>
+                                <li class="nav-item hidden-sm-down">
+                                    <a href="javascript:void(0)" class="nav-link">
+                                        <span class="avatar avatar-lg img-circle">
+                        <img class="img-fluid" src="/lib/images/avatar.jpg" alt="">
+                    </span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav navbar-nav pull-xs-left hidden-md-up">
+                                <li class="nav-item">
+                                    <a href="javascript:void(0)" class="nav-link navbar-toggler" data-toggle="collapse" data-target="#exCollapsingNavbar2">
+                                        <i class="fa fa-bars fa-fw"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="">
+                                <a href="javascript:void(0)" class="navbar-brand aside-xs hidden-sm-down m-l m-r" data-toggle="fullscreen"> <img src="/lib/images/logo_dark.png" class="img-fluid"></a>
+                                <a href="javascript:void(0)" class="navbar-brand w-48 hidden-md-up pull-xs-none" data-toggle="fullscreen"> <img src="/lib/images/logo_dark_sm.png" class="img-fluid"></a>
+                            </div>
+                            <ul id="exCollapsingNavbar2" class="nav navbar-nav navbar-toggleable-sm text-xs-left navbar-light collapse">
+                                <li class="nav-item active dropdown">
+                                    <a href="javascript:void(0)" class="nav-link dropdown-toggle " data-toggle="dropdown-submenu">
+                                        <i class="fa fa-file-text-o fa-fw "></i>
+                                        <span class="nav-text">Orders</span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-item"><a href="javascript:void(0)" class="">Action</a></li>
+                                        <li class="dropdown-item"><a href="javascript:void(0)" class="">Another action</a></li>
+                                        <li class="dropdown-item"><a href="javascript:void(0)" class="">Something else here</a></li>
+                                        <li class="dropdown-divider"></li>
+                                        <li class="dropdown dropdown-item dropdown-submenu">
+                                            <a href="javascript:void(0)" class="" data-toggle="dropdown-submenu">More Options </a>
+                                            <ul class="dropdown-menu ">
+                                                <li class="dropdown dropdown-item dropdown-submenu">
+                                                    <a href="javascript:void(0)" class="" data-toggle="dropdown-submenu">Task 1</a>
+                                                    <div class="dropdown-menu" role="menu">
+                                                        <a href="javascript:void(0)" class="dropdown-item">Action</a>
+                                                        <a href="javascript:void(0)" class="dropdown-item">Another action</a>
+                                                        <a href="javascript:void(0)" class="dropdown-item">Something else here</a>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-item"><a href="javascript:void(0)">Task 2</a></li>
+                                                <li class="dropdown-item"><a href="javascript:void(0)">Task 3</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a href="javascript:void(0)" class="nav-link dropdown-toggle " data-toggle="dropdown-submenu">
+                                        <i class="fa fa-tags fa-fw "></i>
+                                        <span class="nav-text">Inventory</span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-item"><a href="javascript:void(0)" class="">Action</a></li>
+                                        <li class="dropdown-item"><a href="javascript:void(0)" class="">Another action</a></li>
+                                        <li class="dropdown-item"><a href="javascript:void(0)" class="">Something else here</a></li>
+                                        <li class="dropdown-divider"></li>
+                                        <li class="dropdown dropdown-item dropdown-submenu">
+                                            <a href="javascript:void(0)" class="" data-toggle="dropdown-submenu">More Options </a>
+                                            <ul class="dropdown-menu ">
+                                                <li class="dropdown dropdown-item dropdown-submenu">
+                                                    <a href="javascript:void(0)" class="" data-toggle="dropdown-submenu">Task 1</a>
+                                                    <div class="dropdown-menu" role="menu">
+                                                        <a href="javascript:void(0)" class="dropdown-item">Action</a>
+                                                        <a href="javascript:void(0)" class="dropdown-item">Another action</a>
+                                                        <a href="javascript:void(0)" class="dropdown-item">Something else here</a>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-item"><a href="javascript:void(0)">Task 2</a></li>
+                                                <li class="dropdown-item"><a href="javascript:void(0)">Task 3</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="javascript:void(0)" class="nav-link">
+                                        <i class="fa fa-dollar fa-fw "></i>
+                                        <span class="nav-text">Invoicing</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="javascript:void(0)" class="nav-link">
+                                        <i class="fa fa-line-chart fa-fw "></i>
+                                        <span class="nav-text">Reports</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </header>
+
+                </div>
+
+                <p class="h6 font-bold m-t-1 m-b-1">Example markup</p>
+                <pre class="code pre-scrollable p-a-1 b-a bg-light" ng-include src="'tiles/topnavigation.html'" maketext></pre>
+                <!-- End top navigation -->
+
+                <!-- Begin page header -->
+                <div id="header" class="h4 m-b-1 m-t-3">Page Header</div>
+                <p class="m-b-1">This is the page header.</p>
+                <div class="">
+                    <div class="bg-light p-a-2">
+                        <div class="btn-group pull-sm-right m-b-1">
+                            <a href="javascript:void(0)" class="btn btn-default">Save</a>
+                            <a href="javascript:void(0)" class="btn btn-default">Cancel</a>
+                            <a href="javascript:void(0)" class="btn btn-default">Copy</a>
+                            <div class="btn-group" role="group">
+                                <a href="javascript:void(0)" class="btn btn-default btn-icon dropdown-toggle" data-toggle="dropdown"></a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" href="javascript:void(0)">Action</a>
+                                    <a class="dropdown-item" href="javascript:void(0)">Action</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media m-a-0">
+                            <a href="javascript:void(0)" class="m-b-xs text-sm inline"><i class="fa fa-angle-left"></i> Back to Module List</a>
+                            <a class="media-left" href="javascript:void(0)">
+                                <span class="fa-stack fa-2x">
+                <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                <i class="fa fa-file-text-o fa-stack-1x fa-inverse"></i>
+            </span>
+                            </a>
+                            <div class="media-body">
+                                <div class="text-muted text-u-c">Record Type</div>
+                                <h3 class="media-heading">Record Title</h3>
+                            </div>
+                        </div>
+                        <div class="row m-t-1 padder-h collapse in" id="headerCollapse">
+                            <div class="col-sm-3 ">
+                                <div class="text-muted text-sm">FIELD 1</div>
+                                <p class="text-ellipsis text-dark">Lorem ipsum dolor sit amet</p>
+                            </div>
+                            <div class="col-sm-3 ">
+                                <div class="text-muted text-sm">FIELD 2</div>
+                                <p class="text-ellipsis text-dark">Lorem ipsum dolor sit amet</p>
+                            </div>
+                            <div class="col-sm-3 ">
+                                <div class="text-muted text-sm">FIELD 3</div>
+                                <p class="text-ellipsis text-dark">Lorem ipsum dolor sit amet</p>
+                            </div>
+                            <div class="col-sm-3 ">
+                                <div class="text-muted text-sm">FIELD 4</div>
+                                <p class="text-ellipsis text-dark">Lorem ipsum dolor sit amet</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-xs-center">
+                        <span class="bg-light inline" data-toggle="collapse" data-target="#headerCollapse">
+        <button class="btn btn-link btn-sm bg-empty padder-h l-h-1x" data-toggle="button" aria-pressed="false">
+            <i class="fa fa-angle-down text-active"></i>
+            <i class="fa fa-angle-up text"></i>
+        </button>
+    </span>
+                    </div>
+                </div>
+                <p class="h6 font-bold m-t-1 m-b-1">Example markup</p>
+                <pre class="code pre-scrollable p-a-1 b-a bg-light" ng-include src="'tiles/header.html'" maketext></pre>
+                <!-- End page header -->
+
+                <!-- Begin table -->
+                <div id="grid" class="h4 m-b-1 m-t-3">Table Design</div>
+                <p class="m-b-1">This shows the primary table design.</p>
+                <div class="">
+                    <div id="gridEx1" class="m-b"></div>
+                    <script id="template1" type="text/x-kendo-tmpl">
+                        <div class='btn-group' role='group' aria-label='Basic example'>
+                            <button href='' class='btn btn-icon btn-sm btn-default'><i class='fa fa-pencil'></i></button>
+                            <button href='' class='btn btn-icon btn-sm btn-default'><i class='fa fa-trash'></i></button>
+                        </div>
+                    </script>
+                    <script>
+                        $(document).ready(function () {
+                            var ds = [
+                                {
+                                    "id": 1,
+                                    "first_name": "Henry",
+                                    "last_name": "Elliott",
+                                    "email": "helliott0@slate.com",
+                                    "company": "Babbleopia",
+                                    "file": "lib/images/p1.png"
+                                },
+                                {
+                                    "id": 2,
+                                    "first_name": "Rebecca",
+                                    "last_name": "Ramirez",
+                                    "email": "rramirez1@auda.org.au",
+                                    "company": "Oyondu",
+                                    "file": "lib/images/p7.png"
+                                },
+                                {
+                                    "id": 3,
+                                    "first_name": "Max",
+                                    "last_name": "Pierce",
+                                    "email": "epierce2@businesswire.com",
+                                    "company": "Myworks",
+                                    "file": "lib/images/p9.png"
+                                },
+                                {
+                                    "id": 4,
+                                    "first_name": "Louise",
+                                    "last_name": "Snyder",
+                                    "email": "lsnyder3@booking.com",
+                                    "company": "Feedmix",
+                                    "file": "lib/images/p10.png"
+                                },
+                                {
+                                    "id": 5,
+                                    "first_name": "Nick",
+                                    "last_name": "Garcia",
+                                    "email": "ngarcia4@newsvine.com",
+                                    "company": "Shufflebeat",
+                                    "file": "lib/images/p4.png"
+                                }
+        ]
+                            var localds = new kendo.data.DataSource({
+                                data: ds
+                            });
+
+                            $("#gridEx1").kendoGrid({
+                                dataSource: localds,
+                                sortable: true,
+                                columns: [
+                                    {
+                                        field: "file",
+                                        title: "Contact Name",
+                                        template: '<span class="avatar avatar-sm img-circle"><img class="img-fluid" src="/lib/images/avatar_default.jpg" alt="user" ></span><div class="inline m-l">#:first_name# #:last_name# </div>'
+                }, {
+                                        field: "email",
+                                        title: "Email"
+                }, {
+                                        field: "company",
+                                        title: "Company"
+                }, {
+                                        field: "",
+                                        title: "Actions",
+                                        template: kendo.template($("#template1").html())
+                }
+            ]
+                            });
+                        });
+                    </script>
+
+
+                </div>
+                <p class="h6 font-bold m-t-1 m-b-1">Example markup</p>
+                <pre class="code pre-scrollable p-a-1 b-a bg-light" ng-include src="'tiles/table.html'" maketext></pre>
+                <!-- End table -->
+
+                <!-- Begin comment out footer
+                <div id="footer" class="h4 m-b-1 m-t-3">Footer</div>
+                <p class="m-b-1">This is the footer.</p>
+                <div class="">
+                    <div class="row m-n bg-light lt b-t text-muted ng-scope">
+                        <div class="col-xs-12 text-xs-center padder-v-sm">
+                            <div class="font-bold m-b-sm">ILOGO</div>
+                            <div class="small text-muted"><a href="javascript:void(0)">Terms of Use</a> | <a href="javascript:void(0)">Privacy Policy </a> | <a href="javascript:void(0)">License Agreements </a></div>
+                            <div class="small text-lt">© 2016 Company Inc. All rights reserved. Powered by Company.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="h6 font-bold m-t-1 m-b-1">Example markup</p>
+                <pre class="code pre-scrollable p-a-1 b-a bg-light" ng-include src="'tiles/footer.html'" maketext></pre>
+                End comment out footer -->
+
+                <!-- Begin form elements -->
+                <div id="formelements" class="h4 m-b-1 m-t-3">Form Elements</div>
+                <!-- Begin input -->
+                <p class="h4 m-b-1">Input example</p>
+                <div class="form-group row">
+                    <label class="col-sm-2 form-control-label text-sm-right">First Name</label>
+                    <div class="col-sm-10">
+                        <ul id="fieldlist">
+                            <li>
+                                <input id="phone_number" value="John" />
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <p class="h6 font-bold m-t-1 m-b-1">Example markup</p>
+                <pre class="code pre-scrollable p-a-1 b-a bg-light" ng-include src="'tiles/input.html'" maketext></pre>
+                <!-- End input -->
+                <!-- Begin select -->
+                <p class="h4 m-b-1">Select example</p>
+                <div class="">
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label text-sm-right">Select</label>
+                        <div class="col-sm-10">
+                            <span title="" class="k-widget k-dropdown k-header w-full no-padder" unselectable="on" role="listbox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-owns="kendoSelect_listbox" aria-disabled="false" aria-readonly="false" aria-busy="false" style="" aria-activedescendant="76752537-7364-459f-8d70-3923328976b7"><span unselectable="on" class="k-dropdown-wrap k-state-default"><span unselectable="on" class="k-input">1</span><span unselectable="on" class="k-select"><span unselectable="on" class="k-icon k-i-arrow-s">select</span></span>
+                            </span>
+                            <select id="kendoSelect" class="w-full no-padder" data-role="dropdownlist" style="display: none;">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <p class="h6 font-bold m-t-1 m-b-1">Example markup</p>
+                <pre class="code pre-scrollable p-a-1 b-a bg-light" ng-include src="'tiles/select.html'" maketext></pre>
+                <!-- End select -->
+                <!-- Begin multi-select -->
+                <p class="h4 m-b-1">Multi-select example</p>
+                <div class="">
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label text-sm-right">Multi Select</label>
+                        <div class="col-sm-10">
+                            <div class="k-widget k-multiselect k-header w-full no-padder" unselectable="on" title="" style="">
+                                <div class="k-multiselect-wrap k-floatwrap" unselectable="on">
+                                    <ul role="listbox" unselectable="on" class="k-reset" id="kendoMultiSelect_taglist">
+                                        <li class="k-button" unselectable="on"><span unselectable="on">1</span><span unselectable="on" class="k-select"><span unselectable="on" class="k-icon k-i-close">delete</span></span>
+                                        </li>
+                                    </ul>
+                                    <input class="k-input" style="width: 25px" accesskey="" autocomplete="off" role="listbox" aria-expanded="false" tabindex="0" aria-owns="kendoMultiSelect_taglist kendoMultiSelect_listbox" aria-disabled="false" aria-readonly="false" aria-activedescendant="7830e795-20dd-4f8d-b443-b32e9a674edf" aria-busy="false"><span class="k-icon k-loading k-loading-hidden"></span></div>
+                                <select id="kendoMultiSelect" class="w-full no-padder" data-role="multiselect" multiple="multiple" aria-disabled="false" aria-readonly="false" style="display: none;">
+                                    <option value="1" selected="">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select><span style="font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-stretch: normal; font-style: normal; font-weight: normal; letter-spacing: normal; text-transform: none; line-height: 18.34px; position: absolute; visibility: hidden; top: -3333px; left: -3333px;"></span></div>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+                <p class="h6 font-bold m-t-1 m-b-1">Example markup</p>
+                <pre class="code pre-scrollable p-a-1 b-a bg-light" ng-include src="'tiles/multiselect.html'" maketext></pre>
+                <!-- End multi-select -->
+                <!-- Begin radio -->
+                <p class="h4 m-b-1">Radio button example</p>
+                <div class="">
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label text-sm-right">Custom Radios</label>
+                        <div class="col-sm-10">
+                            <div class="c-inputs-stacked">
+                                <label class="c-input c-radio">
+                                    <input id="radioStacked1" name="radio-stacked" type="radio">
+                                    <span class="c-indicator"></span> Option One
+                                </label>
+                                <label class="c-input c-radio">
+                                    <input id="radioStacked2" name="radio-stacked" type="radio" checked="">
+                                    <span class="c-indicator"></span> Option Two
+                                </label>
+                                <label class="c-input c-radio disabled">
+                                    <input id="radioStacked3" name="radio-stacked2" type="radio" checked="" disabled="">
+                                    <span class="c-indicator"></span> Option Three
+                                </label>
+                                <label class="c-input c-radio disabled">
+                                    <input id="radioStacked4" name="radio-stacked2" type="radio" disabled="">
+                                    <span class="c-indicator"></span> Option Four
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <p class="h6 font-bold m-t-1 m-b-1">Example markup</p>
+                <pre class="code pre-scrollable p-a-1 b-a bg-light" ng-include src="'tiles/radiobutton.html'" maketext></pre>
+                <!-- End radio -->
+                <!-- Begin checkboxes-->
+                <p class="h4 m-b-1">Checkbox example</p>
+                <div class="">
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label text-sm-right">Custom Checkbox</label>
+                        <div class="col-sm-10">
+                            <div class="c-inputs-stacked">
+                                <label class="c-input c-checkbox">
+                                    <input id="checkboxStacked1" name="checkbox-stacked" type="checkbox">
+                                    <span class="c-indicator"></span> Option One
+                                </label>
+                                <label class="c-input c-checkbox">
+                                    <input id="checkboxStacked2" name="checkbox-stacked" type="checkbox" checked="">
+                                    <span class="c-indicator"></span> Option Two
+                                </label>
+                                <label class="c-input c-checkbox disabled">
+                                    <input id="checkboxStacked3" name="checkbox-stacked" type="checkbox" checked="" disabled="">
+                                    <span class="c-indicator"></span> Option Three
+                                </label>
+                                <label class="c-input c-checkbox disabled">
+                                    <input id="checkboxStacked4" name="checkbox-stacked" type="checkbox" disabled="">
+                                    <span class="c-indicator"></span> Option Four
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <p class="h6 font-bold m-t-1 m-b-1">Example markup</p>
+                <pre class="code pre-scrollable p-a-1 b-a bg-light" ng-include src="'tiles/checkbox.html'" maketext></pre>
+                <!-- End checkboxes -->
+                <!-- Begin tabs-->
+                <p class="h4 m-b-1">Tab example</p>
+                <div class="">
+                    <div class="form-group row">
+                        <ul class="nav nav-tabs ng-scope">
+                            <li class="nav-item">
+                                <a href="javascript:void(0)" class="nav-link active" data-target="#basic-tab1" data-toggle="tab">Active</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="javascript:void(0)" class="nav-link disabled" data-target="#basic-tab2" data-toggle="tab">Inactive</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="javascript:void(0)" class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="" role="button" aria-haspopup="true" aria-expanded="false">Dropdown </a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a href="javascript:void(0)" class="dropdown-item" data-target="#basic-tab3" role="tab" data-toggle="tab">Tab Three</a>
+                                    <a href="javascript:void(0)" class="dropdown-item" data-target="#basic-tab4" role="tab" data-toggle="tab">Tab Four</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="tab-content ng-scope">
+                            <div id="basic-tab1" class="tab-pane p-y-1 active">Item one content</div>
+                            <div id="basic-tab2" class="tab-pane p-y-1">Item two content</div>
+                            <div id="basic-tab3" class="tab-pane p-y-1">Item three content </div>
+                            <div id="basic-tab4" class="tab-pane p-y-1">Item four content</div>
+                        </div>
+                    </div>
+                </div>
+                <p class="h6 font-bold m-t-1 m-b-1">Example markup</p>
+                <pre class="code pre-scrollable p-a-1 b-a bg-light" ng-include src="'tiles/tabs.html'" maketext></pre>
+                <!-- End tabs -->
+                <!-- End form elements -->
+
+                <!-- Begin alerts -->
+                <div id="footer" class="h4 m-b-1 m-t-3">Alerts</div>
+                <p class="m-b-1">Alert examples.</p>
+                <div class="">
+                    <div class="alert alert-success" role="alert">
+                        <i class="fa fa-check-circle fa-lg fa-fw"></i> <strong>Success!</strong> Your file has been uploaded.
+                    </div>
+                    <div class="alert alert-info" role="alert">
+                        <i class="fa fa-info-circle fa-lg fa-fw"></i> <strong>Info!</strong> You have 198 unread messages.
+                    </div>
+                    <div class="alert alert-warning" role="alert">
+                        <i class="fa fa-warning fa-lg fa-fw"></i> <strong>Warning!</strong> Your monthly traffic is reaching limit.
+                    </div>
+                    <div class="alert alert-danger" role="alert">
+                        <i class="fa fa-ban fa-lg fa-fw"></i> <strong>Error!</strong> The daily cronjob has failed.
+                    </div>
+                </div>
+                <p class="h6 font-bold m-t-1 m-b-1">Example markup</p>
+                <pre class="code pre-scrollable p-a-1 b-a bg-light" ng-include src="'tiles/alerts.html'" maketext></pre>
+                <!-- End alerts -->
+
+                <!-- Begin icons -->
+                <div id="icons" class="h4 m-b-1 m-t-3">Icons</div>
+                <!--Begin table -->
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th style="width: 50px;">Description</th>
+                                <th style="width: 500px;">Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p>Email icon<code>fa-envelope-o</code></p>
+                                </td>
+                                <td>
+                                    <i class="fa fa-envelope-o fa-lg"></i>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <p>File icon<code>fa-file-o</code></p>
+                                </td>
+                                <td>
+                                    <i class="fa fa-file-o fa-lg"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Save icon<code>fa-save</code></p>
+                                </td>
+                                <td>
+                                    <i class="fa fa-save fa-lg"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Add icon<code>fa-plus</code></p>
+                                </td>
+                                <td> <i class="fa fa-plus fa-lg"></i></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Edit icon<code>fa-pencil-square-o</code></p>
+                                </td>
+                                <td>
+                                    <i class="fa fa-pencil-square-o fa-lg"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Delete icon<code>fa-close"</code></p>
+                                </td>
+                                <td>
+                                    <i class="fa fa-close fa-lg"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Print icon<code>fa-print</code></p>
+                                </td>
+                                <td>
+                                    <i class="fa fa-print fa-lg"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Download icon<code>fa-download</code></p>
+                                </td>
+                                <td>
+                                    <i class="fa fa-download fa-lg"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Success icon<code>fa-check-circle</code></p>
+                                </td>
+                                <td>
+                                    <i class="fa fa-check-circle fa-lg"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Info icon<code>fa-info-circle</code></p>
+                                </td>
+                                <td>
+                                    <i class="fa fa-info-circle fa-lg"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Warning icon<code>fa-warning</code></p>
+                                </td>
+                                <td>
+                                    <i class="fa fa-warning fa-lg"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Error icon<code>fa-ban</code></p>
+                                </td>
+                                <td>
+                                    <i class="fa fa-ban fa-lg"></i>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <p>Cart icon<code>fa-cart-plus</code></p>
+                                </td>
+                                <td>
+                                    <i class="fa fa-cart-plus fa-lg"></i>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <p>Help icon<code>fa-question-circle</code></p>
+                                </td>
+                                <td>
+                                    <i class="fa fa-question-circle fa-lg"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Search icon<code>fa-search</code></p>
+                                </td>
+                                <td>
+                                    <i class="fa fa-search fa-lg"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--End table -->
+                <!-- End icons -->
+
+
+            </section>
+            <!-- End section -->
+
+            <!-- Begin right side navigation -->
+            <aside class="aside-md b-l hidden-md-down nav-sidebar bg-white">
+                <nav class="nav-scroll affix w-full" role="navigation" jumpmenu>
+                    <div class="text-muted text-u-c hidden-nav padder m-t-1 m-b-1">On This Page:</div>
+                    <ul class="nav nav-main" data-ride="collapse">
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" data-target="#footer" class="nav-link">Basic Template</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" data-target="#brandcolors" class="nav-link">Logo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" data-target="#brandcolors" class="nav-link">Colors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" data-target="#typography" class="nav-link">Typography</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" data-target="#buttons" class="nav-link">Buttons</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" data-target="#topnavigation" class="nav-link">Navigation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" data-target="#header" class="nav-link">Page Header</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" data-target="#table" class="nav-link">Table</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" data-target="#footer" class="nav-link">Footer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" data-target="#typography" class="nav-link">Form Elements</a>
+                            <ul class="nav">
+                                <li class="nav-item">
+                                    <a href="javascript:void(0)" data-target="#input" class="nav-link">Input</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="javascript:void(0)" data-target="#input" class="nav-link">Select</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="javascript:void(0)" data-target="#multiselect" class="nav-link">Multi Select</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="javascript:void(0)" data-target="#radio" class="nav-link">Radio Buttons</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="javascript:void(0)" data-target="#checkbox" class="nav-link">Checkboxes</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="javascript:void(0)" data-target="#tabs" class="nav-link">Tabs</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" data-target="#footer" class="nav-link">Alerts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" data-target="#icons" class="nav-link">Icons</a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <!-- End right side navigation -->
+        </div>
+    </div>
+
+</body>
+
+</html>

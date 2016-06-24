@@ -1,0 +1,229 @@
+/* KENDO OVERRIDE */
+
+// KENDO GRID
+.k-grid-content {
+   overflow-y: visible;
+}
+
+// Removes Lines around Grid
+.k-grid-pager,
+.k-pager-wrap {
+	border: 0px;
+	padding:  0;
+	box-shadow: none;
+}
+
+div.k-grid-header, .k-grid-header-wrap {
+	border-width: 0;
+}
+
+.k-grid-header th.k-header, .k-filter-row th {
+	border-width: 1px 0 0 0px;
+	text-transform: uppercase;
+	padding: .8rem .6rem .8rem .6rem;
+}
+.k-grid tr td {
+	border-left-width: 0;
+}
+
+// Remove default white bg and boxshadow on grids
+.k-grid.k-widget, .k-grid-toolbar {
+	background: transparent;
+	box-shadow: none;
+	border-width: 0!important;
+}
+
+// Grid Footer
+.footer .k-grid-pager {
+	background-color: transparent!important;
+	outline: none;
+	box-shadow: none;
+}
+
+
+.k-grid-toolbar {
+   padding: 0 0 10px 0 !important;
+}
+
+// See if there's another way to do row hover states
+.k-grid tbody tr:hover { 
+    background-color: @base;
+}
+
+.k-grid tbody tr.k-state-selected:hover {
+    background-color: @selected-background;
+}
+
+
+// See if there's another way to do listView hover active states
+.list-group-item.k-state-selected {
+	&:hover,
+	&:active,
+	&:focus, {
+	    background-color: @selected-background;
+	}
+}
+
+// If the text in a grid cell is too long add ellipsis
+.k-grid td
+{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+// KENDO DROPDOWNLIST
+
+.k-dropdown .k-state-disabled {
+	background: @brand-light;
+	cursor: not-allowed!important;
+}
+
+// KENDO UPLOADER
+.k-widget.k-upload {
+	border-width: 0px; //Remove default border
+	background: transparent;
+}
+
+.k-upload .k-upload-button, .k-upload .k-upload-selected {
+	min-width: auto; // Flexibility to content in upload button
+	margin: 0;
+}
+
+.k-upload .k-dropzone {
+	border: 2px @border-color dashed;
+}
+
+.k-upload .k-file {
+	border-width: 1px;
+	border-radius: @border-radius-base;
+	background: @brand-light;
+	margin-top: .6rem;
+}
+
+.k-upload-files {
+	border-width: 0px;
+}
+
+// KENDO SLIDER
+
+.k-slider-selection {
+  background-color: @brand-primary;
+  border-radius: @border-radius-base;
+
+}
+
+.k-slider-horizontal .k-slider-selection, .k-slider-horizontal .k-slider-track {
+  height: 4px;
+  margin-top: -2px;
+}
+.k-slider-track {
+	background: @brand-light;
+	border-radius: @border-radius-base;
+	box-shadow: none;
+}
+
+// KENDO EDITOR
+
+table.k-editor {
+	border-width: 0;
+	border-collapse: collapse;
+}
+.k-webkit .k-editor-toolbar{
+	padding: 0 0 5px 0;
+}
+
+.k-editor .k-editable-area {
+	padding: 10px;
+}
+
+//KENDO SWITCH
+
+.km-switch {
+	width: auto;
+	min-width: 60px;
+
+	.km-switch-wrapper {
+		overflow: visible;
+	}
+
+	.km-switch-container {
+		border-radius: 30px;
+		overflow: visible;
+	}
+
+	.km-switch-handle {
+		position: absolute;
+		top: 1px;
+		bottom: 1px;
+		width: 26px;
+		border-radius: 50%;
+		border: 1px solid @border-color;
+		background: @background;
+		transition: left 0.2s;
+		cursor: pointer;
+
+		.km-switch-label-off {
+			font-size: .9rem;
+		}
+		.km-switch-label-on {
+			font-size: .9rem;
+			color: #fff;
+			text-shadow: none;
+		}
+	}
+}
+
+.km-switch-off .km-switch-container {
+	background: @background;
+	border: 1px solid @border-color;
+}
+.km-switch-on .km-switch-container {
+	background: @accent;
+}
+
+// Menu changes
+.k-menu {
+	background-color: @brand-light;
+	border: 0;
+}
+.k-menu .k-item, 
+.k-menu-horizontal > .k-item {
+	border: 0!important;
+}
+.k-menu>.k-item>.k-link {
+	line-height: 3.5rem;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+// Removes styling on kendo window
+.no-window {
+	background: transparent;
+	border-width: 0!important;
+	padding: 0!important;
+    box-shadow: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+	.k-window {
+		border: 0;
+	    box-shadow: none;
+	}
+
+	.k-window-titlebar {
+		display: none;
+	}
+
+	.k-content {
+		background: transparent;
+		padding: 0;
+	}
+
+	.modal {
+	    overflow-x: hidden;
+	    overflow-y: auto;
+	}
+}

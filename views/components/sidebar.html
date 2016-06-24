@@ -1,0 +1,95 @@
+<div class="">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="p-x-3">
+            <h1 class="display-5">Sidebar</h1>
+            <p class="lead">Sidebar is a vertical area that displays onscreen and presents widget components and navigation in a text-based hierarchical form. On web applications, the sidebar navigation should be open by default, and navigation items should only link to screens within the application (no external links). If secondary items exist within a navigation item, the top-level item is not an actual destination. Clicking a navigation item with secondary navigation expands that item’s secondary navigation. The preferred format for navigation items is <a href="https://en.wikipedia.org/wiki/Letter_case" target="_blank">Title Case</a></p>
+        </div>
+    </div>
+    <div class="hbox stretch">
+        <section class="p-x-3">
+            <div class="h6 font-bold m-t-2 m-b-1">When to Use:</div>
+            <ul>
+                <li>To access all main high-level sections of application.</li>
+                <li>To access to Home/top-level of the application.</li>
+                <li>To provide sense of place to the user (display the depth and breadth of the app/site.)</li>
+            </ul>
+            <div class="h6 font-bold m-t-2 m-b-1">Sidebar Classes</div>
+            <p>The sidebar is css-driven - and various classes can be combined to control it's width and color. Below you'll find summarized tables with the available sidebar navigation classes.</p>
+            <div class="row padder-lg m-t-2 ">
+                <div class="col-md-4 m-b-1 m-t-1">
+                    <div class="nav-sidebar bg-white b b-light r m-x-auto" ng-include src="'views/components/sidebar/sidebar.html'" style="height: 650px;"></div>
+                </div>
+                <div class="col-md-4 m-b-1 m-t-1">
+                    <div class="nav-sidebar bg-light b b-light r m-x-auto" ng-include src="'views/components/sidebar/sidebar.html'" style="height: 650px;"></div>
+                </div>
+                <div class="col-md-2 m-b-1 m-t-1">
+                    <div class="nav-sidebar nav-sm bg-dark r m-x-auto" ng-include src="'views/components/sidebar/sidebar.html'" style="height: 650px;"></div>
+                </div>
+                <div class="col-md-2 m-b-1 m-t-1">
+                    <div class="nav-sidebar nav-xs bg-success b b-light r m-x-auto" ng-include src="'views/components/sidebar/sidebar.html'" style="height: 650px;"></div>
+                </div>
+            </div>
+
+            <div class="table-responsive m-t-lg">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th style="width: 300px">Class</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>.nav-sidebar</code></td>
+                            <td>Default sidebar class, added to <code>nav</code> container.</td>
+                        </tr>
+                        <tr>
+                            <td><code>.nav-sidebar.bg-*</code></td>
+                            <td>Defines sidebar background color. According to the custom color system, sidebar background color can be changed to one of the available colors by adding a proper class to the main sidebar container.</td>
+                        </tr>
+                        <tr>
+                            <td><code>.nav-sidebar.nav-sm</code></td>
+                            <td>Small sidebar has 100px width, with stacked icons and text. Second navigation levels and sublevels opens on parent level hover. It is required to add <code>.nav-sm</code> class to the along with the <code>.nav-sidebar</code> class. </td>
+                        </tr>
+                        <tr>
+                            <td><code>.nav-sidebar.nav-xs</code></td>
+                            <td>Mini sidebar has 70px width, with icons only. Second navigation levels and sublevels opens on parent level hover. It is required to add <code>.nav-xs</code> class to the along with the <code>.nav-sidebar</code> class. </td>
+                        </tr>
+                        <tr>
+                            <td><code>.hidden-nav</code></td>
+                            <td>Hides content when the sidebar is small or mini</td>
+                        </tr>
+                        <tr>
+                            <td><code>.visible-nav</code></td>
+                            <td>Displays content when the sidebar is small or mini</td>
+                        </tr>
+                        <tr>
+                            <td><code>data-toggle="class:nav-sm"</code></td>
+                            <td>Collapsible sidebar. Changes main sidebar width from default to small. It is required to add a control along with a <code>data-target="#sidebarID"</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><code>data-toggle="class:nav-xs"</code></td>
+                            <td>Collapsible sidebar. Changes main sidebar width from default to mini. It is required to add a control along with a <code>data-target="#sidebarID"</code>.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <p>Default sidebar markup</p>
+            <pre class="code pre-scrollable p-a-1 b-a bg-light" ng-include src="'views/components/sidebar/sidebar.html'" maketext></pre>
+        </section>
+        <aside class="aside-md b-l hidden-md-down nav-sidebar bg-white">
+            <nav class="nav-scroll affix w-full" role="navigation" jumpmenu>
+                <div class="text-muted text-u-c hidden-nav padder m-t-1 m-b-1">On This Page:</div>
+                <ul class="nav nav-main" data-ride="collapse">
+                    <li class="nav-item active">
+                        <a href="javascript:void(0)" data-target="#test" class="nav-link  active">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" data-target="#test" class="nav-link">Classes</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+</div>

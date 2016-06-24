@@ -1,0 +1,51 @@
+<div class="">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="p-x-3">
+            <h1 class="display-5">Form Elements</h1>
+            <p class="lead">Forms allow a user to enter and read data.</p>
+        </div>
+    </div>
+    <div class="hbox stretch">
+        <section class="p-x-3">
+            <div id="" class="h4 m-b-1 m-t-1">Overview</div>
+            <p>Though we try not to, sometime we need to ask users to enter information. Form elements and controls help us capture this information. Forms are the primary place where users manage their data and complete tasks in an application. For example, forms can be used to enter shipping or credit card data to order a product. It is very important that applications use consistent controls to manage users expectations about how an application will work.</p>
+
+            <div id="input" class="h4 m-b-1 m-t-3">Input</div>
+            <!--<p>Examples of standard form controls supported in an example form layout. Individual form controls automatically receive some global styling. All textual <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code> elements with <code>.form-control</code> are set to <code>width: 100%;</code> by default. Wrap labels and controls in <code>.form-group</code> for optimum spacing. Labels in horizontal form require <code>.form-control-label</code> class.</p>-->
+            <div class="" ng-include src="'views/styles/forms/bs_inputs.html'"></div>
+
+            <div id="checksRadios" class="h4 m-b-1 m-t-3">Checkboxes &amp; Radios</div>
+            <p>Checkboxes are for selecting one or several options in a list, while radios are for selecting one from many.</p>
+            <div class="" ng-include src="'views/styles/forms/bs_checksRadios.html'"></div>
+
+
+            <div id="selectsTextarea" class="h4 m-b-1 m-t-3">Selects &amp; Textarea</div>
+            <p>Use the default option, or add multiple to show multiple options at once.</p>
+            <div class="" ng-include src="'views/styles/forms/bs_selectsTextarea.html'"></div>
+
+            <div id="kendoControls" class="h4 m-b-1 m-t-3">Kendo Controls</div>
+            <div class="" ng-include src="'views/styles/forms/kendo_select.html'"></div>
+        </section>
+        <aside class="aside-md b-l hidden-md-down nav-sidebar bg-white">
+            <nav class="nav-scroll affix w-full" role="navigation" jumpmenu>
+                <div class="text-muted text-u-c hidden-nav padder m-t-1 m-b-1">On This Page:</div>
+                <ul class="nav nav-main" data-ride="collapse">
+                    <li class="nav-item active">
+                        <a href="javascript:void(0)" class="nav-link active">BootStrap Inputs</a>
+                        <ul class="nav" style="display: block;">
+                            <li class="nav-item active"><a href="javascript:void(0)" data-target="#input" class="nav-link active">Inputs</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)" data-target="#checksRadios" class="nav-link">Checkboxes &amp; Radios</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)" data-target="#selectsTextarea" class="nav-link">Selects &amp; Textareas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" class="nav-link">Kendo Inputs</a>
+                        <ul class="nav">
+                            <li class="nav-item"><a href="javascript:void(0)" data-target="#kendoControls" class="nav-link">Selects &amp; Editors</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+</div>

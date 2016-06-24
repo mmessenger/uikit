@@ -1,0 +1,53 @@
+<div class="">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="p-x-3">
+            <h1 class="display-5">Application Bar</h1>
+            <p class="lead">The application bar provides a location for placement of corporate identity information, product name, the user menu, optional global functions, and  navigation to major modules of the application.</p>
+        </div>
+    </div>
+    <div class="hbox stretch">
+        <section class="p-x-3">
+            <div id="" class="h4 m-b-1 m-t-1">Overview</div>
+            <div class="alert alert-warning" role="alert">
+                An application bar should be used on every standard page
+            </div>
+            <p id="flyout" class="h4 m-b-1 m-t-3">Flyout Navigation</p>
+            <p>Flyouts Navigation slide down from the header and slide over the page contents. They can be closed by clicking on the selected Button within the header or anywhere outside the flyout. Upon closing, they slide up into the header. When the flyout navigation is used on smaller screen the flyouts are presented in line with other navigation links and can be expanded/collapsed.</p>
+            <div class="" ng-include src="'views/components/appheader/default.html'"></div>
+            <p class="h6 font-bold m-t-1 m-b-1">Example markup</p>
+            <pre class="code pre-scrollable p-a-1 b-a bg-light" ng-include src="'views/components/appheader/default.html'" maketext></pre>
+
+            <!-- App Bar with Mega -->
+            <p id="mega" class="h4 m-b-1 m-t-3">Mega Menu Navigation</p>
+            <p>Mega Menu Navigation are often used on large-scale sites that have many potential pages for users to navigate to. The mega menu opens up an expanded area that offers more options.</p>
+            <div class="" ng-include src="'views/components/appheader/mega.html'"></div>
+            <p class="h6 font-bold m-t-1 m-b-1">Example markup</p>
+            <pre class="code pre-scrollable p-a-1 b-a bg-light" ng-include src="'views/components/appheader/mega.html'" maketext></pre>
+
+            <!-- App Bar with Tab -->
+            <p id="tab" class="h4 m-b-1 m-t-3">Tabbed Navigation</p>
+            <p>Tabbed navigation consists of buttons or tabs aligned side by side and it is usually located at the top of the page. Tabbed navigation is a good choice when the number of tabs is not likely to change often and the tabs fit on one row. The navigation element should span across the entire width of the page using limited as well as short and predictable titles with the current selected tab clearly highlighted.</p>
+            <div class="" ng-include src="'views/components/appheader/tab.html'"></div>
+            <p class="h6 font-bold m-t-1 m-b-1">Example markup</p>
+            <pre class="code pre-scrollable p-a-1 b-a bg-light" ng-include src="'views/components/appheader/tab.html'" maketext></pre>
+
+            <!-- App Bar with Cart -->
+            <p id="cart" class="h4 m-b-1 m-t-3">Min-cart View</p>
+            <p>When users click on shopping cart icon, it provides a mini-cart view of the shopping cart. This view displays 3 recently added items. This view eliminates the steps in the shopping process where users can confirm what itmes are just added in cart and make any selections or deletions. The View All link or Check Out button direct users to checkout process.</p>
+            <div class="" ng-include src="'views/components/appheader/cart.html'"></div>
+            <p class="h6 font-bold m-t-1 m-b-1">Example markup</p>
+            <pre class="code pre-scrollable p-a-1 b-a bg-light" ng-include src="'views/components/appheader/cart.html'" maketext></pre>
+        </section>
+        <aside class="aside-md b-l hidden-md-down nav-sidebar bg-white">
+            <nav class="nav-scroll affix w-full" role="navigation" jumpmenu>
+                <div class="text-muted text-u-c hidden-nav padder m-t-1 m-b-1">On This Page:</div>
+                <ul class="nav nav-main" data-ride="collapse">
+                    <li class="nav-item active"><a href="javascript:void(0)" data-target="#flyout" class="nav-link active">Flyout Navigation</a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#mega" class="nav-link active">Mega Menu Navigation</a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#tab" class="nav-link active">Tabbed Navigation</a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#cart" class="nav-link active">Mini-Cart View</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+</div>

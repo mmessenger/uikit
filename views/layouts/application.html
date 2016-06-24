@@ -1,0 +1,97 @@
+<div id="" class="p-a-2 bg-white">
+    <h1 class="h1">Overview</h1>                    
+    <h4 id="layout" class="m-t-lg">Layout</h4>
+    <div class="m-t b-a b-light b-2x" style="height: 500px;">
+        <section class="hbox stretch bg-light">
+            <aside class="aside-md lt b-r">
+                <section class="vbox">
+                    <header class="header font-thin h4 p-a b-b">Header</header>
+                    <section class="scrollable w-f p-a-1">
+                        <p>This area is scrollable</p>
+                    </section>
+                </section>
+            </aside>
+            <section class="">
+                <section class="vbox">
+                    <section class="scrollable p-a-1">
+                        <p>This area is scrollable</p>
+                    </section>
+                </section>
+            </section>
+            <aside class="aside-sm lt b-l">
+                <section class="vbox">
+                    <header class="header font-thin h4 p-a b-b">Header</header>
+                    <section class="scrollable p-a w-f">
+                        <p>This is the scrollable content</p>
+                    </section>
+                </section>
+            </aside>
+        </section>
+    </div>
+    <p>use .vbox(vertical box) and .hbox(horizontal box) to build the web application layout. you can build the complicated layout as you want.</p>
+    <h5><strong>hbox</strong></h5>
+    <p>hbox is a horizontal wrapper that you can put columns in it. you can put <code>&lt;aside&gt;</code> and <code>&lt;section&gt;</code> in it. </p> <pre><code class="html">&lt;section class="hbox"&gt;&lt;aside class="aside-lg"&gt;&lt;/aside&gt;&lt;section&gt;&lt;/section&gt;&lt;/section&gt;</code></pre>
+    <p>you can use <code>.aside, .aside-xxs, .aside-xs, .aside-sm, .aside-md, .aside-lg .aside-xl, .aside-xxl</code> to set the width of an aside wrapper. also you can use the Bootstrap grid system, like <code>.col-6, .col-7</code>...</p>
+    <p>.stretch box has the 100% height. <code>&lt;section class="hbox stretch"&gt;&lt;/section&gt;</code></p>
+    <h5><strong>vbox</strong></h5>
+    <p>vbox is a vertical wrapper that you can put the row in it. </p> <pre><code class="html">&lt;section class="vbox"&gt;&lt;header class="header"&gt;&lt;/header&gt;&lt;section class="w-f scrollable"&gt;&lt;/section&gt;&lt;footer class="footer"&gt;&lt;/footer&gt;&lt;/section&gt;</code></pre>
+    <p><code>.w-f</code> means this vbox have a footer. Add <code>.scrollable</code> a .vbox section will make the area scrollable </p>
+    <p>.flex vbox let you put a flex height of the header/footer.</p> <pre><code class="html">&lt;section class="vbox flex"&gt;&lt;header&gt;&lt;/header&gt;&lt;section&gt;&lt;section&gt;&lt;section&gt;&lt;/section&gt;&lt;/section&gt;&lt;/section&gt;&lt;footer&gt;&lt;/footer&gt;&lt;/section&gt;</code></pre>
+    <h5><strong>Example</strong></h5>
+    <div class="row">
+        <div class="col-sm-6">
+            <p>.hbox</p>
+            <div style="height:250px">
+                <div class="app">
+                    <section class="hbox bg-light">
+                        <aside class="lt">aside</aside>
+                        <section class=""><div class="m-b-xl">section</div></section>
+                        <aside class="dk">aside</aside>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <p>.vbox</p>
+            <div style="height:250px">
+                <div class="app content">
+                    <section class="vbox bg-light">
+                        <header class="header lt"><span class="pull-in">header</span></header>
+                        <footer class="footer dk"><span class="pull-in">footer</span></footer>
+                        <section class="">section</section>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <p>.hbox stretch</p>
+            <div style="height:250px">
+                <div class="app">
+                    <section class="hbox stretch bg-light">
+                        <aside class="lt">aside</aside>
+                        <section>section</section>
+                        <aside class="dk">aside</aside>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <p>.vbox flex</p>
+            <div style="height:250px">
+                <div class="app">
+                    <section class="vbox flex bg-light">
+                        <header class="header dker"><span class="pull-in">content</span></header>
+                        <header class="header lt"><span class="pull-in">header</span></header>
+                        <footer class="footer dk"><span class="pull-in">footer</span></footer>
+                        <section class="">section</section>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h5><strong>Application layout</strong></h5>
+    <p>You can use the .app on the html tag to build the full-screen app layout <code>&lt;html class="app"&gt;&lt;/html&gt;</code>.</p>
+
+</div>

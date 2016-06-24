@@ -1,0 +1,208 @@
+<div class="">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="p-x-3">
+            <h1 class="display-5">Step Indicator</h1>
+            <p class="lead">A step indicator communicates to the user the progress of a particular screen flow.</p>
+        </div>
+    </div>
+    <div class="hbox stretch">
+        <section class="p-x-3">
+            <div id="overview" class="h4 m-b-1 m-t-1">Overview</div>
+            <p>asdf</p>
+            <p class="h6 font-bold m-t-3 m-b-1">When to Use:</p>
+            <ul>
+              <li>When the user needs to complete a complicated task or a series of tasks or decisions affecting downstream choices (e.g. connect bank account or when onboarding a client)</li>
+              <li>When the user needs to fill out a long form. A step flow will break it down into several digestible sections (e.g. create a new employee, sign up payment)</li>
+            </ul>
+            <div id="basic" class="h4 m-b-1 m-t-3">Basic</div>
+            <p>The basic step indicator contains default styles for active, incomplete and disabled states. To link a step use an <code>&lt;a&gt;</code> tag.</p>
+            <div class="" ng-include src="'views/styles/steps/basic.html'" ></div>
+            <p class="h6 font-bold m-t-3 m-b-1">Example Markup:</p>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a" ng-include src="'views/styles/steps/basic.html'" maketext></pre>
+
+            <div id="fluid" class="h4 m-b-1 m-t-3">Fluid</div>
+            <p>Step indicators can can be be fluid or flex.</p>
+            <div class="" ng-include src="'views/styles/steps/fluid.html'" ></div>
+
+            <div id="size" class="h4 m-b-1 m-t-3">Size</div>
+            <p>Supports various sized step bars.</p>
+            <div class="" ng-include src="'views/styles/steps/size.html'" ></div>
+
+            <div id="colors" class="h4 m-b-1 m-t-3">Colors</div>
+            <p>Colors can be set according to the background color system.</p>
+            <div class="steps w-full" ng-include src="'views/styles/steps/colors.html'" ></div>
+            <div class="steps w-full bg-light" ng-include src="'views/styles/steps/colors.html'" ></div>
+            <div class="steps w-full bg-primary" ng-include src="'views/styles/steps/colors.html'" ></div>
+            <div class="steps w-full bg-info" ng-include src="'views/styles/steps/colors.html'" ></div>
+            <div class="steps w-full bg-warning" ng-include src="'views/styles/steps/colors.html'" ></div>
+            <div class="steps w-full bg-success" ng-include src="'views/styles/steps/colors.html'" ></div>
+            <div class="steps w-full bg-danger" ng-include src="'views/styles/steps/colors.html'" ></div>
+            <div class="steps w-full bg-inverse" ng-include src="'views/styles/steps/colors.html'" ></div>
+            <div class="steps w-full bg-dark" ng-include src="'views/styles/steps/colors.html'" ></div>
+            <div class="steps w-full bg-black" ng-include src="'views/styles/steps/colors.html'" ></div>
+
+            <div id="icons" class="h4 m-b-1 m-t-3">Icons</div>
+            <p>Step indicators support icons to the left of step content.</p>
+            <div class="" ng-include src="'views/styles/steps/icons.html'" ></div>
+
+            <div id="descriptions" class="h4 m-b-1 m-t-3">Descriptions</div>
+            <p>Descriptions can support indicator labels and are place underneath.</p>
+            <div class="" ng-include src="'views/styles/steps/descriptions.html'" ></div>
+
+            <div id="numbered" class="h4 m-b-1 m-t-3">Numbered</div>
+            <p>Steps may be numbered and once complete will display a checkmark icon.</p>
+            <div class="" ng-include src="'views/styles/steps/ordered.html'" ></div>
+
+            <div id="vertical" class="h4 m-b-1 m-t-3">Orientation</div>
+            <p>In addition to horizonal display, indicators may be positioned vertically.</p>
+            <div class="" ng-include src="'views/styles/steps/vertical.html'" ></div>
+
+            <div id="responsive" class="h4 m-b-1 m-t-3">Responsive</div>
+            <p>Both horizontal and vertial indicators are responsive for phones. Horizontal indicators may be set vertically for tablet.</p>
+            <div class="" ng-include src="'views/styles/steps/responsive.html'" ></div>
+
+            <div id="placement" class="h4 m-b-1 m-t-3">Placement</div>
+            <p>Indicators can be placed on the top or bottom container.</p>
+            <div class="" ng-include src="'views/styles/steps/placement.html'" ></div>
+            
+            <div id="grid" class="h4 m-b-1 m-t-3">Grid</div>
+            <p>Steps will automatically fill the avaialble space equally.</p>
+            <div class="" ng-include src="'views/styles/steps/grid.html'" ></div>
+
+            <p id="classes" class="h4 m-b-1 m-t-3">Classes</p>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 20%">Class</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>.steps</code></td>
+                        <td>Indicates placement for step indicators and adds default styling to the container.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.steps-numbered</code></td>
+                        <td>Adds sequential numbering to the steps</td>
+                    </tr>
+                    <tr>
+                        <td><code>.steps-vertical</code></td>
+                        <td>Orients the steps vertically</td>
+                    </tr>
+                    <tr>
+                        <td><code>.steps-fluid</code></td>
+                        <td>Makes step bar full width of the parent container.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.steps-top</code></td>
+                        <td>Attached steps to the top of a container</td>
+                    </tr>
+                    <tr>
+                        <td><code>.steps-bottom</code></td>
+                        <td>Attached steps to the bottom of a container</td>
+                    </tr>
+                    <tr>
+                        <td><code>.steps-sm</code></td>
+                        <td>Sets the height to .8rem</td>
+                    </tr>
+                    <tr>
+                        <td><code>.steps-lg</code></td>
+                        <td>Sets the height to 1.2rem</td>
+                    </tr>
+                    <tr>
+                        <td><code>.steps-noflex</code></td>
+                        <td>Remove flexing from the steps. Steps will align left</td>
+                    </tr>
+                    <tr>
+                        <td><code>.bg-*</code></td>
+                        <td>Use modifier classes to change the appearance of each step by adding <code>.bg-*</code> to the <code>.steps</code> class. You may also apply variations by adding <code>.dk</code>, <code>.dker</code>, <code>.lt</code>, <code>.lter</code> to darken or lighten the base color.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.step</code></td>
+                        <td>Applies default stying to each step</td>
+                    </tr>
+                    <tr>
+                        <td><code>.step-body</code></td>
+                        <td>Indicates placement for step content</td>
+                    </tr>
+                    <tr>
+                        <td><code>.step-title</code></td>
+                        <td>Applies styling to a step title</td>
+                    </tr>
+                    <tr>
+                        <td><code>.step-description</code></td>
+                        <td>Applies styling to a step description</td>
+                    </tr>
+                    <tr>
+                        <td><code>.step-icon</code></td>
+                        <td>Displays and icon to the left of step content</td>
+                    </tr>
+                    <tr>
+                        <td><code>.active</code></td>
+                        <td>Applies highlight styles</td>
+                    </tr>
+                    <tr>
+                        <td><code>.complete</code></td>
+                        <td>Applies checkmark to a completed step</td>
+                    </tr>
+                    <tr>
+                        <td><code>.disabled</code></td>
+                        <td>Disables cursor and dims step indicator.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <aside class="aside-md b-l hidden-md-down nav-sidebar bg-white">
+            <nav class="nav-scroll affix w-full" role="navigation" jumpmenu>
+                <div class="text-muted text-u-c hidden-nav padder m-t-1 m-b-1">On This Page:</div>
+                <ul class="nav nav-main" data-ride="collapse">
+                    <li class="nav-item active">
+                        <a href="javascript:void(0)" data-target="#overview" class="nav-link  active">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" class="nav-link active">Steps Definition</a>
+                        <ul class="nav">
+                          <li class="nav-item">
+                              <a href="javascript:void(0)" data-target="#basic" class="nav-link ">Basic</a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="javascript:void(0)" data-target="#fluid" class="nav-link ">Fluid</a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="javascript:void(0)" data-target="#size" class="nav-link ">Size</a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="javascript:void(0)" data-target="#colors" class="nav-link ">Colors</a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="javascript:void(0)" data-target="#icons" class="nav-link ">Icons</a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="javascript:void(0)" data-target="#descriptions" class="nav-link ">Descriptions</a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="javascript:void(0)" data-target="#numbered" class="nav-link ">Numbered</a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="javascript:void(0)" data-target="#vertical" class="nav-link ">Vertical</a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="javascript:void(0)" data-target="#responsive" class="nav-link ">Responsive</a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="javascript:void(0)" data-target="#placement" class="nav-link ">Placement</a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="javascript:void(0)" data-target="#grid" class="nav-link ">Grid</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" data-target="#classes" class="nav-link ">Classes</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+</div>

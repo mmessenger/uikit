@@ -1,0 +1,101 @@
+<div class="">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="p-x-3">
+            <h1 class="display-5">Dropdowns</h1>
+            <p class="lead">A dropdown allows a user to select a value from a series of options.</p>
+        </div>
+    </div>
+    <div class="hbox stretch">
+        <section class="p-x-3">
+            <div id="dropdown" class="h4 m-b-1 m-t-1">Basic Dropdown</div>
+            <p>A Drop Down is used when the user needs to select from a few item or no more than 25 items. For larger selection list use a drop down with Type Ahead. Dropdown capitalization is sentence case, except when the list displays formal names.</p>
+            <div ng-include src="'views/styles/dropdowns/basic.html'"></div>
+
+            <div id="icons" class="h4 m-b-1 m-t-3">Dropdown With Icons</div>
+            <p>Icons can be included on either the right, left, or both sides of an option.</p>
+            <div ng-include src="'views/styles/dropdowns/icons.html'"></div>
+
+            <div id="positions" class="h4 m-b-1 m-t-3">Dropdown Positioning</div>
+            <p>A dropdown may also be positioned top or bottom.</p>
+            <div ng-include src="'views/styles/dropdowns/positions.html'"></div>
+
+            <div id="submenus" class="h4 m-b-1 m-t-3">Dropdown Submenus</div>
+            <p>A dropdown may have one or more submenus levels and <code>.dropup</code> or <code>.pull-left</code></p>
+            <div ng-include src="'views/styles/dropdowns/submenus.html'"></div>
+
+            <div id="classes" class="h4 m-b-1 m-t-3 p-t-3">Dropdown Classes</div>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th style="width: 200px;">Class</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>.dropdown</code></td>
+                            <td>Initializes dropdown. The target HTML element and dropdown need to be wrapped in this class</td>
+                        </tr>
+                        <tr>
+                            <td><code>.dropdown-toggle</code></td>
+                            <td>Enables dropdown to show on click</td>
+                        </tr>
+                        <tr>
+                            <td><code>.dropdown-menu</code></td>
+                            <td>Identifies the item menu dropped</td>
+                        </tr>
+                        <tr>
+                            <td><code>.dropdown-header</code></td>
+                            <td>Styles a header to label sections of actions</td>
+                        </tr>
+                        <tr>
+                            <td><code>.dropdown-item</code></td>
+                            <td>Initializes dropdown item. Can be a <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.dropdown-divider</code></td>
+                            <td>Separate groups of related menu items with a divider.</td>
+                        </tr>
+                        <tr>
+                            <td><code>.dropdown-submenu</code></td>
+                            <td>Allows for multilevel dropdowns and designates the item as a submenu</td>
+                        </tr>
+                        <tr>
+                            <td><code>.dropup</code></td>
+                            <td>Changes the dropdown to expand upwards when added to the parent container.</td>
+                        </tr>
+                        <tr>
+                            <td><code>.active</code></td>
+                            <td>Applies active state to dropdown item</td>
+                        </tr>
+                        <tr>
+                            <td><code>.disabled</code></td>
+                            <td>Styles dropdown items as disabled.</td>
+                        </tr>
+                        <tr>
+                            <td><code>.arrow</code></td>
+                            <td>Adds and arrow to the designated position on the dropdown. </td>
+                        </tr>
+                        <tr>
+                            <td><code>.arrow.left</code><br><code>.arrow.bottom</code></td>
+                            <td>Positions the arrow above or below the target. The default location is center, but can be combined with <code>.pull-right</code> and <code>.pull-left</code> for left/right alignment</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <aside class="aside-md b-l hidden-md-down nav-sidebar bg-white">
+            <nav class="nav-scroll affix w-full" role="navigation" jumpmenu>
+                <div class="text-muted text-u-c hidden-nav padder m-t-1 m-b-1">On This Page:</div>
+                <ul class="nav nav-main" data-ride="collapse">
+                    <li class="nav-item active"><a href="javascript:void(0)" data-target="#dropdown" class="nav-link active">Basic</a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#icons" class="nav-link">Icons</a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#positions" class="nav-link">Positioning</a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#submenus" class="nav-link">Submenus</a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#classes" class="nav-link">Classes</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+</div>

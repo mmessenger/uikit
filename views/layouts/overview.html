@@ -1,0 +1,185 @@
+<div class="">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="p-x-3">
+            <h1 class="display-5">Layout</h1>
+            <p class="lead">A layout is a template consisting of structural components intended to deliver consistency and cohesiveness among pages in an application. It's commonly defined in terms of spacing, grid systems and sections and contains components such as application bars, navigation and drawers.</p>
+        </div>
+    </div>
+    <div class="hbox stretch">
+        <section class="p-x-3">
+            <div id="principles" class="h4 m-b-1 m-t-1">Design Principles</div>
+            <p>The layouts provided reflect the following core design principals that are key to a quality experience. Before creating or selecting a layout, we encourage you to review these guidelines and adopt them as well.</p>
+            <ul>
+                <li><strong>Have a clear purpose</strong> - Understand what your user is trying to acheive and deliver the information they require.</li>
+                <li><strong>Group related infomation</strong> - Organizing the information according to relationships makes it more efficient for users to work</li>
+                <li><strong>Create a visual hierarchy</strong> - give the most important information the greatest prominence.</li>
+                <li><strong>Provide context</strong> - Keep people aware of where they are. Ensure that the design is self-contained and avoid breaking people out of the experience</li>
+                <li><strong>Simplify and Clarify</strong> - Reduce visual "noise". Create layouts that are lighter, faster and easy to read. Avoid distractions, jargon, and long loading times.</li>
+                <li><strong>Be consistent</strong> - Choose layouts that are predictable and familiar, this creates an experience that is recognizable across products.</li>
+            </ul>
+
+            <div id="configurations" class="h4 m-b-1 m-t-3">Configurations</div>
+            <p>A page layout can take on a number of different configurations, based on the use cases an application aims to support. Provided here are some of the most common layout structures, but you are free to create the layout that works best for you.</p> 
+            <p>Use the layout classes below to create as simple or robust a layout as you need. For guidance on arranging elements follow the layout principles in creating layouts that make the most sense for your application.</p>
+            <figure class="figure p-a-3">
+              <img src="lib/images/docs/layoutExamples.png" class="figure-img img-fluid">
+            </figure>
+
+
+            <div id="examples" class="h4 m-b-1 m-t-3">Example Layout</div>
+            <div class="text-sm-center">
+                <iframe src="views/layouts/layouts/default.html" class="b b-light pos-rlt m-b-3 m-t-2"  width="99%" height="500" style="border-box: border-box;"></iframe>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="h5 m-b-1"><code>.hbox</code> layout</div>
+                    <div class="" style="height:250px">
+                        <div class="app b bg-white">
+                            <section class="hbox">
+                                <aside class="b-r p-a-1">
+                                    <p>aside</p>
+                                </aside>
+                                <section class="p-a-1"><div class="m-b-xl">section</div></section>
+                                <aside class="b-l p-a-1">
+                                    <p>aside</p>
+                                </aside>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="h5 m-b-1"><code>.vbox</code> layout</div>
+                    <div style="height:250px">
+                        <div class="app b bg-white">
+                            <section class="vbox">
+                                <header class="header b-b">
+                                    <p>header</p>
+                                </header>
+                                <section class="p-a-1">section</section>
+                                <footer class="footer b-t">
+                                    <p>footer</p>
+                                </footer>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="h5 m-b-1 m-t-2"><code>.hbox</code> layout with <code>.stretch</code></div>
+                    <div class="" style="height:250px">
+                        <div class="app b bg-white">
+                            <section class="hbox stretch">
+                                <aside class="b-r p-a-1">
+                                    <p>aside</p>
+                                </aside>
+                                <section class="p-a-1"><div class="m-b-xl">section</div></section>
+                                <aside class="b-l p-a-1">
+                                    <p>aside</p>
+                                </aside>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="h5 m-b-1 m-t-2"><code>.vbox</code> layout with <code>.flex</code></div>
+                    <div style="height:250px">
+                        <div class="app b bg-white">
+                            <section class="vbox flex">
+                                <header class="header b-b">
+                                    <p>Flex Content</p>
+                                </header>
+                                <header class="header b-b">
+                                    <p>header</p>
+                                </header>
+                                <section class="">
+                                    <p class="m-a-1">Content</p>
+                                </section>
+                                <footer class="footer b-t">
+                                    <p>footer</p>
+                                </footer>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="classes" class="h4 m-b-1 m-t-3">Classes</div>
+            <p>This table gives you a quick overview of the CSS classes that can be applied to create various layouts.</p>
+            <div class="table-responsive m-t-lg">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th style="width: 150px">Class</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>.app</code></td>
+                            <td>Applied to the <code>&lt;html&gt;</code> tag to create a full-screen application layout</td>
+                        </tr>
+                        <tr>
+                            <td><code>.hbox</code></td>
+                            <td>Horizontal wrapper that can contain columns. To create columns add <code>.aside</code>. Atternately used with the bootstrap grid system.</td>
+                        </tr>
+                        <tr>
+                            <td><code>.stretch</code></td>
+                            <td>Sets the <code>.hbox</code> to 100% height in an application layout</td>
+                        </tr>
+                        <tr>
+                            <td><code>.aside-*</code></td>
+                            <td>Defines a column inside an <code>.hbox</code>. Set the width of the aside using <code>.aside-*</code>. Available sizes are <code>-xxs</code>, <code>-xs</code>, <code>-sm</code>, <code>-md</code>, <code>-lg</code>, <code>-xl</code>, and <code>-xxl</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><code>.vbox</code></td>
+                            <td>Vertical wrapper that can contain a <code>&lt;header&gt;</code>, scrollable <code>&lt;section&gt;</code> and <code>&lt;footer&gt;</code> in an application layout.</td>
+                        </tr>
+                        <tr>
+                            <td><code>.flex</code></td>
+                            <td>Allows for a flexible height of the <code>&lt;header&gt;</code> the <code>&lt;footer&gt;</code> in <code>.vbox</code> layout</td>
+                        </tr>
+                        <tr>
+                            <td><code>.header</code></td>
+                            <td>Sets the height of the <code>&lt;header&gt;</code> tag in a <code>.vbox</code> layout. A <code>.header-md</code> can be applied as well to increase the height of the <code>&lt;header&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>.scrollable</code></td>
+                            <td>Applied to the <code>&lt;section&gt;</code> tag in a <code>.vbox</code> layout. Makes the main content area scrollable</td>
+                        </tr>
+                        <tr>
+                            <td><code>.w-f</code></td>
+                            <td>Applied to the <code>&lt;section&gt;</code> tag in a <code>.vbox</code> layout. Reduces the height of the main content allowing when a <code>&lt;footer&gt;</code> is applied.</td>
+                        </tr>
+                        <tr>
+                            <td><code>.footer</code></td>
+                            <td>Sets the height of the <code>&lt;footer&gt;</code> tag in a <code>.vbox</code> layout. A <code>.header-md</code> can be applied as well to increase the height of the <code>&lt;header&gt;</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="types" class="h4 m-b-1 m-t-3">Layout Types</div>
+            <p>A type refers to either the function of a page — for example, a Home page —or its layout, such as master-detail.</p>
+            <hr class="m-y-2">
+            <div class="h5 m-b-1"><a href="#/layouts/form">Form Layout</a></div>
+            <p>Forms are the primary place where users interact with an application to complete tasks; they allow a user to enter and read data. For example, forms can be used to enter billing or product information when creating an order. Forms can contain Text Fields, Text Areas, Select Dropdowns, Radio Buttons, Checkboxes, File Uploads, Date Pickers, and other methods of input.</p>
+            <hr class="m-y-2">
+            <div class="h5 m-b-1"><a href="#/layouts/masterDetail">Master-Detail Layout</a></div>
+            <p>A master-detail groups together two layout views in a one-to-many relationship. The information on the entire page displays one or more master objects and displays a detail object based on selection of a master. This is often expressed in a Split View consisting of two side-by-side panels: an item list and the selected item’s details but may also include a drilldown or a popup.</p>
+            <hr class="m-y-2">
+            <div class="h5 m-b-1"><a href="#/layouts/splitView">Table Layout</a></div>
+            <p>A table is the most basic format for displaying a list. Each record is represented by a single row of data that begins with the record’s primary field and shows additional fields in subsequent columns. The data is labeled using column headers that can be interactive.</p>
+        </section>
+        <aside class="aside-md b-l hidden-md-down nav-sidebar bg-white">
+            <nav class="nav-scroll affix w-full" role="navigation" jumpmenu>
+                <div class="text-muted text-u-c hidden-nav padder m-t-1 m-b-1">On This Page:</div>
+                <ul class="nav nav-main" data-ride="collapse">
+                        <li class="nav-item active"><a href="javascript:void(0)" data-target="#principles" class="nav-link active">Design Principles</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)" data-target="#configurations" class="nav-link">Configurations</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)" data-target="#examples" class="nav-link">Examples</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)" data-target="#classes" class="nav-link">Classes</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)" data-target="#types" class="nav-link">Types</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+</div>

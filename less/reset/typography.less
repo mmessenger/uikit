@@ -1,0 +1,28 @@
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+  letter-spacing: 0rem;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6{
+  margin: 0;
+}
+
+a {
+  color: @link-color;
+  text-decoration: none;
+  
+	&.disabled {
+		color: rgba(40, 40, 40, 0.3);
+	}
+
+	&:hover,
+	&:focus {
+		color: @link-hover-color;
+		text-decoration: none;
+	}
+}
+
+label{font-weight: normal;}
+
+small, .small{font-size: @font-size-sm;}
+
+.icon-muted{ color: inherit; opacity: 0.5; }

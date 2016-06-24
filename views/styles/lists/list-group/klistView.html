@@ -1,0 +1,116 @@
+<div id="listView" class="list-group border-box" style="box-shadow: none; border: 0;"></div>
+
+<script type="text/x-kendo-template" id="template">
+    <a href="javascript:void(0)" class="list-group-item">
+        <span class="pull-right label label-default">#: department #</span>
+        <span class="avatar avatar-sm img-circle bg-light dker pull-left m-r m-b ng-scope">
+            <img class="img-fluid" src="lib/images/avatar_default.png" alt="">
+        </span>
+        <span class="list-group-item-heading">#: first_name # #: last_name #</span>
+        <span class="list-group-item-text block text-muted">#: title #</span> 
+    </a>
+</script>
+
+
+<script type="text/javascript">
+        $("#listView").kendoListView({
+            dataSource: {
+                data: [{
+                  "id": 1,
+                  "gender": "Female",
+                  "first_name": "Sarah",
+                  "last_name": "Williams",
+                  "email": "swilliams0@instagram.com",
+                  "title": "Sales Representative",
+                  "department": "NA West",
+                  "phone": "1-(214)576-1851",
+                  "status": "Inactive",
+                  "hire-date": "05/29/2015",
+                  "birthdate": "04/18/2015",
+                  "tenure": 16,
+                  "performance": 3,
+                  "comp": 95,
+                  "address": "32 Paget Lane",
+                  "city": "Dallas",
+                  "state": "Texas",
+                  "zip": "75372",
+                  "salary": "$75.41",
+                  "employee_id": 678601,
+                  "ssn": "XXX-XX-9909",
+                  "initials": "SW"
+                }, {
+                  "id": 2,
+                  "gender": "Male",
+                  "first_name": "Gerald",
+                  "last_name": "Harvey",
+                  "email": "gharvey1@dagondesign.com",
+                  "title": "Sales Representative",
+                  "department": "NA East",
+                  "phone": "1-(805)701-0028",
+                  "status": "Active",
+                  "hire-date": "05/19/2015",
+                  "birthdate": "01/07/2015",
+                  "tenure": 3,
+                  "performance": 1,
+                  "comp": 102,
+                  "address": "22 Oak Valley Park",
+                  "city": "Simi Valley",
+                  "state": "California",
+                  "zip": "93094",
+                  "salary": "$58.60",
+                  "employee_id": 161341,
+                  "ssn": "XXX-XX-6658",
+                  "initials": "GH"
+                }, {
+                  "id": 3,
+                  "gender": "Male",
+                  "first_name": "Frank",
+                  "last_name": "Collins",
+                  "email": "fcollins2@tuttocitta.it",
+                  "title": "Sales Representative",
+                  "department": "NA South",
+                  "phone": "1-(408)786-3151",
+                  "status": "Active",
+                  "hire-date": "08/10/2015",
+                  "birthdate": "04/01/2015",
+                  "tenure": 8,
+                  "performance": 3,
+                  "comp": 104,
+                  "address": "001 Cascade Road",
+                  "city": "San Jose",
+                  "state": "California",
+                  "zip": "95155",
+                  "salary": "$104.77",
+                  "employee_id": 342424,
+                  "ssn": "XXX-XX-6365",
+                  "initials": "FC"
+                }, {
+                  "id": 4,
+                  "gender": "Female",
+                  "first_name": "Judy",
+                  "last_name": "Duncan",
+                  "email": "jduncan3@vkontakte.ru",
+                  "title": "Sales Representative",
+                  "department": "NA North",
+                  "phone": "1-(850)742-3088",
+                  "status": "Active",
+                  "hire-date": "01/06/2016",
+                  "birthdate": "02/01/2015",
+                  "tenure": 12,
+                  "performance": 1,
+                  "comp": 85,
+                  "address": "203 Carey Avenue",
+                  "city": "Pensacola",
+                  "state": "Florida",
+                  "zip": "32505",
+                  "salary": "$50.59",
+                  "employee_id": 578835,
+                  "ssn": "XXX-XX-3445",
+                  "initials": "JD"
+                }],
+            },
+            pageable: true,
+            template: kendo.template($("#template").html()),
+        });
+
+</script>

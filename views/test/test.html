@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" class="app" id="ng-app" ng-app="spark" >
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <!--<link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">-->
+    <link rel="stylesheet" href="../../../lib/css/bootstrap.css">
+    <link rel='stylesheet' href='https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans:400,600,700,300,800' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="../../../lib/vendor/kendo/2016.1.125/kendo.common.min.css" type='text/css'>
+    <link rel="stylesheet" href="../../../lib/css/app.css" type='text/css'>
+    <link rel="stylesheet" href="../../../lib/css/override.css" type='text/css'>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-route.js"></script>
+    <script type="text/javascript" src="../../../app/main.js"></script>
+    <script type="text/javascript" src="../../..//lib//vendor/kendo/2016.1.125/kendo.all.min.js"></script>
+    <script type="text/javascript" src="../../../lib/js/app.js"></script>
+    <script type="text/javascript" src="../../../lib/js/tether.js"></script>
+    <script type="text/javascript" src="../../../lib/js/bootstrap.js"></script>
+</head>
+<body>
+<style type="text/css">
+    #gridEx3 {
+        box-shadow: none;
+        border: none;
+        border-radius: none;
+    }
+    
+    #gridEx3 .k-grid-header .k-header>.k-link {
+        font-weight: 700;
+    }
+    
+    #gridEx3 .k-grid-header {
+        background: red;
+        border-color: #ECEEEB;
+    }
+    
+    #gridEx3 th.k-header {
+        border-width: 0 0 1px 0;
+    }
+    
+    #gridEx3 .k-grid-header-wrap {
+        border-right: 0;
+    }
+    
+    #gridEx3.k-grid td {
+        border-width: 0 0 1px 0;
+        border-color: #ECEEEB;
+    }
+    #gridEx3 .k-detail-row{
+        background-color: #54565b;
+        color: #bbbcc0;
+    }
+
+    #gridEx3 .k-master-row{
+        height:60px;
+    }
+    .border-box, .border-box * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+
+        [class^="k-"] {
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+        }
+    }
+</style>
+
+<div id="grid">
+    <script id="rowTemplate" type="text/x-kendo-tmpl">
+        <tr class="k-master-row">
+            <td colspan="2">
+                <h2> #= FirstName # #= LastName # </h2>
+                <div class="k-hierarchy-cell"><a href="\#" class="k-icon k-plus"></a>Expand Collapse</div>
+            </td>
+        </tr>
+    </script>
+
+    <script id="detailTemplate" type="text/x-kendo-tmpl">
+    </script>
+</div>
+
+
+    
+<script type="text/javascript">
+
+$("#grid").kendoGrid({
+     columns:[
+              {
+                  field: "FirstName",
+                  title: "First Name"
+              }
+     ],
+    
+    dataSource: {
+      data: [
+          {
+              FirstName: "Joe",
+              LastName: "Smith",
+              orderID: 1
+          },
+          {
+              FirstName: "Jane",
+              LastName: "Smith",
+              orderID: 2
+          }]
+    },
+    rowTemplate:kendo.template($("#rowTemplate").html()),
+    detailTemplate: kendo.template($("#detailTemplate").html()),
+    detailInit: detailInit,
+});
+
+
+        function detailInit(e) {
+            $("<div/>").appendTo(e.detailCell).kendoGrid({
+                dataSource: {
+                    data: [
+                      {
+                          FirstName: "Hary",
+                          LastName: "Smith",
+                          orderID: 1
+                      },
+                      {
+                          FirstName: "Tom",
+                          LastName: "Smith",
+                          orderID: 2
+                      }
+                    ],
+                    filter: {
+                        field: "orderID",
+                        operator: "eq",
+                        value: e.data.orderID
+                    }
+                }
+            });
+        }
+
+
+
+</script>
+
+</body>
+
+</html>

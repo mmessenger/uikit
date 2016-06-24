@@ -1,0 +1,29 @@
+.btn{
+	border-radius: @border-radius-base;
+	border-width: 1px;
+	> i{
+		&.pull-left,
+		&.pull-right{
+			line-height: 1.3;
+		}
+	}
+}
+
+.btn-link{
+	color: @link-color;
+}
+
+// Use theme corners not bootstrap corners
+.btn-group-vertical > .btn:first-child:not(:last-child){
+	border-top-right-radius: @border-radius-base;
+}
+
+.btn-group-vertical > .btn:last-child:not(:first-child){
+	border-bottom-left-radius: @border-radius-base;
+}
+
+// Fixes the dropup for btn-group that was broke on submenus
+.btn-group.dropup .dropdown-menu {
+	bottom: 100%;
+}
+

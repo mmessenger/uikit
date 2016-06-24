@@ -1,0 +1,69 @@
+{
+  "meta": {
+    "code": 200
+  },
+  "data": [
+    {
+      "title": "Listing Agent",
+      "name": "Dennis Butler",
+      "phone": "770 309 - 9000",
+      "email": "email@domain.com"
+    }, {
+      "title": "Loan Officer",
+      "name": "Sara Lawrence",
+      "phone": "",
+      "email": "email@domain.com"
+    }, {
+      "title": "Mortgage Representative",
+      "name": "Jerry Warren",
+      "phone": "770 309 - 9000",
+      "email": "email@domain.com"
+    }, {
+      "title": "Referring Loan Officer",
+      "name": "Charles Nguyen",
+      "phone": "770 309 - 9000",
+      "email": ""
+    },{
+      "title": "Selling Agent",
+      "name": "Theresa Lewis",
+      "phone": "770 309 - 9000",
+      "email": ""
+    }, {
+      "title": "Title Company",
+      "name": "Roger Peterson",
+      "phone": "770 309 - 9000",
+      "email": "email@domain.com"
+    },
+    {
+      "title": "Listing Agent",
+      "name": "Dennis Butler",
+      "phone": "770 309 - 9000",
+      "email": "email@domain.com"
+    }, {
+      "title": "Loan Officer",
+      "name": "Sara Lawrence",
+      "phone": " ",
+      "email": "dbutler@domain.com"
+    }, {
+      "title": "Mortgage Representative",
+      "name": "Jerry Warren",
+      "phone": "770 309 - 9000",
+      "email": "email@domain.com"
+    }, {
+      "title": "Referring Loan Officer",
+      "name": "Charles Nguyen",
+      "phone": "770 309 - 9000",
+      "email": ""
+    },{
+      "title": "Selling Agent",
+      "name": "Theresa Lewis",
+      "phone": "770 309 - 9000",
+      "email": "email@domain.com"
+    }, {
+      "title": "Title Company",
+      "name": "Roger Peterson",
+      "phone": "770 309 - 9000",
+      "email": "email@domain.com"
+    }
+  ]
+}

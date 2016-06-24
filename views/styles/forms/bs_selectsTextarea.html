@@ -1,0 +1,167 @@
+<form>
+    <div class="form-group row">
+        <label class="col-sm-2 form-control-label text-sm-right">Select</label>
+        <div class="col-sm-10">
+            <select class="form-control">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 form-control-label text-sm-right">Disabled</label>
+        <div class="col-sm-10">
+            <select class="form-control" disabled="">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 form-control-label text-sm-right">Select large</label>
+        <div class="col-sm-10">
+            <select class="form-control form-control-lg">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 form-control-label text-sm-right">Select small</label>
+        <div class="col-sm-10">
+            <select class="form-control form-control-sm">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 form-control-label text-sm-right">Custom select</label>
+        <div class="col-sm-10">
+            <select class="c-select">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 control-label">Dropdown select</label>
+        <div class="col-sm-10">
+            <div class="btn-group m-r">
+                <button data-toggle="dropdown" class="btn btn-default dropdown-toggle"> <span class="dropdown-label">Option1</span> </button>
+                <ul class="dropdown-menu dropdown-select">
+                    <li class="dropdown-item active">
+                        <a href="javascript:void(0)" class="active">
+                            <input type="radio" name="d-s-r" checked="">Option1</a>
+                    </li>
+                    <li class="dropdown-item ">
+                        <a href="javascript:void(0)">
+                            <input type="radio" name="d-s-r">Option2</a>
+                    </li>
+                    <li class="dropdown-item ">
+                        <a href="javascript:void(0)">
+                            <input type="radio" name="d-s-r">Option3</a>
+                    </li>
+                    <li class="dropdown-item disabled">
+                        <a href="javascript:void(0)">
+                            <input type="radio" name="d-s-r" disabled="">I'm disabled</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-group m-r">
+                <button data-toggle="dropdown" class="btn btn-default dropdown-toggle"> <span class="dropdown-label" data-placeholder="Please select">Please select</span> </button>
+                <ul class="dropdown-menu dropdown-select">
+                    <li class="dropdown-item ">
+                        <a href="javascript:void(0)">
+                            <input type="checkbox" name="d-s-c-1">Option1</a>
+                    </li>
+                    <li class="dropdown-item ">
+                        <a href="javascript:void(0)" class="">
+                            <input type="checkbox" name="d-s-c-2">Option2</a>
+                    </li>
+                    <li class="dropdown-item ">
+                        <a href="javascript:void(0)">
+                            <input type="checkbox" name="d-s-c-3">Option3</a>
+                    </li>
+                    <li class="dropdown-item ">
+                        <a href="javascript:void(0)">
+                            <input type="checkbox" name="d-s-c-4">Option4</a>
+                    </li>
+                    <li class="dropdown-item ">
+                        <a href="javascript:void(0)">
+                            <input type="checkbox" name="d-s-c-5">Option5</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="inline v-middle">
+
+                <!--Begin add margin to the top of the following input group to add spacing between the prior dropdowns -->
+                <div class="input-group input-w-lg padder-v">
+                    <!--End add margin to the top of the following input group to add spacing between the prior dropdowns -->
+
+                    <input type="text" id="appendedInput" class="form-control">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown"> <span class="dropdown-label">USD</span> <span class="caret"></span> </button>
+                        <ul class="dropdown-menu dropdown-select pull-right">
+                            <li class="dropdown-item active">
+                                <a href="javascript:void(0)" class="active">
+                                    <input type="radio" value="USD" name="pay_unit" checked="">USD</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="javascript:void(0)" class="">
+                                    <input type="radio" value="GBP" name="pay_unit">GBP</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 form-control-label text-sm-right">Multiple</label>
+        <div class="col-lg-4">
+            <select multiple="" class="form-control">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 form-control-label text-sm-right">Textarea</label>
+        <div class="col-sm-10">
+            <textarea class="form-control" rows="5"></textarea>
+        </div>
+    </div>
+
+
+    <div class="form-group row">
+        <label class="col-sm-2 form-control-label text-sm-right">File input</label>
+        <div class="col-sm-10">
+            <label class="file">
+                <input type="file" id="file">
+                <span class="file-custom"></span>
+            </label>
+        </div>
+    </div>
+
+</form>

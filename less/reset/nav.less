@@ -1,0 +1,75 @@
+.nav{
+  > .nav-item{
+    > .nav-link{
+    }
+  }
+  &.nav-sm{
+    > .nav-item > .nav-link{
+      padding: 6px 8px;
+    }
+  }
+  .avatar{
+    width: 30px;
+    margin-top: -5px;
+    margin-right: 5px;
+  }
+}
+
+.nav-pills{
+  &.no-radius {
+    > .nav-item{
+      > .nav-link {
+        border-radius: 0;
+      }
+    }
+  }
+  .nav-link {
+    &:hover,
+    &:focus{
+      background-color: lighten(@brand-light, 1.5%);
+    }
+    &.active,
+    &.active:focus,
+    &.active:hover {
+      color: #fff !important;
+      background-color: @brand-primary;
+    }
+  }
+  .nav-item {
+    &.open {
+      .nav-link,
+      .nav-link:focus,
+      .nav-link:hover {
+        color: #fff !important;
+        background-color: @brand-primary;
+      }
+    }
+  }
+}
+
+
+.nav-tabs{
+  border-color: @border-color;
+  > .nav-item{
+    > a{     
+      border-radius: @card-border-radius @card-border-radius 0 0;      
+      border-bottom-color: @border-color !important;
+    }
+    &.active > a{
+      border-color: @border-color !important;
+      border-bottom-color: #fff !important;
+    }
+    > .nav-link.active{
+      border-color: @border-color !important;
+      border-bottom-color: #fff !important;
+    }
+  }
+  .nav-link {
+    &.disabled,
+    &.disabled:focus,
+    &.disabled:hover {
+      color: inherit;
+      opacity: .5;
+    }
+  }
+}

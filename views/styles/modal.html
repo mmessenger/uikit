@@ -1,0 +1,259 @@
+<div class="">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="p-x-3">
+            <h1 class="display-5">Modal</h1>
+            <p class="lead">Modals are used to display content in a layer above the app. This paradigm is used in cases such as the creation or editing of a record, as well as various types of messaging and wizards.</p>
+        </div>
+    </div>
+    <div class="hbox stretch">
+
+        <!--Begin Section-->
+        <section class="p-x-3">
+            <div id="overview" class="h4 m-b-1 m-t-1">Overview</div>
+            <p>A modal dialog is a small window that communicates information to the user and prompt them for a response. Dialog boxes are classified as "modal" or "modeless", depending on whether or not they block interaction with the page that initiated the dialog. Table below contains basic modal dialog examples. Click View button to run modal examples.</p>
+
+            <!--Begin Static Example -->
+            <div id="basic" class="h4 m-b-xs m-t-3">Basic Modal</div>
+            <p class="m-b-md">Basic modal dialog with <code>header</code>, <code>body</code> and <code>footer</code> areas. Default examples displays: header - contains a title and a close button; footer - contains buttons and body contains static or dynamic content</p>
+            <div class="" ng-include src="'views/styles/modal/static_example.html'" ></div>
+            <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a m-b-2" ng-include src="'views/styles/modal/static_example.html'" maketext></pre>
+            <!--End Static Example -->
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th style="width: 20%">Type</th>
+                        <th></th>
+                        <th>Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>modal-middle</code></td>
+                        <td><button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal_middle">View</button></td>
+                        <td>Vertically center your modals</td>
+                    </tr>
+                    <tr>
+                        <td>Modal with icons</td>
+                        <td><button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal_iconified">View</button></td>
+                        <td>Modal with icons added to the specified elements: heading title, footer control buttons and text inside modal body</td>
+                    </tr>
+                    <tr>
+                        <td>Disable backdrop</td>
+                        <td><button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal_static" data-backdrop="static" data-keyboard="false" >View</button></td>
+                        <td>If you would like to a modal that doesn't cloce on an outside click add <code>data-backdrop="static"</code>to the button.</td>
+                    </tr>
+                    <tr>
+                        <td>Remove backdrop</td>
+                        <td><button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal_backdrop" data-backdrop="false" data-keyboard="false" >View</button></td>
+                        <td>Remove the modal backdrop element using <code>data-backdrop="false"</code>. This also remove the backdrop click.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div id="size" class="h4 m-b-xs m-t-3">Size</div>
+            <p class="m-b-1">You can control the widths of modals. Modal height will expand to fit the content. If there is overflow the modal will scroll to display the hidden content.</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th style="width: 20%">Type</th>
+                        <th></th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>modal-xs</code></td>
+                        <td><button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal_mini">View</button></td>
+                        <td>Modal in mini size. Mini modal width is <code>300px</code>. To use, add <code>modal-xs</code> class to <code>.modal-dialog</code> container</td>
+                    </tr>
+                    <tr>
+                        <td><code>modal-sm</code></td>
+                        <td><button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal_small">View</button></td>
+                        <td>Modal in small size. Small modal width is <code>400px</code>. To use, add <code>modal-sm</code> class to <code>.modal-dialog</code> container</td>
+                    </tr>
+                    <tr>
+                        <td>Default</td>
+                        <td><button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal_default">View</button>
+                        <td>Modal in default size. Default modal width is <code>600px</code>. Since this is a default size, modal markup doesn't require any additional sizing classes</td>
+                    </tr>
+                    <tr>
+                        <td><code>modal-lg</code></td>
+                        <td><button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal_large">View</button></td>
+                        <td>Modal in large size. Large modal width is <code>900px</code>. To use, add <code>modal-lg</code> class to <code>.modal-dialog</code> container</td>
+                    </tr>
+                    <tr>
+                        <td><code>modal-xl</code></td>
+                        <td><button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal_xlarge">View</button></td>
+                        <td>Modal in extra large size. Extra large modal width is <code>1180px</code>. To use, add <code>modal-xl</code> class to <code>.modal-dialog</code> container</td>
+                    </tr>
+                    <tr>
+                        <td><code>modal-full</code></td>
+                        <td><button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal_full">View</button></td>
+                        <td>Modal in full width size. This modal has <code>94%</code> width of the window. To use, add <code>modal-full</code> class to <code>.modal-dialog</code> container</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div id="color" class="h4 m-b-xs m-t-3">Color</div>
+            <p class="m-b-1">Change the color of a modal header, footer or the entire modal. To use, add any <a href="#/styles/colors">color class</a> from the color system to the <code>.modal-header</code> or <code>.modal-content</code>.</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th style="width: 20%">Type</th>
+                        <th></th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Primary Header</td>
+                        <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_primary_header">View</button></td>
+                        <td>To use, add <code>.bg-primary</code> class to the <code>.modal-header</code> container</td>
+                    </tr>
+                    <tr>
+                        <td>Danger Header</td>
+                        <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal_danger_header">View</button></td>
+                        <td>To use, add <code>.bg-danger</code> class to the <code>.modal-header</code> container</td>
+                    </tr>
+                    <tr>
+                        <td>Success Header</td>
+                        <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal_success_header">View</button></td>
+                        <td>To use, add <code>.bg-success</code> class to the <code>.modal-header</code> container</td>
+                    </tr>
+                    <tr>
+                        <td>Warning Header</td>
+                        <td><button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal_warning_header">View</button></td>
+                        <td>To use, add <code>.bg-warning</code> class to the <code>.modal-header</code> container</td>
+                    </tr>
+                    <tr>
+                        <td>Info Header</td>
+                        <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal_info_header">View</button></td>
+                        <td>To use, add <code>.bg-info</code> class to the <code>.modal-header</code> container</td>
+                    </tr>
+                    <tr>
+                        <td>Primary Background</td>
+                        <td><button type="button" class="btn btn-primary rounded" data-toggle="modal" data-target="#modal_primary">View</button></td>
+                        <td>To use, add <code>.bg-primary</code> class to the <code>.modal-content</code> container</td>
+                    </tr>
+                    <tr>
+                        <td>Danger Background</td>
+                        <td><button type="button" class="btn btn-danger rounded" data-toggle="modal" data-target="#modal_danger">View</button></td>
+                        <td>To use, add <code>.bg-danger</code> class to the <code>.modal-content</code> container</td>
+                    </tr>
+                    <tr>
+                        <td>Success Background</td>
+                        <td><button type="button" class="btn btn-success rounded" data-toggle="modal" data-target="#modal_success">View</button></td>
+                        <td>To use, add <code>.bg-success</code> class to the <code>.modal-content</code> container</td>
+                    </tr>
+                    <tr>
+                        <td>Warning Background</td>
+                        <td><button type="button" class="btn btn-warning rounded" data-toggle="modal" data-target="#modal_warning">View</button></td>
+                        <td>To use, add <code>.bg-warning</code> class to the <code>.modal-content</code> container</td>
+                    </tr>
+                    <tr>
+                        <td>Info Background</td>
+                        <td><button type="button" class="btn btn-info rounded" data-toggle="modal" data-target="#modal_info">View</button></td>
+                        <td>To use, add <code>.bg-info</code> class to the <code>.modal-content</code> container</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div id="dialog" class="h4 m-b-xs m-t-3">Dialogs</div>
+            <p class="m-b-1">A dialog is a window that requires users to focus on a task that is related to a primary function.</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th style="width: 20%">Type</th>
+                        <th></th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Confirmation</td>
+                        <td><button type="button" class="btn btn-warning-outline" data-toggle="modal" data-target="#dialog_confirm" data-backdrop="static" >View</button></td>
+                        <td>A warning message.</td>
+                    </tr>
+                    <tr>
+                        <td>Success</td>
+                        <td><button type="button" class="btn btn-success-outline" data-toggle="modal" data-target="#dialog_success" data-backdrop="static" >View</button></td>
+                        <td>A success message.</td>
+                    </tr>
+                    <tr>
+                        <td>Error</td>
+                        <td><button type="button" class="btn btn-danger-outline" data-toggle="modal" data-target="#dialog_error" data-backdrop="static" >View</button></td>
+                        <td>A error message.</td>
+                    </tr>
+                    <tr>
+                        <td>Info</td>
+                        <td><button type="button" class="btn btn-info-outline" data-toggle="modal" data-target="#dialog_info" data-backdrop="static" >View</button></td>
+                        <td>A info message.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div id="window" class="h4 m-b-xs m-t-3">Window</div>
+            <p class="m-b-1">Leverage data binding and modal options inside a Kendo window.</p>
+            <button id="openWindowBtn" type="button" class="btn btn-default m-b-3">Try it out</button>
+            <div class="" ng-include src="'views/styles/modal/kendo/k-window.html'" ></div>
+
+            
+            <div ng-include src="'views/styles/modal/icons.html'" ></div>
+            <div ng-include src="'views/styles/modal/static_backdrop.html'" ></div>
+            <div ng-include src="'views/styles/modal/nobackdrop.html'" ></div>
+            <div ng-include src="'views/styles/modal/middle.html'" ></div>
+            <div ng-include src="'views/styles/modal/basic.html'" ></div>
+            <div ng-include src="'views/styles/modal/size/modal_mini.html'" ></div>
+            <div ng-include src="'views/styles/modal/size/modal_small.html'" ></div>
+            <div ng-include src="'views/styles/modal/size/modal_large.html'" ></div>
+            <div ng-include src="'views/styles/modal/size/modal_xlarge.html'" ></div>
+            <div ng-include src="'views/styles/modal/size/modal_full.html'" ></div>
+            <div ng-include src="'views/styles/modal/colors/primary_header.html'" ></div>
+            <div ng-include src="'views/styles/modal/colors/danger_header.html'" ></div>
+            <div ng-include src="'views/styles/modal/colors/success_header.html'" ></div>
+            <div ng-include src="'views/styles/modal/colors/warning_header.html'" ></div>
+            <div ng-include src="'views/styles/modal/colors/info_header.html'" ></div>
+            <div ng-include src="'views/styles/modal/colors/primary.html'" ></div>
+            <div ng-include src="'views/styles/modal/colors/danger.html'" ></div>
+            <div ng-include src="'views/styles/modal/colors/success.html'" ></div>
+            <div ng-include src="'views/styles/modal/colors/warning.html'" ></div>
+            <div ng-include src="'views/styles/modal/colors/info.html'" ></div>
+            <div ng-include src="'views/styles/modal/dialogs/confirm.html'" ></div>
+            <div ng-include src="'views/styles/modal/dialogs/success.html'" ></div>
+            <div ng-include src="'views/styles/modal/dialogs/error.html'" ></div>
+            <div ng-include src="'views/styles/modal/dialogs/info.html'" ></div>
+
+        </section>
+        <!--End section-->
+
+        <!-- Begin aside left navigation -->
+        <aside class="aside-md b-l hidden-md-down nav-sidebar bg-white">
+            <nav class="nav-scroll affix w-full" role="navigation" jumpmenu>
+                <div class="text-muted text-u-c hidden-nav padder m-t-1 m-b-1">On This Page:</div>
+                <ul class="nav nav-main" data-ride="collapse">
+                    <li class="nav-item active">
+                        <a href="javascript:void(0)" data-target="#overview" class="nav-link  active">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" data-target="#basic" class="nav-link">Basic</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" data-target="#size" class="nav-link ">Sizing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" data-target="#color" class="nav-link ">Colors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" data-target="#dialog" class="nav-link ">Dialogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" data-target="#window" class="nav-link ">Kendo Window</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <!-- End left navigation -->
+    </div>
+
+</div>

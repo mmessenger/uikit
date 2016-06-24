@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en" class="app" id="ng-app" ng-app="spark">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <!--<link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">-->
+    <link rel="stylesheet" href="../../../lib/css/bootstrap.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="../../../lib/vendor/kendo/2016.1.125/kendo.common.min.css" type='text/css'>
+    <link rel="stylesheet" href="../../../lib/css/app.css" type='text/css'>
+    <link rel="stylesheet" href="../../../lib/css/override.css" type='text/css'>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-route.js"></script>
+    <script type="text/javascript" src="../../../app/main.js"></script>
+    <script type="text/javascript" src="../../..//lib//vendor/kendo/2016.1.125/kendo.all.min.js"></script>
+    <script type="text/javascript" src="../../../lib/js/app.js"></script>
+    <script type="text/javascript" src="../../../lib/js/tether.js"></script>
+    <script type="text/javascript" src="../../../lib/js/bootstrap.js"></script>
+</head>
+
+<body>
+    <section class="vbox">
+        <header class="header p-a-0 b-b b-light navbar navbar-fixed-top-xs">
+            <nav class="navbar navbar-header navbar-light bg-white p-a-0 text-xs-center">
+                <ul class="nav navbar-nav pull-xs-right">
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" class="nav-link"><i class="fa fa-search fa-fw"></i></a>
+                    </li>
+                    <li class="nav-item hidden-sm-down">
+                        <a href="javascript:void(0)" class="nav-link">
+                            <span class="avatar img-circle">
+                            <img class="img-fluid" src="lib/images/avatar_default.jpg" alt="">
+                        </span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav pull-xs-left hidden-md-up">
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" class="nav-link navbar-toggler" data-toggle="class:nav-off-screen,open" data-target="#navbarSideBar,html">
+                            <i class="fa fa-bars fa-fw "></i>
+                        </a>
+                    </li>
+                </ul>
+                <a href="javascript:void(0)" class="navbar-brand aside-sm hidden-sm-down m-l m-r" data-toggle="fullscreen"> <img src="../../../lib/images/logo_dark.png" class="img-fluid pull-left"></a>
+                <a href="javascript:void(0)" class="navbar-brand w-48 hidden-md-up pull-xs-none" data-toggle="fullscreen"> <img src="../../../lib/images/logo_dark_sm.png" class="img-fluid"></a>
+            </nav>
+        </header>
+        <section id="content" class="">
+            <section class="hbox stretch">
+                <aside class="aside-md nav-sidebar nav-xs bg-dark hidden-sm-down b-r" id="navbarSideBar">
+                    <section class="vbox">
+                        <section class="scrollable">
+                            <nav class="" role="navigation">
+                                <ul class="nav" data-ride="collapse">
+                                    <li class=" nav-item">
+                                        <a href="javascript:void(0)" class="nav-link auto">
+                                            <i class="fa fa-home fa-fw "></i> Home
+                                        </a>
+                                    </li>
+                                    <li class="active nav-item">
+                                        <a href="javascript:void(0)" class="nav-link auto">
+                                            <i class="fa fa-file-text-o fa-fw "></i> Orders
+                                        </a>
+                                    </li>
+                                    <li class=" nav-item">
+                                        <a href="javascript:void(0)" class="nav-link auto">
+                                            <i class="fa fa-tags fa-fw "></i> Inventory
+                                            <b class="label bg-light pull-right hidden-nav">NEW</b>
+                                        </a>
+                                    </li>
+                                    <li class=" nav-item">
+                                        <a href="javascript:void(0)" class="nav-link auto">
+                                            <i class="fa fa-dollar fa-fw "></i> Invoicing
+                                            <b class="label label-pill bg-danger pull-right hidden-nav">4</b>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="javascript:void(0)" class="nav-link auto">
+                                            <i class="fa fa-user fa-fw "></i> Employees
+                                        </a>
+                                    </li>
+                                    <li class=" nav-item">
+                                        <a href="javascript:void(0)" class="nav-link auto">
+                                            <i class="fa fa-bar-chart fa-fw "></i> Reports
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </section>
+                    </section>
+                </aside>
+                <section>
+                    <section class="vbox">
+                        <section class="scrollable bg-light dker">
+                            <div class="card card-block m-a-2 p-a-0 animated fadeInUp no-radius no-border box-shadow">
+                                <header class="header p-a-0">
+
+                                    <div class="bg-info-ltest lt p-a-2">
+                                        <div class="btn-group pull-sm-right m-b-1">
+                                            <div class="btn-group" role="group">
+                                                <a href="javascript:void(0)" class="btn btn-secondary  btn-icon dropdown-toggle" data-toggle="dropdown"></a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a class="dropdown-item" href="javascript:void(0)">Set to Done</a>
+                                                    <a class="dropdown-item" href="javascript:void(0)">Print</a>
+                                                    <a class="dropdown-item" href="javascript:void(0)">Cancel Order</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="javascript:void(0)" class="btn btn-secondary pull-sm-right m-b-1 m-r-xs">Create Invoice</a>
+                                        <a href="javascript:void(0)" class="btn btn-secondary pull-sm-right m-b-1 m-r-xs">Save</a>
+                                        <div class="media m-a-0">
+                                            <a href="javascript:void(0)" class="m-b-xs text-sm inline"><i class="fa fa-angle-left"></i> Back to Orders</a>
+                                            <div class="media-left">
+                                                <span class="fa-stack fa-2x">
+                                                <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                                                <i class="fa fa-file-text-o fa-stack-1x fa-inverse"></i>
+                                            </span>
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="text-muted text-u-c">Order</div>
+                                                <h3 class="media-heading">#12345622</h3>
+                                            </div>
+                                        </div>
+                                        <div class="row m-t-1 padder-h collapse" id="orderHeader">
+                                            <div class="col-sm-3 ">
+                                                <div class="text-muted text-sm">CUSTOMER</div>
+                                                <p class="text-ellipsis text-dark">Aimbu Inc</p>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="text-muted text-sm">BILLING ADDRESS</div>
+                                                <address class="text-dark">700 Main St. Suite 600<br> 
+                                                San Francisco, CA 94107 </address>
+                                            </div>
+                                            <div class="col-sm-3 ">
+                                                <div class="text-muted text-sm">ORDER DATE</div>
+                                                <p class="text-ellipsis text-dark">01/01/2016</p>
+                                            </div>
+                                            <div class="col-sm-3 ">
+                                                <a href="javascript:void(0)">
+                                                    <span class="avatar avatar-sm img-circle pull-left m-r-1">
+                                                    <img class="img-fluid" src="lib/images/avatar.jpg" alt="">
+                                                </span>
+                                                    <span class="clear">
+                                                    <span class="text-muted text-sm block">SALES PERSON</span>
+                                                    <p class="text-ellipsis text-dark">Linda Webb</p>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-xs-center">
+                                        <span class="bg-light lt inline" data-toggle="collapse" data-target="#orderHeader">
+                                        <button class="btn btn-link btn-sm bg-empty padder-h l-h-1x" data-toggle="button" aria-pressed="false">
+                                            <i class="fa fa-angle-down text-active"></i>
+                                            <i class="fa fa-angle-up text"></i>
+                                        </button>
+                                    </span>
+                                    </div>
+
+                                </header>
+                                <form class="form-horizontal padder-lg m-t-xl">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group row m-b-xs">
+                                                <label class="col-sm-3 form-control-label">Customer</label>
+                                                <div class="col-sm-9">
+                                                    <input id="customers" class="input-sm no-padder" style="width: 100%" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group row m-b-xs">
+                                                <label class="col-sm-3 form-control-label">Shipping Address</label>
+                                                <div class="col-sm-9">
+                                                    <textarea class="input-sm form-control" rows="3" disabled>1 Infinite Loop 95014 Cupertino, CA United States
+                                                    </textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row m-b-xs">
+                                                <label class="col-sm-3 form-control-label">Ship Policy</label>
+                                                <div class="col-sm-9">
+                                                    <input id="shipping" class="form-control input-sm" class="form-control" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group row m-b-xs">
+                                                <label class="col-sm-3 form-control-label">Sales Person</label>
+                                                <div class="col-sm-9">
+                                                    <input id="salesPeople" class="input-sm no-padder" style="width: 100%" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group row m-b-xs">
+                                                <label class="col-sm-3 form-control-label">Delivery Method</label>
+                                                <div class="col-sm-9">
+                                                    <select id="deliveryMethod" class="input-sm no-padder" style="width: 100%;">
+                                                        <option>Free Delivery</option>
+                                                        <option>Normal Delivery Method</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row m-b-xs">
+                                                <label class="col-sm-3 form-control-label">Term</label>
+                                                <div class="col-sm-5">
+                                                    <select id="terms" class="input-sm no-padder" style="width: 100%;">
+                                                        <option>Net 10</option>
+                                                        <option>Net 15</option>
+                                                        <option>Net 30</option>
+                                                        <option>Net 60</option>
+                                                        <option>Due on Receipt</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row m-b-xs">
+                                                <label class="col-sm-3 form-control-label">Order Date</label>
+                                                <div class="col-sm-5">
+                                                    <input id="orderDate" class="input-sm no-padder" style="width: 100%" disabled/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row m-b-xs">
+                                                <label class="col-sm-3 form-control-label">PO Number</label>
+                                                <div class="col-sm-5">
+                                                    <input id="poNumber" class="form-control input-sm" style="width: 100%" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="m-t-2 padder-lg ">
+                                    <div id="products"></div>
+                                </div>
+                                <div class="row padder-lg p-b-2">
+                                    <div class="col-sm-6">
+                                        <label class="font-bold m-t">Notes</label>
+                                        <textarea class="form-control" rows="4"></textarea>
+                                    </div>
+                                    <div class="col-sm-2"></div>
+                                    <div class="col-sm-4">
+                                        <table class="table table-sm m-t-xl m-b-none">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-xs-right"><strong>Subtotal:</strong></td>
+                                                    <td class="text-xs-right" width="120">$1607.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-xs-right no-border"><strong>Shipping:</strong></td>
+                                                    <td class="text-xs-right" width="120">$0.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-xs-right no-border"><strong>Total:</strong></td>
+                                                    <td class="text-xs-right h4" width="120"><strong>$1607.00</strong></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+</body>
+
+<script type="text/x-kendo-template" id="template">
+    <div class="toolbar">
+        <button class="k-grid-add btn btn-secondary"><i class="i i-plus2"></i> New Sales Line</button>
+    </div>
+</script>
+<script>
+    var dropDown = $("#customers").kendoDropDownList({
+        filter: "startswith",
+        dataTextField: "custName",
+        dataValueField: "custName",
+        dataSource: {
+            transport: {
+                read: {
+                    url: "../../../lib/json/customers.json",
+                    dataType: "json"
+                }
+            },
+            schema: {
+                data: "data"
+            }
+        }
+    });
+
+    var dropDown = $("#salesPeople").kendoDropDownList({
+        filter: "startswith",
+        dataTextField: "salesPerson",
+        dataValueField: "salesPerson",
+        enable: false,
+        dataSource: {
+            transport: {
+                read: {
+                    url: "../../../lib/json/salesPeople.json",
+                    dataType: "json"
+                }
+            },
+            schema: {
+                data: "data"
+            }
+        }
+    });
+
+    var dropdownlist = $("#customers").data('kendoDropDownList')
+    var dropdownlist = $("#salesPeople").data('kendoDropDownList')
+
+    $("#terms").kendoDropDownList({
+        enable: false
+    });
+    $("#deliveryMethod").kendoDropDownList();
+    $("#orderDate").kendoDatePicker();
+
+    $("#products").kendoGrid({
+        columns: [
+            {
+                field: "product",
+                title: "Product",
+                width: "180px",
+                editor: productDropDownEditor,
+                template: "#=product#"
+            },
+            {
+                field: "description",
+                title: "Description",
+            },
+            {
+                field: "qtyOrdered",
+                title: "Quantity",
+                width: "100px"
+            },
+            {
+                field: "delivered",
+                title: "Delivered",
+                width: "100px"
+            },
+            {
+                field: "uom",
+                title: "UOM",
+                width: "60px"
+            },
+            {
+                field: "unitPrice",
+                title: "Unit Price",
+                format: "{0:c}",
+                width: "100px"
+            },
+            {
+                field: "discount",
+                title: "Discount",
+                format: "{0:p}",
+                width: "100px"
+            },
+            {
+                field: "subtotal",
+                title: "Subtotal",
+                format: "{0:c}",
+                width: "100px"
+            },
+            {
+                command: [{
+                    name: "destroy",
+                    template: "<a class='btn btn-default btn-icon btn-sm k-grid-destroy btn-empty b-a m-l-xs' href='' style='min-width:16px;'><span class='fa fa-trash-o fa-lg'></span></a>",
+                    width: 40
+                }, ],
+                width: "60px"
+            }
+            ],
+        editable: true,
+        toolbar: kendo.template($("#template").html()),
+        //toolbar: ["create"],
+        dataSource: {
+            type: "json",
+            transport: {
+                read: {
+                    url: "../../../lib/json/orderDetail.json",
+                    dataType: "json",
+                }
+            },
+            schema: {
+                data: "data",
+                total: "data.length",
+                model: {
+                    id: "orderNum",
+                    fields: {
+                        product: {
+                            editable: true,
+                            nullable: true
+                        },
+                        qtyOrdered: {
+                            type: "number",
+                            validation: {
+                                required: true,
+                                min: 1
+                            },
+                            defaultValue: 1
+                        },
+                        delivered: {
+                            teditable: false,
+                            ype: "number",
+                            defaultValue: 0
+                        },
+                        uom: {
+                            editable: false,
+                            nullable: false,
+                            defaultValue: "Unit(s)"
+                        },
+                        unitPrice: {
+                            type: "number",
+                            validation: {
+                                required: true,
+                                min: 1
+                            }
+                        },
+                        discount: {
+                            type: "number",
+                            validation: {
+                                required: true,
+                                min: 1
+                            }
+                        },
+                        subtotal: {
+                            type: "number",
+                            editable: false,
+                            nullable: false
+                        },
+                    }
+                }
+            },
+            sort: {
+                field: "product",
+                dir: "asc"
+            }
+        },
+        scrollable: true,
+        sortable: true,
+        selectable: false,
+        filterable: false,
+        pageable: false,
+    });
+
+    function productDropDownEditor(container, options) {
+        $('<input required data-text-field="product" data-value-field="product" data-bind="value:' + options.field + '"/>')
+            .appendTo(container)
+            .kendoDropDownList({
+                autoBind: false,
+                dataSource: {
+                    type: "json",
+                    transport: {
+                        read: {
+                            url: "../../../lib/json/products.json",
+                            dataType: "json",
+                        },
+                    },
+                    schema: {
+                        data: "data",
+                        total: "data.length",
+                        model: {
+                            id: "productID",
+                            fields: {
+                                productID: {
+                                    editable: false,
+                                    nullable: true
+                                },
+                                product: {
+                                    validation: {
+                                        required: true
+                                    }
+                                },
+                                unitPrice: {
+                                    type: "number",
+                                    validation: {
+                                        required: true,
+                                        min: 1
+                                    }
+                                }
+                            }
+                        }
+                    },
+                }
+            });
+    }
+</script>
+
+</html>

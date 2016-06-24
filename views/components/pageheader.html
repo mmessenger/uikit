@@ -1,0 +1,96 @@
+<div class="">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="p-x-3">
+            <h1 class="display-5">Page Header</h1>
+            <p class="lead">Page Headers, displayed at the top of several pages, are used to provide a high-level overview for the page. Generaly composed of multiple components, page headers can include a heading, details, snapshots, and a minimal set of primary actions or controls related to the content.</p>
+        </div>
+    </div>
+    <div class="hbox stretch">
+        <section class="p-x-3">
+            <div id="overview" class="h4 m-b-1 m-t-1">Overview</div>
+            <p>Text</p>
+            <div class="h6 font-bold m-t-2 m-b-1">When to Use:</div>
+            <ul>
+                <li>On each main-level module screen of the application to provide positional cues and a sense of place.</li>
+                <li>When there's a relevant insight to help enhace a users understanding of the content.</li>
+                <li>When the user needs to act on the entire page content.</li>
+            </ul>
+
+            <!-- Dashboard Header -->
+            <p id="dashboard" class="h4 m-b-1 m-t-3">Dashboard Header</p>
+            <p>The page header is located at the top of a dashboard screen. It includes the dashboard title, a short description, the last updated time and date, refresh and a method for editing the content displayed on the dashboard.</p>
+            <div class="" ng-include src="'views/components/pageheader/dashboard.html'"></div>
+            <p class="h6 font-bold m-t-1 m-b-1">Example markup</p>
+            <pre class="code pre-scrollable p-a-1 b-a bg-light" ng-include src="'views/components/pageheader/dashboard.html'" maketext></pre>
+
+            <!-- Module Header -->
+            <p id="module" class="h4 m-b-1 m-t-3">Module Header</p>
+            <p>The page header is located at the top of every main application module (e.g. customers, inventory, sales). It includes the module title, a short description, the ability to toggle views as well as the context of the module, and other related actions.</p>
+            <div class="" ng-include src="'views/components/pageheader/module.html'"></div>
+            <div class="h6 font-bold m-t-2 m-b-1">Examples</div>
+            <div class="" ng-include src="'views/components/pageheader/moduleExamples.html'"></div>
+            <p class="h6 font-bold m-t-1 m-b-1">Example markup</p>
+            <pre class="code pre-scrollable p-a-1 b-a bg-light" ng-include src="'views/components/pageheader/module.html'" maketext></pre>
+
+            <!-- Record Header -->
+            <p id="record" class="h4 m-b-1 m-t-3">Record Header</p>
+            <p>The page header is displayed when the user selects a single record and is located at the top of record home. It includes the record title, navigation back to the module list and other related actions. In addition the record header contains a horizonal row containing details or snapshots related to the record. Record headers may be collapsed or expanded accompanied by a slide transition.</p>
+            <div class="" ng-include src="'views/components/pageheader/default.html'"></div>
+            <div class="h6 font-bold m-t-2 m-b-1">Examples</div>
+            <div class="" ng-include src="'views/components/pageheader/defaultExamples.html'"></div>
+            <p class="h6 font-bold m-t-1 m-b-1">Example markup</p>
+            <pre class="code pre-scrollable p-a-1 b-a bg-light" ng-include src="'views/components/pageheader/default.html'" maketext></pre>
+
+            <!-- Related Header -->
+            <p id="related" class="h4 m-b-1 m-t-3">Related List Header</p>
+            <p>The Related List Header is display when a user selects a list related to a single record (e.g. view related records). It includes a list title, a breadcrumb navigation back to the orignal module and record, a short description of the list and other related actions. </p>
+            <div class="" ng-include src="'views/components/pageheader/list.html'"></div>
+            <p class="h6 font-bold m-t-1 m-b-1">Example markup</p>
+            <pre class="code pre-scrollable p-a-1 b-a bg-light" ng-include src="'views/components/pageheader/list.html'" maketext></pre>
+
+            <!-- Dialog Header -->
+            <p id="dialog" class="h4 m-b-1 m-t-3">Dialog Header</p>
+            <p>The dialog header is displayed at the top of a modal dialog when a new object is being created. A short description is displayed for users who need further explanation as to the screen requirments (why is the information be requested, what can I do here). The short descrition may be expanded or collapsed.</p>
+            <div class="" ng-include src="'views/components/pageheader/dialog.html'"></div>
+            <p class="h6 font-bold m-t-1 m-b-1">Example markup</p>
+            <pre class="code pre-scrollable p-a-1 b-a bg-light" ng-include src="'views/components/pageheader/dialog.html'" maketext></pre>
+
+            <!-- Invoice Header -->
+            <!--<div id="invoice" class="h5 font-bold m-t-2 m-b-1">Invoice Header</div>
+            <p>The invoice header is displayed at the top of an invoice. The invoice header includes the common information about the invoice: invoice number, invoice date, client name and address and related order information.</p>
+            <div class="" ng-include src="'views/components/pageheader/invoice.html'"></div>
+            <p class="h6 font-bold m-t-1 m-b-1">Example markup</p>
+            <pre class="code pre-scrollable p-a-1 b-a bg-light" ng-include src="'views/components/pageheader/invoice.html'" maketext></pre>-->
+
+            <!-- Search Results Header -->
+            <p id="searchresults" class="h4 m-b-1 m-t-3">Search Results Header</p>
+            <p>The serach results header is displayed at the top of search results page. It includes the page title, a seach keyword, and the number of records found.</p>
+            <div class="" ng-include src="'views/components/pageheader/searchresults.html'"></div>
+            <p class="h6 font-bold m-t-1 m-b-1">Example markup</p>
+            <pre class="code pre-scrollable p-a-1 b-a bg-light" ng-include src="'views/components/pageheader/searchresults.html'" maketext></pre>
+
+            <!-- Profile Header -->
+            <!--<div id="profile" class="h5 font-bold m-t-2 m-b-1">Profile Header</div>
+            <p>The profile header is displayed at the top of profile page. It includes a photo, contact information, title and primary actons. The additional information can be displayed below with a supplemental actions.</p>
+            <div class="" ng-include src="'views/components/pageheader/profile.html'"></div>
+            <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <pre class="code pre-scrollable p-a-1 b-a bg-light" ng-include src="'views/components/pageheader/profile.html'" maketext></pre>-->
+
+        </section>
+        <aside class="aside-md b-l hidden-md-down nav-sidebar bg-white">
+            <nav class="nav-scroll affix w-full" role="navigation" jumpmenu>
+                <div class="text-muted text-u-c hidden-nav padder m-t-1 m-b-1">On This Page:</div>
+                <ul class="nav nav-main" data-ride="collapse">
+                    <li class="nav-item active"><a href="javascript:void(0)" data-target="#dashboard" class="nav-link active">Dashboard</a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#module" class="nav-link">Module</a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#record" class="nav-link">Record</a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#related" class="nav-link">Related</a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#dialog" class="nav-link">Dialog</a></li>
+                    <!--<li class="nav-item"><a href="javascript:void(0)" data-target="#invoice" class="nav-link">Invoice</a></li>-->
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#searchresults" class="nav-link">Search Results</a></li>
+                    <!--<li class="nav-item"><a href="javascript:void(0)" data-target="#profile" class="nav-link">Profile</a></li>-->
+                </ul>
+            </nav>
+        </aside>
+    </div>
+</div>

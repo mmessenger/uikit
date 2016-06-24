@@ -1,0 +1,42 @@
+<div class="">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="p-x-3">
+            <h1 class="display-5">Grid system</h1>
+            <p class="lead">Bootstrap includes a powerful mobile-first grid system for building layouts of all shapes and sizes. It’s based on a 12 column layout and has multiple tiers, one for each media query range. You can use it with Sass mixins or our predefined classes.
+            </p>
+        </div>
+    </div>
+    <div class="hbox stretch">
+        <section class="p-x-3">
+            <div id="overview" class="h4 m-b-1 m-t-1">Bootstrap Grid System</div>
+            <p class="m-b-1">We incorporate the <a href="http://v4-alpha.getbootstrap.com/layout/grid/" target="_blank">Bootstrap grid system</a>, so you can get the layouts as you want. Based on a 12 column system, each column size (<code>col-sm-*)</code> applies to any one of 5 viewports. See the bootstrap documenation for more information.</p>
+            <div class="" ng-include src="'views/styles/grid/basic.html'" ></div>
+
+            <div id="custom" class="h4 m-t-3">Custom Grid System</div>
+            <p class="m-b-1">As an extention to the bootstrap grid system you can use a sub-grid divided by 5ths (12/5) in any of the available viewport sizes. Simply <code>col-sm-1-5</code>, <code>col-sm-2-5</code>, <code>col-sm-3-5</code>, <code>col-sm-4-5</code>, <code>col-sm-5-5</code></p>
+            <div class="" ng-include src="'views/styles/grid/custom.html'" ></div>
+
+            <div id="gutters" class="h4 m-t-3">Gutter Size</div>
+            <p class="m-b-1">By default the grid system uses a 1.875rem (30px) gutter. You can decrease the gutters by appending <code>.row-sm</code> to the class<code>.row</code></p>
+            <div class="" ng-include src="'views/styles/grid/gutter.html'" ></div>
+
+        </section>
+        <aside class="aside-md b-l hidden-md-down nav-sidebar bg-white">
+            <nav class="nav-scroll affix w-full" role="navigation" jumpmenu>
+                <div class="text-muted text-u-c hidden-nav padder m-t-1 m-b-1">On This Page:</div>
+                <ul class="nav nav-main" data-ride="collapse">
+                    <li class="nav-item active">
+                        <a href="javascript:void(0)" data-target="#overview" class="nav-link  active">Bootstrap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" data-target="#custom" class="nav-link ">Custom Grid</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" data-target="#gutters" class="nav-link ">Gutter Size</a>
+                    </li>
+                    <li class="nav-item">
+                </ul>
+            </nav>
+        </aside>
+    </div>
+</div>

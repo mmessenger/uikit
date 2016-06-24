@@ -1,0 +1,73 @@
+.alert{
+  //font-size: @font-size-sm;
+  margin-bottom: .5rem;
+  .close i{
+    font-size: 1rem;
+    font-weight: normal;
+    display: block;
+  }
+  .alert-heading {
+  	font-weight: normal;
+  }
+  .alert-link {
+  	text-decoration: underline;
+  	font-weight: normal;
+  	color: inherit;
+  }
+}
+
+.alert-success {
+	.color-variant(@brand-success-ltest);
+	.font-variant(@brand-success-ltest, darken(@brand-success,20%), darken(@brand-success,30%), @brand-success);
+	border-color: lighten(@brand-success,30%);
+	&.alert-notice {
+		.color-variant(lighten(@brand-success-ltest, 10%), 5%, 10%, 5%, 10%);
+		.font-variant(@brand-success-ltest, darken(@brand-success,20%), darken(@brand-success,30%), #fff);
+		border-left: 3px solid @brand-success;
+	}
+}
+
+.alert-info {
+	.color-variant(@brand-info-ltest);
+	.font-variant(@brand-info-ltest, darken(@brand-info,15%), darken(@brand-info,25%), @brand-info);
+	border-color: darken(@brand-info-ltest,5%);
+	&.alert-notice {
+		.color-variant(lighten(@brand-info-ltest, 5%), 5%, 10%, 5%, 10%);
+		.font-variant(@brand-info-ltest, darken(@brand-info,20%), darken(@brand-info,30%), #fff);
+		border-left: 3px solid @brand-info;
+	}
+}
+
+.alert-warning {
+	.color-variant(@brand-warning-ltest);
+	.font-variant(@brand-warning-ltest, darken(@brand-warning,30%), darken(@brand-warning,40%), @brand-warning);
+	border-color: darken(@brand-warning-ltest,8%);
+	&.alert-notice {
+		.color-variant(lighten(@brand-warning-ltest, 5%), 5%, 10%, 5%, 10%);
+		.font-variant(@brand-warning-ltest, darken(@brand-warning,30%), darken(@brand-warning,40%), #fff);
+		border-left: 3px solid @brand-warning;
+	}
+}
+.alert-danger {
+	.color-variant(@brand-danger-ltest);
+	.font-variant(@brand-danger-ltest, darken(@brand-danger,20%), darken(@brand-danger,30%), @brand-danger);
+	border-color: darken(@brand-danger-ltest,8%);
+	&.alert-notice {
+		.color-variant(lighten(@brand-danger-ltest, 5%), 5%, 10%, 5%, 10%);
+		.font-variant(@brand-danger-ltest, darken(@brand-danger,20%), darken(@brand-danger,30%), #fff);
+		border-left: 3px solid @brand-danger;
+	}
+}
+
+.alert-toast {
+	width: 300px;
+	.box-shadow(0 2px 6px rgba(0, 0, 0, 0.1));
+	margin-bottom: 0;
+}
+
+.alert-system {
+	margin-bottom: 0;
+	border-radius: 0;
+	text-align: center;
+	border: none;
+}

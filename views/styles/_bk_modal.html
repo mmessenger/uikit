@@ -1,0 +1,498 @@
+<div class="">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="p-x-3">
+            <h1 class="display-5">Modal</h1>
+            <p class="lead">Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults.</p>
+        </div>
+    </div>
+    <div class="hbox stretch">
+
+        <!--Begin Section-->
+        <section class="p-x-3">
+
+            <!--Begin Static Example -->
+            <h4 class="h4 m-b-1 m-t-1">Static example</h4>
+            <p class="m-b-md">A rendered modal with header, body, and set of actions in the footer.
+            </p>
+            <div class="bg-light dker" ng-include src="'views/styles/modal/static_example.html'" ></div>
+            <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a m-b-2" ng-include src="'views/styles/modal/static_example.html'" maketext></pre>
+            <!--End Static Example -->
+
+            <!--Begin Live Demo -->
+            <h4 class="h4 m-b-1 m-t-1">Live demo</h4>
+            <p class="m-b-md">Toggle a modal via JavaScript by clicking the button below. It will slide down and fade in from the top of the page.
+            </p>
+            <button type="button" class="btn btn-primary btn-lg m-b-2" data-toggle="modal" data-target="#myModal" data-backdrop="static">
+                Launch demo modal
+            </button>
+            <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a m-b-2" ng-include src="'views/styles/modal/live_demo.html'" maketext></pre>
+
+
+            <!--Begin Modal for Live Demo -->
+            <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                        </div>
+                        <div class="modal-body">
+                            <h4>Text in a modal</h4>
+                            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+
+                            <h4>Popover in a modal</h4>
+                            <p>This <a href="#" role="button" class="btn btn-secondary popover-test" title="" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">button</a> should trigger a popover on click.</p>
+
+                            <h4>Tooltips in a modal</h4>
+                            <p><a href="#" class="tooltip-test" title="" data-original-title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="" data-original-title="Tooltip">that link</a> should have tooltips on hover.</p>
+
+                            <hr>
+
+                            <h4>Overflowing text to show scroll behavior</h4>
+                            <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                            <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                            <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                            <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                            <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                            <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <!--End Modal for Live Demo -->
+
+            <!--End Live Demo -->
+
+            <!--Begin Sizes -->
+            <h4 id="size" class="h4 m-b-1 m-t-2">Optional sizes</h4>
+            <p class="m-b-md">Modals have two optional sizes, available via modifier classes to be placed on a <code>.modal-dialog</code>.</p>
+
+            <!--Begin Large Modal-->
+            <button type="button" class="btn btn-primary m-r-1 m-b-1" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
+            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                            <h4 class="modal-title" id="myLargeModalLabel">Large modal</h4>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Large Modal  -->
+
+            <!--Begin Small Modal  -->
+            <button type="button" class="btn btn-primary m-r-1 m-b-1" data-toggle="modal" data-target=".bd-example-modal-sm">Small modal</button>
+            <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                            <h4 class="modal-title" id="mySmallModalLabel">Small modal</h4>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Small Modal  -->
+
+            <!--Begin Responsive Modal-->
+            <button type="button" class="btn btn-primary m-r-1 m-b-1" data-toggle="modal" data-target=".bd-example-modal-Responsive">Responsive modal</button>
+            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog modal-Responsive">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                            <h4 class="modal-title" id="myResponsiveModalLabel">Responsive modal</h4>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a" ng-include src="'views/styles/modal/size.html'" maketext></pre>
+            <!--End Responsive Modal  -->
+
+            <!--End Sizes -->
+
+            <!--Begin Remove Animation  -->
+            <h4 id="animation" class="h4 m-b-1 m-t-2">Remove animation</h4>
+            <p class="m-b-md">For modals that simply appear rather than fade in to view, remove the <code>.fade</code> class from your modal markup.</p>
+            <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a m-b-2" ng-include src="'views/styles/modal/remove_animation.html'" maketext></pre>
+            <!--End Remove Animation  -->
+
+            <!--Begin Grid System  -->
+            <h4 id="gridsystem" class="h4 m-b-1 m-t-2">Using the grid system</h4>
+            <p class="m-b-md">To take advantage of the Bootstrap grid system within a modal, just nest <code>.container-fluid</code> within the <code>.modal-body</code> and then use the normal grid system classes within this container.</p>
+            <button type="button" class="btn btn-primary btn-lg m-b-2" data-toggle="modal" data-target="#gridSystemModal">
+                Launch demo grid system modal
+            </button>
+            <div id="gridSystemModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                            <h4 class="modal-title" id="gridModalLabel">Modal title</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid bd-example-row">
+                                <div class="row">
+                                    <div class="col-md-4">.col-md-4</div>
+                                    <div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
+                                    <div class="col-md-2 col-md-offset-4">.col-md-2 .col-md-offset-4</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-9">
+                                        Level 1: .col-sm-9
+                                        <div class="row">
+                                            <div class="col-xs-8 col-sm-6">
+                                                Level 2: .col-xs-8 .col-sm-6
+                                            </div>
+                                            <div class="col-xs-4 col-sm-6">
+                                                Level 2: .col-xs-4 .col-sm-6
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a m-b-2" ng-include src="'views/styles/modal/grid_system.html'" maketext></pre>
+
+
+            <!--Begin Varying Modal Content Based on Trigger Button-->
+            <h4 id="triggerbutton" class="h4 m-b-1 m-t-2">Varying modal content based on trigger button</h4>  <p class="m-b-md">Have a bunch of buttons that all trigger the same modal, just with slightly different contents? Use <code>event.relatedTarget</code> and HTML <code>data-*</code> attributes (possibly via jQuery) to vary the contents of the modal depending on which button was clicked. See the Modal Events docs for details on <code>relatedTarget</code>.</p>
+           
+
+            <!--Begin Modal @mdo-->
+            <button type="button" class="btn btn-primary m-r-1 m-b-2 m-t-2" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal @mdo</button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                            <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="recipient-name" class="form-control-label">Recipient:</label>
+                                    <input type="text" class="form-control" id="recipient-name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message-text" class="form-control-label">Message:</label>
+                                    <textarea class="form-control" id="message-text"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Send message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Modal @mdo-->
+
+            <!--Begin Modal @fat-->
+            <button type="button" class="btn btn-primary m-r-1 m-b-2 m-t-2" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal @fat</button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                            <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="recipient-name" class="form-control-label">Recipient:</label>
+                                    <input type="text" class="form-control" id="recipient-name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message-text" class="form-control-label">Message:</label>
+                                    <textarea class="form-control" id="message-text"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Send message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Modal @fat-->
+
+            <!--Begin Modal @getboostrap-->
+            <button type="button" class="btn btn-primary m-r-1 m-b-2 m-t-2" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal @getbootstrap</button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                            <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="recipient-name" class="form-control-label">Recipient:</label>
+                                    <input type="text" class="form-control" id="recipient-name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message-text" class="form-control-label">Message:</label>
+                                    <textarea class="form-control" id="message-text"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Send message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Modal @getboostrap-->
+            <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a m-b-2" ng-include src="'views/styles/modal/trigger_button1.html'" maketext></pre>
+              <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a m-b-2" ng-include src="'views/styles/modal/trigger_button2.html'" maketext></pre>
+         
+            <!--End Varying Modal Content Based on Trigger Button-->
+
+            <!--Begin Dynamic Heights-->
+            <div class="m-b-3">
+                <h4 id="height" class="h4 m-b-1">Modals with dynamic heights</h4> If the height of a modal changes while it is open, you should call <code>$('#myModal').data('bs.modal').handleUpdate()</code> to readjust the modal’s position in case a scrollbar appears.</div>
+            <!--End Dynamic Heights-->
+
+            <!--Begin Usage-->
+            <div class="m-b-3">
+                <h4 id="usage" class="h4 m-b-1">Usage</h4> The modal plugin toggles your hidden content on demand, via data attributes or JavaScript. It also adds <code>.modal-open</code> to the <code>&#60;body&#62;</code> to override default scrolling behavior and generates a <code>.modal-backdrop</code>to provide a click area for dismissing shown modals when clicking outside the modal. </div>
+            <!--End Usage-->
+
+            <!--Begin Data Attribute-->
+            <div class="m-b-3">
+                <h4 id="dataattribute" class="h4 m-b-1">Via data attributes</h4> Activate a modal without writing JavaScript. Set <code>data-toggle="modal"</code> on a controller element, like a button, along with a <code>data-target="#foo"</code> or <code>href="#foo"</code> to target a specific modal to toggle.</div>
+            <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a" ng-include src="'views/styles/modal/data_attribute.html'" maketext></pre>
+            <!--End Data Attribute-->
+
+
+            <!--Begin Javascript-->
+            <div class="m-b-3">
+                <h4 id="javascript" class="h4 m-b-1">Via JavaScript</h4> Call a modal with id <code>myModal</code> with a single line of JavaScript:</div>
+            <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a" ng-include src="'views/styles/modal/javascript.html'" maketext></pre>
+            <!--End Javascript-->
+
+            <!--Begin Options-->
+            <div class="m-b-3">
+                <h4 id="options" class="h4">Options</h4> Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-backdrop=""</code>.</div>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th style="width: 100px;">Name</th>
+                            <th style="width: 50px;">Type</th>
+                            <th style="width: 50px;">Default</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>backdrop</td>
+                            <td>boolean or the string <code>'static'</code></td>
+                            <td>true</td>
+                            <td>Includes a modal-backdrop element. Alternatively, specify <code>static</code> for a backdrop which doesn't close the modal on click.</td>
+                        </tr>
+                        <tr>
+                            <td>keyboard</td>
+                            <td>boolean</td>
+                            <td>true</td>
+                            <td>Closes the modal when escape key is pressed</td>
+                        </tr>
+                        <tr>
+                            <td>show</td>
+                            <td>boolean</td>
+                            <td>true</td>
+                            <td>Shows the modal when initialized.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--End Options-->
+
+            <!--Begin Methods-->
+            <div class="m-b-3">
+                <h4 id="methods" class="h4 m-b-1">Methods</h4>
+                <!--Begin Option-->
+                <h4 class="m-b-1"><code>.modal(options)</code></h4>
+                <h6 class=" m-b-1">Activates your content as a modal. Accepts an optional options <code>object</code>.</h6> </div>
+            <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a" ng-include src="'views/styles/modal/method_options.html'" maketext></pre>
+            <!--End Option-->
+
+            <!--Begin Toggle-->
+            <h4 class="m-b-1  m-t-2"><code>.modal(toggle')</code></h4>
+            <h6 class=" m-b-1">Manually toggles a modal. Returns to the caller before the modal has actually been shown or hidden (i.e. before the  <code>shown.bs.modal</code> or  <code>hidden.bs.modal</code> event occurs).</h6>
+            <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a" ng-include src="'views/styles/modal/method_toggle.html'" maketext></pre>
+            <!--End Toggle-->
+
+            <!--Begin Show-->
+            <h4 class="m-b-1  m-t-2"><code>.modal(show')</code></h4>
+            <h6 class=" m-b-1">Manually opens a modal. Returns to the caller before the modal has actually been shown (i.e. before the  <code>shown.bs.modal</code> event occurs).</h6>
+            <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a" ng-include src="'views/styles/modal/method_show.html'" maketext></pre>
+            <!--End Show-->
+
+            <!--Begin Hide-->
+            <h4 class="m-b-1  m-t-2"><code>.modal(hide')</code></h4>
+            <h6 class=" m-b-1">Manually hides a modal. Returns to the caller before the modal has actually been hidden (i.e. before the  <code>hidden.bs.modal</code> event occurs).</h6>
+            <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a" ng-include src="'views/styles/modal/method_hide.html'" maketext></pre>
+            <!--End Hide-->
+            <!--End Methods-->
+
+            <!--Begin Events-->
+            <div class="m-b-3">
+                <h4 id="event" class="h4 m-b-1">Events</h4>
+
+
+                <h6 class=" m-b-1">Bootstrap’s modal class exposes a few events for hooking into modal functionality. All modal events are fired at the modal itself (i.e. at the <code>&#60;div class="modal"&#62;</code>).</h6> </div>
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th style="width: 150px;">Event Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>show.bs.modal</td>
+                            <td>This event fires immediately when the <code>show</code> instance method is called. If caused by a click, the clicked element is available as the <code>relatedTarget</code> property of the event.</td>
+                        </tr>
+                        <tr>
+                            <td>shown.bs.modal</td>
+                            <td>This event is fired when the modal has been made visible to the user (will wait for CSS transitions to complete). If caused by a click, the clicked element is available as the <code>relatedTarget</code> property of the event.</td>
+                        </tr>
+                        <tr>
+                            <td>hide.bs.modal</td>
+                            <td>This event is fired immediately when the <code>hide</code> instance method has been called.</td>
+                        </tr>
+                        <tr>
+                            <td>hidden.bs.modal</td>
+                            <td>This event is fired when the modal has finished being hidden from the user (will wait for CSS transitions to complete).</td>
+                        </tr>
+                        <tr>
+                            <td>loaded.bs.modal</td>
+                            <td>This event is fired when the modal has loaded content using the <code>remote</code> option.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a" ng-include src="'views/styles/modal/event.html'" maketext></pre>
+
+
+
+
+
+
+
+
+
+
+        </section>
+        <!--End section-->
+
+        <!-- Begin aside left navigation -->
+        <aside class="aside-md b-l hidden-md-down nav-sidebar bg-white">
+            <nav class="nav-scroll affix w-full" role="navigation" jumpmenu>
+                <div class="text-muted text-u-c hidden-nav padder m-t-1 m-b-1">On This Page:</div>
+                <ul class="nav nav-main" data-ride="collapse">
+                    <li class="nav-item active"><a href="javascript:void(0)" data-target="#size" class="nav-link active">Optional Sizes</a></li>
+                    <li class="nav-item "><a href="javascript:void(0)" data-target="#animation" class="nav-link">Remove Animation</a></li>
+                    <li class="nav-item "><a href="javascript:void(0)" data-target="#gridsystem" class="nav-link">Using the Grid System</a></li>
+                    <li class="nav-item "><a href="javascript:void(0)" data-target="#triggerbutton" class="nav-link">Varying Modal Content Based on Trigger Button</a></li>
+                    <li class="nav-item "><a href="javascript:void(0)" data-target="#height" class="nav-link">Dynamic Heights</a></li>
+                    <li class="nav-item "><a href="javascript:void(0)" data-target="#usage" class="nav-link ">Usage</a></li>
+                    <ul>
+                    <li class="nav-item "><a href="javascript:void(0)" data-target="#dataattribute" class="nav-link">Via Data Attributes</a></li>
+                    <li class="nav-item "><a href="javascript:void(0)" data-target="#javascript" class="nav-link">Via JavaScript</a></li>
+                    <li class="nav-item "><a href="javascript:void(0)" data-target="#options" class="nav-link">Options</a></li>
+                    <li class="nav-item "><a href="javascript:void(0)" data-target="#methods" class="nav-link">Methods</a></li>
+                    <li class="nav-item "><a href="javascript:void(0)" data-target="#event" class="nav-link">Events</a></li>
+                        </ul>
+                </ul>
+            </nav>
+        </aside>
+        <!-- End left navigation -->
+    </div>
+
+</div>

@@ -1,0 +1,119 @@
+// Dropdown on hover not click
+// Currently does not work for input groups. Actions will trigger
+/*.dropdown:hover > .dropdown-menu {
+  display: block;
+}*/
+
+.dropdown-menu{
+  border-radius: @border-radius-base;
+  .box-shadow(0 1px 3px rgba(0,0,0,.1));
+  border-color: @border-color;
+  margin: .25rem 0;
+  padding: 0;
+  > .dropdown-item {
+      color: darken(@text-color, 15%);
+      padding: .35rem 1.1rem;
+      margin: .25rem;
+      width: auto;
+      border-radius: @border-radius-base;
+      &:hover,
+      &:focus {
+        color: @link-hover-color;
+        background-color: @brand-light;
+    }
+  }
+  > .dropdown-item.disabled, 
+  > .dropdown-item.disabled:focus, 
+  > .dropdown-item.disabled:hover {
+      color: lighten(@text-color, 15%);
+      background-color: transparent;
+  }
+  > a.active,
+  > .active,
+  > .active:hover, 
+  > .active:focus{
+      background-image: none;
+      filter:none;
+      background-color: @brand-light;
+      color: @link-hover-color;
+  }
+}
+
+a.dropdown-item,
+.dropdown-item a {
+  display: block;
+}
+
+// Restyles default boostrap dropdown headers
+.dropdown-header{
+  padding: .6rem 1.1rem;
+  margin: .25rem;
+}
+
+// Replaces the standard dropdown arrow with a font awesome version
+.dropdown-toggle:after {
+    font-family: "fontawesome";
+    content: "\f107";
+    border: 0!important;
+    vertical-align: top;
+    margin: auto;
+    //padding-right: 0.7rem;
+    display: inline;
+}
+
+// New submenu in dropdown
+.dropdown-submenu{
+  position: relative;
+
+  &.pull-left{
+    float: none !important;
+    > .dropdown-menu{
+        left: auto;
+        right: 100%;
+        margin-left: 10px;
+    }
+  }
+  &:before {
+      display:block;
+      font-family: "fontawesome";
+      content: "\f105";
+      float:right;
+      /*width:0;
+      height:0;
+      border: 0;
+      border-color:transparent;
+      border-style:solid;
+      border-width:5px 0 5px 5px;
+      border-left-color:@border-color;*/
+      margin-top:0px;
+      margin-right:0px;
+      margin-left: 5px;
+  }
+  .dropdown-menu{
+    left:100%;
+    top:0;
+    margin-top: -6px;
+    margin-left: -1px
+  }
+}
+@media (min-width: 48em) { //Submenu will flyout only on larger screens
+  .dropdown-submenu{
+    &:hover,
+    &:focus{
+      > .dropdown-toggle{
+        background-color: @brand-light !important;
+        color: @text-color;
+      }
+      > .dropdown-menu {
+        display: block;
+      }
+    }
+  }
+}
+
+.dropup & {
+  .dropdown-menu{
+    top: auto;
+    bottom: 0;
+  }
+}

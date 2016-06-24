@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="en" class="app" id="ng-app" ng-app="spark" >
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="../../../lib/css/bootstrap.css">
+    <link rel='stylesheet' href='https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans:400,600,700,300,800' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="../../../lib/vendor/kendo/2016.1.125/kendo.common.min.css" type='text/css'>
+    <link rel="stylesheet" href="../../../lib/css/app.css" type='text/css'>
+    <link rel="stylesheet" href="../../../lib/css/override.css" type='text/css'>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-route.js"></script>
+    <script type="text/javascript" src="../../../app/main.js"></script>
+    <script type="text/javascript" src="../../..//lib//vendor/kendo/2016.1.125/kendo.all.min.js"></script>
+    <script type="text/javascript" src="../../../lib/js/app.js"></script>
+    <script type="text/javascript" src="../../../lib/js/tether.js"></script>
+    <script type="text/javascript" src="../../../lib/js/bootstrap.js"></script>
+
+<script type="text/javascript" > 
+	(function($, undefined) {
+
+	    var kendo = window.kendo,
+	        ui = kendo.ui,
+	        Widget = ui.Widget,
+	        NS = 'step',
+	        CONTENT = 'steps-container',
+	        CHANGE = 'change',
+	        CLICK = 'click',
+	        ACTIVESTATE = 'active', 
+
+	    _active = 1;
+
+	    var Steps = Widget.extend({
+
+	        init: function(element, options) {
+	            var that = this;
+						//content = that.contentHolder(selectedItems.index());
+
+	            // Initializes the widget calls a template and a datasource
+	            kendo.ui.Widget.fn.init.call(that, element, options);
+	            that.template = kendo.template(that.options.template || '<div data-step="#= data.value #" class="step"><span class="step-number">#= data.value #</span><span class="step-title hidden-xs-down">#= data.text #</span><span class="step-arrow"></span></div>');
+	            
+	            that._dataSource();
+	            that._create();
+				
+	            // Events
+	            that.wrapper.find('.btn-next').on('click', function(e){
+					that.next(e);
+	            })
+
+	            that.wrapper.find('.btn-prev').on('click', function(e){
+					that.previous(e);
+	            })
+
+	        },
+	        options: {
+	            name: "Steps",
+	            autoBind: true,
+	            template: ""
+	        },
+	        _wrapper: function () {
+				var that = this;
+					that.wrapper = that.element.closest('.steps');
+			},
+			_create: function () {
+				var that = this;
+	            that._wrapper();
+
+	    		that.wrapper.find('.step:first-child').addClass('active')
+	    		that.wrapper.find('.btn-prev').addClass('disabled')
+
+			},
+			_total: function() {
+				var that = this;
+					totalSteps = that.wrapper.find('.step').length
+				
+				return totalSteps
+			},
+	        _active: function(selectedItem) {
+				var that = this;
+	        		activeStep = that.wrapper.find('.step.active').data("step")
+
+	        	return activeStep;
+	        },
+	        next: function(e) {
+				var that = this;
+					currentStep = that._active()
+					totalSteps = that._total()
+	        	
+				that.element.trigger(e, {
+					step: currentStep,
+					direction: 'next'
+				});
+
+	        	if (currentStep < totalSteps) {
+	        		currentStep = currentStep + 1
+	        		that.setState(currentStep)
+	        	} 
+
+	        	if (currentStep == totalSteps) { 
+	        		that.wrapper.find('.btn-next').addClass('disabled')
+	        	}
+
+	        },
+	        previous: function(e) {
+				var that = this;
+					currentStep = that._active()
+					totalSteps = that._total()
+	        	
+				that.element.trigger(e, {
+					step: currentStep,
+					direction: 'previous'
+				});
+
+	        	if (currentStep > 1) {
+	        		currentStep = currentStep - 1
+	        		that.setState(currentStep)
+	        	} 
+
+	        	if (currentStep == 1) { 
+	        		that.wrapper.find('.btn-prev').addClass('disabled')
+	        	}
+
+	        },
+	        setState: function(step) {
+				var that = this;
+					$steps = that.wrapper.find('.step')
+					$nextBtn = that.wrapper.find('.btn-next')
+					$prevBtn = that.wrapper.find('.btn-prev')
+					$stepContent = that.wrapper.find('.step-content');
+				
+				that.wrapper.find('.step').removeClass('active')
+				that.wrapper.find('.step[data-step="' + step +'"]').addClass('active')
+
+				$stepContent.find('.step-pane').removeClass('active')
+				$stepContent.find('.step-pane[data-step="' + step +'"]').addClass('active')
+
+	        	if (currentStep == 1) { 
+	        		$nextBtn.removeClass('disabled')
+	        		$prevBtn.addClass('disabled')
+	        	}
+
+	        	if (currentStep > 1 && currentStep < totalSteps) {
+	        		$nextBtn.removeClass('disabled')
+	        		$prevBtn.removeClass('disabled')
+	        	} 
+
+	        	if (currentStep == totalSteps) { 
+	        		$nextBtn.addClass('disabled')
+	        		$prevBtn.removeClass('disabled')
+	        	}
+
+	        },
+	        refresh: function() {
+	            var that = this,
+	                view = that.dataSource.view(),
+	                html = kendo.render(that.template, view);
+	            
+	            that.element.html(html);
+	        },
+	        _dataSource: function() {
+	            var that = this;
+
+				that.dataSource = kendo.data.DataSource.create(that.options.dataSource).bind(CHANGE, function() {
+	                that.refresh();
+	            });
+
+	            if (that.options.autoBind) {
+	                that.dataSource.fetch();
+	            }
+	        }
+	    });
+
+	    ui.plugin(Steps);
+
+	})(jQuery);
+</script>
+
+
+</head>
+
+<style type="text/css">
+	.step-pane {
+		display: none;
+	}
+	.step-pane.active {
+		display: inline-block;
+	}
+</style>
+<body>
+
+
+	<div class="steps steps-dark ">
+  		<div id="steps" class="steps-container"></div>
+		<div class="step-content">
+			<div class="step-pane active" data-step="1">ABC</div>
+			<div class="step-pane" data-step="2">DEF</div>
+			<div class="step-pane" data-step="3">GHI</div>
+		</div>
+		<div class="actions">
+			<button type="button" class="btn btn-default btn-prev">Prev</button>
+			<button type="button" class="btn btn-primary btn-next" data-last="Complete">Next</button>
+		</div>
+	</div>
+
+<!--<div id="container">
+    <div data-role="steps" data-source="dataSource" data-template="template"></div>
+</container>-->
+    
+<script type="text/x-kendo-template" id="template">
+    <div style="float: left; color: salmon; margin-right: 10px"><h1>#= data #</h1></div>
+</script>
+
+<script type="text/javascript">
+
+	var dataSource = new kendo.data.DataSource({
+	    data: [
+			{ text: "Step 1", value: "1" },
+			{ text: "Step 2", value: "2" },
+			{ text: "Step 3", value: "3" }
+	     ]
+	});
+
+
+	$("#steps").kendoSteps({
+	    dataSource: dataSource,
+	});
+
+	//console.log($('#steps').kendoSteps().data("kendoSteps"));
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<div class="">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="p-x-3">
+            <h1 class="display-5">Tabs</h1>
+            <p class="lead">Tabs are used to separate content into different views, which can be displayed one at a time without a page refresh.  Tabs provide easy access to additional content without requiring the user to go to a new page.</p>
+        </div>
+    </div>
+    <div class="hbox stretch">
+        <section class="p-x-3">
+            <div id="overview" class="h4 m-b-1 m-t-1">Overview</div>
+            <ul>
+                <li>Use tabs when content is closely related, but mutually exclusive</li>
+                <li>Use tabs when it is not important to see more than one content pane at a time</li>
+                <li>Always show one tab as selected with its content visible.</li>
+                <li>Selecting a tab will not affect other parts of the page.</li>
+                <li>Tabs should always appear in the same location as the user clicks from one tab to another.</li>
+                <li>Limit labels to short words – try not to wrap</li>
+                <li>Capitalization of horizontal tab names is Title Case</li>
+            </ul>
+
+            <div id="basic" class="h4 m-b-1 m-t-3">Basic Tabs</div>
+            <p>A basic tab</p>
+            <div class="" ng-include src="'views/styles/tabs/basic.html'"></div>
+            <p class="h6 font-bold m-t-1 m-b-1">Example markup</p>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a" ng-include src="'views/styles/tabs/basic.html'" maketext></pre>
+
+            <div id="justified" class="h4 m-b-1 m-t-3">Justified Tabs</div>
+            <p>Tabs can be set to equal width across a container on larger screens.</p>
+            <div class="" ng-include src="'views/styles/tabs/justified.html'"></div>
+
+            <div id="inline" class="h4 m-b-1 m-t-3">Inline Tabs</div>
+            <p>A nav can be styled inline.</p>
+            <div class="" ng-include src="'views/styles/tabs/inline.html'"></div>
+
+            <div id="colored" class="h4 m-b-1 m-t-3">Background Colors</div>
+            <p>Tabs with custom background color</p>
+            <div class="" ng-include src="'views/styles/tabs/backgrounds.html'"></div>
+
+            <div id="position" class="h4 m-b-1 m-t-3">Tab Position</div>
+            <p>Align the tabs left, center or right.</p>
+            <div class="" ng-include src="'views/styles/tabs/position.html'"></div>
+
+            <div id="bordered" class="h4 m-b-1 m-t-3">Bordered Tabs</div>
+            <p>A scoped tabset style has a closed container with a defined border.</p>
+            <div class="" ng-include src="'views/styles/tabs/bordered.html'"></div>
+
+            <div id="dropdown" class="h4 m-b-1 m-t-3">Dropdown Tabs</div>
+            <p>The dropdown tab style acts as a menu component and appears as a tab item. It is used when all items do not fit into the horizontal navigation.</p>
+            <div class="" ng-include src="'views/styles/tabs/dropdown.html'"></div>
+
+            <div id="nested" class="h4 m-b-1 m-t-3">Nested Tabs</div>
+            <p>Tab sets may be nested inside tab sets. Pay special attention to the markup. They are constructed to prevent styles from leaking from parent tab.</p>
+            <div class="" ng-include src="'views/styles/tabs/nested.html'"></div>
+
+            <div id="header" class="h4 m-b-1 m-t-3">Within Header</div>
+            <p>Tab sets may be placed in a header to create an embedded menu.</p>
+            <div class="" ng-include src="'views/styles/tabs/header.html'"></div>
+
+            <div id="icons" class="h4 m-b-1 m-t-3">With Icons</div>
+            <p>Tab sets may be placed in a header to create an embedded menu.</p>
+            <div class="" ng-include src="'views/styles/tabs/lefticons.html'"></div>
+            <div class="" ng-include src="'views/styles/tabs/righticons.html'"></div>
+            <div class="" ng-include src="'views/styles/tabs/icons-only.html'"></div>
+
+            <div id="badges" class="h4 m-b-1 m-t-3">With Labels &amp; Badges</div>
+            <p>Tab sets may be placed in a header to create an embedded menu.</p>
+            <div class="" ng-include src="'views/styles/tabs/labels.html'"></div>
+            <div class="" ng-include src="'views/styles/tabs/badges.html'"></div>
+
+            <p id="classes" class="h4 m-b-1 m-t-3">Classes</p>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 30%">Class</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>.nav-tabs</code></td>
+                        <td>Initializes default tabset. Also requires base <code>.nav</code> class.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.nav-inline</code></td>
+                        <td>Spaces nav links horizontally.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.nav-justified</code></td>
+                        <td>Makes tabs equal widths of their parent container on larger screens. On smaller screens the nav links are stacked.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.nav-center</code>, <code>.nav-right</code></td>
+                        <td>Positions the tabs as indicated. The default tab position is left.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.nav-item</code></td>
+                        <td>Styles each list item as a single tab</td>
+                    </tr>
+                    <tr>
+                        <td><code>.nav-link</code></td>
+                        <td>Styles each link element in the list item</td>
+                    </tr>
+                    <tr>
+                        <td><code>.dropdown</code></td>
+                        <td>Used on a tab containing an overflow dropdown menu.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.tab-content</code></td>
+                        <td>Styles each tab content wrapper</td>
+                    </tr>
+                    <tr>
+                        <td><code>.tab-content-bordered</code></td>
+                        <td>To acheive a scoped tab apply border and padding to the tab content.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.bg-*</code></td>
+                        <td>Defines tab background color. According to the custom color system, sidebar background color can be changed to one of the available colors by adding a proper class to the main tab container</td>
+                    </tr>
+                    <tr>
+                        <td><code>.active</code></td>
+                        <td>Applies the active state to a tab list item. A tab is hidden by default, and will only become visible when given the class name active.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.disabled</code></td>
+                        <td>Disable any tab item by adding <code>.disabled</code> class to the <code>nav-link</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>.show</code></td>
+                        <td>Shows the tab</td>
+                    </tr>
+                    <tr>
+                        <td><code>.hide</code></td>
+                        <td>Hides the tab</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <aside class="aside-md b-l hidden-md-down nav-sidebar bg-white">
+            <nav class="nav-scroll affix w-full" role="navigation" jumpmenu>
+                <div class="text-muted text-u-c hidden-nav padder m-t-1 m-b-1">On This Page:</div>
+                <ul class="nav nav-main" data-ride="collapse">
+                    <li class="nav-item active"><a href="javascript:void(0)" data-target="#overview" class="nav-link">Overview</a></li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" class="nav-link active">Definition</a>
+                        <ul class="nav">
+                            <li class="nav-item"><a href="javascript:void(0)" data-target="#basic" class="nav-link">Basic</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)" data-target="#justified" class="nav-link active">Justified</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)" data-target="#inline" class="nav-link active">Inline</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)" data-target="#colored" class="nav-link active">Background</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)" data-target="#position" class="nav-link active">Position</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)" data-target="#bordered" class="nav-link active">Bordered</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)" data-target="#dropdown" class="nav-link active">Dropdown</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" class="nav-link">Examples</a>
+                        <ul class="nav">
+                            <li class="nav-item"><a href="javascript:void(0)" data-target="#nested" class="nav-link">Nested Tabs</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)" data-target="#header" class="nav-link">Within Header</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)" data-target="#icons" class="nav-link active">With Icons</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)" data-target="#badges" class="nav-link active">With Badges &amp; Labels</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#classes" class="nav-link active">Classes</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+</div>

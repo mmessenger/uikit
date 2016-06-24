@@ -1,0 +1,121 @@
+<form class="composer email-composer" method="post" action="">
+    <div class="form-group row row-sm m-b-xs">
+        <label class="col-sm-2 control-label ">To:</label>
+        <div class="col-sm-6">
+            <select id="toMultiSelect" class="w-full no-padder"></select>
+        </div>
+    </div>
+    <div class="form-group row row-sm m-b-xs">
+        <label class="col-sm-2 control-label ">CC:</label>
+        <div class="col-sm-6">
+            <select id="ccMultiSelect" class="w-full no-padder"></select>
+        </div>
+    </div>
+    <div class="form-group row row-sm">
+        <label class="col-sm-2 control-label ">Subject:</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" >
+        </div>
+    </div>
+    <textarea id="editor" rows="6" cols="30" placeholder="Compose email..."></textarea>
+    <div class="m-t">
+      <div class="pull-right pos-rlt" style="z-index: 2;">
+          <button type="button" class="btn btn-primary btn-sm pull-right">Send</button>
+      </div>
+      <div class="pos-rlt" style="z-index: 1;">
+          <input id="emailCompserUpload" class="no-border" type="file" />
+      </div>
+    </div>
+</form>
+
+<script id="contactTemplate" type="text/x-kendo-template">
+  <div class="k-state-default media wrapper-sm">
+    <span class="media-left pull-left">
+      <span class="avatar avatar-sm img-circle ">
+        <img class="img-fluid" src="lib/images/avatar_default.jpg" alt="">
+      </span>
+    </span>
+    <div class="media-body">
+      <h6 class="media-heading ">#:data.ContactName#</h6>
+      <div class="text-sm text-muted m-t-n-xs">#:data.ContactEmail#</div>
+    </div>
+  </div>
+</script>
+
+<script id="emailCompserUploadTemplate" type="text/x-kendo-template">
+    <span class='k-progress'></span>
+    <div class='file-wrapper'>
+        <span class='fa fa-file-#=addExtensionClass(files[0].extension)# fa-lg text-primary'></span>
+        <span class='file-heading file-name-heading m-l-sm'>#=name#</span>
+        <button type='button' class='k-upload-action pull-right m-t-xs m-r l-h-2x'></button>
+    </div>
+</script>
+
+<script type="text/javascript">
+
+  var data = [{
+            CustomerID: 1,
+            ContactName: 'Beverly Hughes',
+            ContactEmail: 'bhughes@gmail.com'
+          }, {
+            CustomerID: 2,
+            ContactName: 'Linda Owens',
+            ContactEmail: 'lowens@gmail.com'
+          }];
+
+  $("#toMultiSelect").kendoMultiSelect({
+    dataTextField: "ContactName",
+    dataValueField: "CustomerID",
+    itemTemplate: kendo.template($('#contactTemplate').html()),
+    dataSource: {
+        data: data,
+    },
+  });
+
+  $("#ccMultiSelect").kendoMultiSelect({
+    dataTextField: "ContactName",
+    dataValueField: "CustomerID",
+    itemTemplate: kendo.template($('#contactTemplate').html()),
+    dataSource: {
+        data: data,
+    },
+  });
+
+  // create Editor from textarea HTML element with default set of tools
+  $("#editor").kendoEditor({
+      resizable: {
+          content: true,
+          toolbar: true
+      }
+  });
+
+$("#emailCompserUpload").kendoUpload({
+    multiple: true,
+    template: kendo.template($('#emailCompserUploadTemplate').html())
+});
+$("#emailCompserUpload").closest(".k-upload").find("span").html('<i class="fa fa-paperclip "></i>');
+
+function addExtensionClass(extension) {
+    switch (extension) {
+        case '.jpg':
+        case '.img':
+        case '.png':
+        case '.gif':
+            return "image-o";
+        case '.doc':
+        case '.docx':
+            return "word-o";
+        case '.xls':
+        case '.xlsx':
+            return "excel-o";
+        case '.pdf':
+            return "pdf-o";
+        case '.zip':
+        case '.rar':
+            return "archive-o";
+        default:
+            return "text-o";
+    }
+}
+
+</script>

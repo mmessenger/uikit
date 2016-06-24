@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" class="app" id="ng-app" ng-app="spark" >
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="../../../lib/css/bootstrap.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="../../../lib/vendor/kendo/2016.1.125/kendo.common.min.css" type='text/css'>
+    <link rel="stylesheet" href="../../../lib/css/app.css" type='text/css'>
+    <link rel="stylesheet" href="../../../lib/css/override.css" type='text/css'>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-route.js"></script>
+    <script type="text/javascript" src="../../../app/main.js"></script>
+    <script type="text/javascript" src="../../..//lib//vendor/kendo/2016.1.125/kendo.all.min.js"></script>
+    <script type="text/javascript" src="../../../lib/js/app.js"></script>
+    <script type="text/javascript" src="../../../lib/js/tether.js"></script>
+    <script type="text/javascript" src="../../../lib/js/bootstrap.js"></script>
+</head>
+
+<body>
+<section class="vbox">
+    <header class="header p-a-0 b-b b-light navbar navbar-fixed-top-xs">
+        <nav class="navbar navbar-header navbar-light bg-white p-a-0 text-xs-center">
+            <ul class="nav navbar-nav pull-xs-right">
+                <li class="nav-item">
+                    <a href="javascript:void(0)" class="nav-link"><i class="fa fa-search fa-fw"></i></a>
+                </li>
+                <li class="nav-item hidden-sm-down">
+                    <a href="javascript:void(0)" class="nav-link">
+                        <span class="avatar img-circle">
+                            <img class="img-fluid" src="lib/images/avatar_default.jpg" alt="">
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav pull-xs-left hidden-md-up">
+                <li class="nav-item">
+                    <a href="javascript:void(0)" class="nav-link navbar-toggler" data-toggle="class:nav-off-screen,open" data-target="#navbarSideBar,html">
+                        <i class="fa fa-bars fa-fw "></i>
+                    </a>
+                </li>
+            </ul>
+            <a href="javascript:void(0)" class="navbar-brand aside-sm hidden-sm-down m-l m-r" data-toggle="fullscreen"> <img src="../../../lib/images/logo_dark.png" class="img-fluid pull-left"></a>
+            <a href="javascript:void(0)" class="navbar-brand w-48 hidden-md-up pull-xs-none" data-toggle="fullscreen"> <img src="../../../lib/images/logo_dark_sm.png" class="img-fluid"></a>
+        </nav>
+    </header>
+    <section id="content" class="">
+        <section class="hbox stretch b-t">
+            <aside class="nav-sidebar nav-xs bg-dark hidden-sm-down b-r" id="navbarSideBar">
+                <section class="vbox">
+                    <section class="scrollable">
+                        <nav class="" role="navigation">
+                            <ul class="nav" data-ride="collapse">
+                                <li class=" nav-item">
+                                    <a href="javascript:void(0)" class="nav-link auto">
+                                        <i class="fa fa-home fa-fw "></i> Home
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="javascript:void(0)" class="nav-link auto">
+                                        <i class="fa fa-file-text-o fa-fw "></i> Orders
+                                    </a>
+                                </li>
+                                <li class=" nav-item">
+                                    <a href="javascript:void(0)" class="nav-link auto">
+                                        <i class="fa fa-tags fa-fw "></i> Inventory
+                                        <b class="label bg-light pull-right hidden-nav">NEW</b>
+                                    </a>
+                                </li>
+                                <li class=" nav-item">
+                                    <a href="javascript:void(0)" class="nav-link auto">
+                                        <i class="fa fa-dollar fa-fw "></i> Invoicing
+                                        <b class="label label-pill bg-danger pull-right hidden-nav">4</b>
+                                    </a>
+                                </li>
+                                <li class="active nav-item">
+                                    <a href="javascript:void(0)" class="nav-link auto">
+                                        <i class="fa fa-user fa-fw "></i> Employees
+                                    </a>
+                                </li>
+                                <li class=" nav-item">
+                                    <a href="javascript:void(0)" class="nav-link auto">
+                                        <i class="fa fa-bar-chart fa-fw "></i> Reports
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="line dk hidden-nav"></div>
+                        </nav>
+                    </section>
+                </section>
+            </aside>
+            <aside class="aside-md b-r">
+                <section class="vbox">
+                    <header class="header b-b wrapper-sm" >
+                        <div class="input-group m-t-sm">
+                            <span class="input-group-addon input-sm no-border bg-empty"><i class="fa fa-search icon-muted"></i></span>
+                            <input type="text" id="employeeFilter" class="form-control no-border no-padder bg-empty text-md" placeholder="Filter by Name">
+                        </div>
+                    </header>
+                    <section class="scrollable">
+                        <ul id="employeeGrid" class="list-group auto no-radius no-border" >
+                            <script id="template" type="text/x-kendo-tmpl">
+                                <li class="list-group-item">
+                                    <a href="javascript:void(0)">
+                                        <span class="avatar avatar-sm img-circle bg-light dker m-r-1 pull-left">
+                                            <img class="img-fluid" src="lib/images/avatar_default.jpg" alt="">
+                                        </span>
+                                        <span class="clear">
+                                            <span class="block">#: first_name# #: last_name #</span>
+                                            <small class="text-muted text-ellipsis">#: title # in #: department # </small>
+                                        </span>
+                                    </a>
+                                </li>
+                            </script>
+                        </ul>
+                    </section>
+                </section>
+            </aside>
+            <section>
+                <section id="detail" class="vbox flex">
+                </section>
+            </section>
+        </section>
+    </section>
+</section>
+</body>
+<script type="text/javascript">
+    
+    // Create data source for Employee listview
+    var dataSource = new kendo.data.DataSource({
+        type: "json",
+        transport: {
+            read: {
+                url: "../../../lib/json/employees.json",
+                dataType: "json",
+            },
+        },
+        schema: {
+            data: "data",
+            total: "data.length",
+            model: {
+                id: "id",
+                fields: {
+                    id: {
+                        editable: true,
+                        nullable: true
+                    },
+                    first_name: {
+                        editable: true,
+                        nullable: true
+                    },
+                    last_name: {
+                        editable: true,
+                        nullable: true
+                    }
+                }
+            }
+        },
+        sort: {
+            field: "first_name",
+            dir: "asc"
+        },
+        pageSize: 20,
+    });
+
+    // Renders employee listView with remote dataSource
+    $("#employeeGrid").kendoListView({
+        dataSource: dataSource,
+        pageable: true,
+        selectable: true,
+        dataBound: selectFirst,
+        change: updateView,
+        template: kendo.template($("#template").html()),
+    });
+
+    // Selects the first record in the list
+    function selectFirst() {
+        var listView = $("#employeeGrid").data("kendoListView");
+        listView.select(listView.element.children().first());
+    }
+
+    // Updates the detail view whe the record is selected
+    function updateView () {
+        var data = dataSource.view(),
+            selected = $.map(this.select(), function(item) {
+                return data[$(item).index()];
+            });
+        var template = kendo.template($("#detailTemplate").html());
+        var result = kendo.render(template, selected); //render the template
+
+        $("#detail").html(result); //append the result to the page
+        $("#detail").html(chart); //append the result to the page
+
+    };
+
+    // Filters list of employees
+    $("#employeeFilter").keydown(function() {
+        setTimeout(function(){
+            $name = $("#employeeFilter").val();
+            $("#employeeGrid").data("kendoListView").dataSource.filter({
+                filters: [{
+                    logic: 'or',
+                    filters: [
+                        { field: 'last_name', operator: 'contains', value: $name },
+                        { field: 'first_name', operator: 'contains', value: $name }
+                    ]}
+                ]
+            });
+        });
+    });
+
+    var chart = function createChart() {
+        $("#linechart").kendoChart({
+            chartArea: {
+                background: "",
+                height: 250,
+            },
+            seriesDefaults: {
+                type: "line",
+                style: "smooth"
+            },
+            legend: {
+                visible: false,
+            },
+            series: [{
+                name: "Goals",
+                markers: {
+                  visible: false,
+                },
+                data: [0,50,100,150,200,250,300,350,400,450,500,550,600,650,700]
+            },{
+                name: "Sales",
+                data: [0, 23.5, 35.994, 143.464, 235.001, 249.939, 295.333, 295.333, 341.339, 412.727, 435.2, 464.5, 532.2, 612.4, 623.8]
+            }],
+            seriesColors: ["#cccccc", "#fd5426"],
+            valueAxis: {
+                labels: {
+                    format: "{0}K"
+                },
+                line: {
+                    visible: false
+                },
+                axisCrossingValue: -10
+            },
+            categoryAxis: {
+                categories: [2,4,6,8,10,12,14,16,18,20,22,24,26,28,30],
+                majorGridLines: {
+                    visible: false
+                },
+                labels: {
+                    rotation: "auto"
+                }
+            },
+            tooltip: {
+                visible: true,
+                format: "{0}K",
+                template: "#= series.name #: #= value #"
+            }
+        });
+    }
+
+    //$(document).ready(createChart);
+
+
+</script>
+
+<script id="detailTemplate" type="text/x-kendo-template">
+    <header class="header bg-light p-a-0">
+        <div class="b-b b-dark bg-white p-a-2">
+            <div class="btn-group pull-sm-right m-b-1">
+                <div class="btn-group" role="group">
+                    <a href="javascript:void(0)" class="btn btn-default-outline btn-icon dropdown-toggle" data-toggle="dropdown"></a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="javascript:void(0)">Action</a>
+                        <a class="dropdown-item" href="javascript:void(0)">Action</a>
+                    </div>
+                </div>
+            </div>
+            <a href="javascript:void(0)" class="btn btn-default-outline pull-sm-right m-b-1 m-r-xs">Edit</a>
+            <div class="media m-a-0">
+                <div class="media-left">
+                    <span class="avatar avatar-md img-circle bg-light dker b b-white">
+                        <img class="img-fluid" src="lib/images/avatar_default.jpg" alt="">
+                    </span>
+                </div>
+                <div class="media-body">
+                    <div class="text-muted text-u-c">#= title #</div>
+                    <h3 class="media-heading">#= first_name # #= last_name #</h3>
+                </div>
+            </div>
+            <div class="row m-t-1 padder-h collapse in" id="profileHeader">
+                <div class="col-sm-2 ">
+                    <div class="text-muted text-sm">DEPARTMENT</div>
+                    <p class="text-ellipsis text-dark">#= department #</p>
+                </div>
+                <div class="col-sm-2 ">
+                    <div class="text-muted text-sm">PHONE</div>
+                    <p class="text-ellipsis text-dark">#= phone #</p>
+                </div>
+                <div class="col-sm-3 ">
+                    <div class="text-muted text-sm">EMAIL</div>
+                    <p class="text-ellipsis text-dark"><a href="mailto:hrichards@progress.com?Subject=Hello%20again">#= email # </a></p>
+                </div>
+                <div class="col-sm-5 ">
+                    <div class="text-muted text-sm">Address</div>
+                    <address class="text-dark">#= address #<br>
+                        #= city #, #= state # #= zip # </address>
+                </div>
+            </div>
+        </div>
+        <div class="text-xs-center block m-t-n-xxs">
+            <span class="bg-white inline b-b b-r b-l m-t-n-xxs" data-toggle="collapse" data-target="\\#profileHeader">
+                <button class="btn btn-link btn-sm bg-empty padder-h l-h-1x" data-toggle="button" aria-pressed="false">
+                    <i class="fa fa-angle-down text-active"></i>
+                    <i class="fa fa-angle-up text"></i>
+                </button>
+            </span>
+        </div>
+    </header>
+    <section class="">
+        <section class="vbox">
+            <section class="scrollable p-a-2 bg-light">
+                
+                <div class="row row-sm">
+
+                    <div class="col-md-4">
+                        <div class="card card-default card-block">
+                            <div class="card-title no-border ">
+                                <div class="h6 text-dark m-t-xs text-u-c text-ellipsis">Sales this month
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="h2">$706.2K</div>
+                                <small class="text-muted text-ellipsis">Booked to date vs. 750K Goal</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 ">
+                        <div class="card card-default card-block">
+                            <div class="card-title no-border ">
+                                <div class="h6 text-dark m-t-xs text-u-c text-ellipsis">Total Forcast this month
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="h2">$760K</div>
+                                <small class="text-muted text-ellipsis">September based on Pipeline</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-default card-block">
+                            <div class="card-title no-border ">
+                                <div class="h6 text-dark m-t-xs text-u-c text-ellipsis">Sales as % of Goal
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="h2 text-primary">92%</div>
+                                <small class="text-muted text-ellipsis">Percentage of Goal Value</small>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <section class="card p-a-2">
+                            <div class="card-title no-border ">
+                                <div class="h6 text-dark m-t-xs text-u-c text-ellipsis">Sales to date &amp; Forcast vs. Goal
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div id="linechart" class=""></div>
+                            </div>
+                        </section>
+                    </div>
+
+                </div>
+
+
+
+            </section>
+        </section>
+    </section>
+</script>
+
+</html>

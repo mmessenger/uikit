@@ -1,0 +1,45 @@
+.navbar-brand{
+	padding: 0;
+	margin: 0;
+	line-height: 3.5rem;
+	display: inline-block;
+	text-align: center;
+	//float: none;
+	//width: 100%;
+	img{
+		max-height: 100%;
+		vertical-align: middle;
+		margin: auto;
+		display: inline-block;
+		//float: left;
+	}	
+}
+
+
+.navbar-form{
+	line-height: 3.5rem;
+	.header-md &{
+		line-height: @header-md-height;
+	}
+}
+
+.navbar-inverse .navbar-collapse, 
+.navbar-inverse .navbar-form{
+  border-color:transparent;
+}
+
+.navbar-fixed-top,
+.navbar-fixed-bottom{
+  position: fixed !important;
+}
+
+.navbar-fixed-top{
+  + *{
+      padding-top: 50px;
+    }
+  &.header-md{
+    + *{
+      padding-top: @header-md-height;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.timeline {
+  position: relative;
+}
+.timeline .media {
+  overflow: visible;
+}
+.timeline .media-left {
+  position: relative;
+  z-index: 2;
+}
+.timeline::before {
+  width: 2px;
+  height: 100%;
+  background: #eee;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  z-index: 1;
+}

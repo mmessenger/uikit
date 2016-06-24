@@ -1,0 +1,98 @@
+.avatar{
+  position: relative;
+  width: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  font-size: 1.2rem;
+  vertical-align: middle;
+
+  i{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30%;
+    height: 30%;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 100%;
+    &.md{
+      width: 40%;
+      height: 40%;
+    }
+    &.right{
+      left: auto;
+      right: 0;
+    }
+    &.left{
+      left: 0;
+      right: auto;
+    }
+    &.top{
+      top: 0;
+      bottom: auto;
+    }
+    &.bottom{
+      top: auto;
+      bottom: 0;
+    }
+    &.on{
+      background-color: @brand-success;
+    }
+    &.off{
+      background-color: @text-muted;
+    }
+    &.busy{
+      background-color: @brand-danger;
+    }
+    &.away{
+      background-color: @brand-warning;
+    }
+  }
+}
+
+.avatar-text {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  width: 100%;
+  line-height: 50px;
+
+  .avatar-lg & {
+    height: 128px;
+    line-height: 128px;
+    font-size: 3rem;
+  }
+  .avatar-md & {
+    height: 64px;
+    line-height: 64px;
+    font-size: 1.8rem;
+  }
+  .avatar-sm & {
+    height: 34px;
+    line-height: 34px;
+    font-size: .9rem;
+  }
+  .avatar-xs & {
+    height: 24px;
+    line-height: 24px;
+    font-size: .7rem;
+  }
+
+}
+
+.avatar-lg{width: 128px;}
+.avatar-md{width: 64px;}
+.avatar-sm{width: 34px;}
+.avatar-xs{width: 24px;}
+
+/*.thumb img, 
+.thumb-xs img, 
+.thumb-sm img, 
+.thumb-md img, 
+.thumb-lg img,
+.thumb-btn img{
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}*/

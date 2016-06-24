@@ -1,0 +1,52 @@
+<div class="">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="p-x-3">
+            <h1 class="display-5">Application Footer</h1>
+            <p class="lead">The Application Footer appears on every single pages. Things generally see in the footer are copyright information, contact information, Privacy policy, terms of use, press release information, call-to-actions and sitemap links. </p>
+        </div>
+    </div>
+    <div class="hbox stretch">
+        <section class="p-x-3">
+            <div id="" class="h4 m-b-1 m-t-1">Overview</div>
+            <div class="h6 font-bold m-t-2 m-b-1">When to Use:</div>
+            <ul>
+                <li>The global footer should be used on every standard pages at the bottom.</li>
+                <li>The footer should not be too information heavy, and it is advisable to keep the design simple and not overflowing with graphics.</li>
+            </ul>
+            <div id="single" class="h5 font-bold m-t-2 m-b-1">Single Line Footer</div>
+            <p>The single line footer provides minimal content and links to pages of interests where it's divided into 2 columns.</p>
+            <div class="" ng-include src="'views/components/appfooter/single.html'"></div>
+            <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <pre class="code pre-scrollable p-a-1 b-a bg-light" ng-include src="'views/components/appfooter/single.html'" maketext></pre>
+
+            <div id="multi" class="h5 font-bold m-t-2 m-b-1">Multi-Line Footer</div>
+            <p>The multi-line footer provides minimal content and links to pages of interests where it's presented in the middle of the footer.</p>
+            <div class="" ng-include src="'views/components/appfooter/multi.html'"></div>
+            <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <pre class="code pre-scrollable p-a-1 b-a bg-light" ng-include src="'views/components/appfooter/multi.html'" maketext></pre>
+           
+            <div id="marketing" class="h5 font-bold m-t-2 m-b-1">Marketing Footer</div>
+            <p>The marketing footer contians call-to-action, social media links and any information that enhance the overall marketing mix: product, price, place or promotion which designed to highlight certain area which you’d like users to focus more on.</p>
+            <div class="" ng-include src="'views/components/appfooter/marketing.html'"></div>
+            <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <pre class="code pre-scrollable p-a-1 b-a bg-light" ng-include src="'views/components/appfooter/marketing.html'" maketext></pre>
+           
+            <div id="large" class="h5 font-bold m-t-2 m-b-1">Large Navigation Footer</div>
+            <p>The large navigation footer are often duplicates of main navigation found at the top of the page. It offers users to quickly jump from page to page or if users get lost they can find their way right back in the footer.</p>
+            <div class="" ng-include src="'views/components/appfooter/large.html'"></div>
+            <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <pre class="code pre-scrollable p-a-1 b-a bg-light" ng-include src="'views/components/appfooter/large.html'" maketext></pre>
+        </section>
+        <aside class="aside-md b-l hidden-md-down nav-sidebar bg-white">
+            <nav class="nav-scroll affix w-full" role="navigation" jumpmenu>
+                <div class="text-muted text-u-c hidden-nav padder m-t-1 m-b-1">On This Page:</div>
+                <ul class="nav nav-main" data-ride="collapse">
+                    <li class="nav-item active"><a href="javascript:void(0)" data-target="#single" class="nav-link active">Single Line Footer</a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#multi" class="nav-link active">Multi-Line Footer</a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#marketing" class="nav-link active">Marketing Footer</a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#large" class="nav-link active">Large Navigation Footer</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+</div>

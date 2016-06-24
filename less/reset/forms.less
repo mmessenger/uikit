@@ -1,0 +1,34 @@
+.form-control{
+  border-color: @input-border;
+  border-radius: @input-border-radius;
+  border-width: 1px;
+  &,
+  &:focus {    
+    .box-shadow(none);
+  }
+  &:focus{
+    border-color: @input-border-focus;
+  }
+}
+
+.input-w-sm {
+  width: 120px
+}
+
+.input-w-md {
+  width: 200px
+}
+
+.input-w-lg {
+  width: 250px
+}
+
+
+.input-group-addon{
+  border-color: @input-border;
+  background-color: lighten(@brand-light, 3%);
+}
+
+.input-group btn-default {
+  .box-shadow(0);
+}

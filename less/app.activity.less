@@ -1,0 +1,24 @@
+.activity {
+    position: relative;
+
+    .media {
+        overflow: visible;
+        margin-bottom: 1.5rem;
+    }
+
+    .media-left {
+        position: relative;
+        z-index: 2
+    }
+
+    &::before {
+        width: 2px;
+        height: 100%;
+        background: #eee;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 1.2rem;
+        z-index: 1;
+    }
+}

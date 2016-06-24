@@ -1,0 +1,55 @@
+<div id="gridEx2" class="m-b border-box"></div>
+<script id="template2" type="text/x-kendo-tmpl">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="media">
+                <div class="media-left">
+                    <span class="avatar avatar-md img-circle">
+                        <img class="img-fluid" src="#=file#" >
+                    </span>
+                </div>
+                <div class="media-body">
+                    <h5 class="media-heading">#=first_name# #=last_name# </br><small>#=email#</small></h5>
+                    <div class="text-muted">
+                        <i class="fa fa-building m-r-xs"></i>#=company#
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <span class="label #=color#">#=status#</span>
+        </div>
+        <div class="col-md-2">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button href="javascript:void(0)" class="btn btn-icon btn-sm btn-default"><i class="fa fa-pencil"></i></button>
+                <button href="javascript:void(0)" class="btn btn-icon btn-sm btn-default"><i class="fa fa-trash"></i></button>
+            </div>
+        </div>
+    </div>
+</script>
+<script>
+    $(document).ready(function () {
+        var ds = [
+            {"id":1,"first_name":"Henry","last_name":"Elliott","email":"helliott0@slate.com","company":"Babbleopia","file":"lib/images/p1.png","status":"Active","color":"bg-success"},
+            {"id":2,"first_name":"Rebecca","last_name":"Ramirez","email":"rramirez1@auda.org.au","company":"Oyondu","file":"lib/images/p7.png","status":"Inactive","color":"label-default"},
+            {"id":3,"first_name":"Evelyn","last_name":"Pierce","email":"epierce2@businesswire.com","company":"Myworks","file":"lib/images/p9.png","status":"Active","color":"bg-success"},
+            {"id":4,"first_name":"Louise","last_name":"Snyder","email":"lsnyder3@booking.com","company":"Feedmix","file":"lib/images/p10.png","status":"Active","color":"bg-success"},
+            {"id":5,"first_name":"Nicole","last_name":"Garcia","email":"ngarcia4@newsvine.com","company":"Shufflebeat","file":"lib/images/p4.png","status":"Active","color":"bg-success"}
+        ]
+        var localds = new kendo.data.DataSource({
+            data: ds
+        });
+
+        $("#gridEx2").kendoGrid({
+            dataSource: localds,
+            sortable: true,
+            columns: [
+                {
+                    field: "",
+                    title: "Contact Name",
+                    template: kendo.template($("#template2").html())
+                }
+            ]
+        });
+    });
+</script>

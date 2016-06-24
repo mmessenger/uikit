@@ -1,0 +1,107 @@
+// Extends Bootstraps Tabs Component
+// -------------------------
+
+.nav-tabs {
+
+	// Positioning
+	&.nav-center {
+		text-align: center;
+	}
+	&.nav-right {
+		text-align: right;
+	}
+	&.nav-center,
+	&.nav-right {
+		.nav-item {
+			float: none;
+			display: inline-block;
+			text-align: center;
+		}
+	}
+
+	// Colored Tabs
+	&[class*=bg-] {
+		border-bottom: 0;
+
+		> .nav-item {
+			margin: 0;
+
+			>.nav-link {
+				border: 0;
+				border-radius: 0;
+				&:hover,
+				&:focus,
+				&.active, 
+				&.active:focus, 
+				&.active:hover {
+					background-color: rgba(0,0,0,.1);
+				    border-color: transparent;
+				    color: #fff;
+				}		
+			}
+
+			>.dropdown-menu {
+				.dropdown-item,
+				a {
+					color: inherit;
+				}
+			}
+		}
+	}
+}
+
+// Justified nav links
+// -------------------------
+
+.nav-justified {
+  width: 100%;
+  border-bottom: 0px;
+
+  > .nav-item {
+    float: none;
+    > .nav-link {
+      text-align: center;
+    }
+  }
+
+  > .dropdown .dropdown-menu {
+    top: auto;
+    left: auto;
+    width: 100%;
+  }
+
+  // Larger Screens
+  @media (min-width: 48em) {
+    > .nav-item {
+      display: table-cell;
+      margin: 0;
+      width: 1%;
+      > .nav-link {
+	        &.active {
+	        	border-bottom-color: white;
+	        }
+      }
+    }
+  }
+
+  // Smaller Screens
+  @media (max-width: 47.9em) {
+    .nav-item {
+	    & + .nav-item {
+	        margin-left: 0;
+	    }
+      > .nav-link {
+      	border-color: @border-color;
+      	border-radius: 0;
+      }
+    }
+  }
+}
+
+// Bordered Tab Content
+// -------------------------
+
+.tab-content-bordered {
+	border: 1px solid @border-color;
+	border-top-width: 0;
+}

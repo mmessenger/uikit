@@ -1,0 +1,70 @@
+<div class="">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="p-x-3">
+            <h1 class="display-5">Wizard</h1>
+            <p class="lead">Wizards break down tasks or information into a sequence of chucks, navigated with Previous and Next buttons and using sequence labeling to indicate where a user is in the process and how much work is required.</p>
+        </div>
+    </div>
+    <div class="hbox stretch">
+        <section class="p-x-3">
+            <div class="h6 font-bold m-t-2 m-b-1">When to Use:</div>
+            <ul>
+                <li>To present a fixed workflow in a prescribed sequence.</li>
+                <li>To break up a long or complex workflow into manageable tasks.</li>
+                <li>To disclose information upon what data a user has already provided.</li>
+            </ul>
+            <div id="basic" class="h4 m-b-1 m-t-3">Basic Wizard</div>
+            <p>Wrap <code>.steps-container</code> class around a list of <code>.steps</code> and <code>.step-content</code></p>
+            <div class="m-t-3" ng-include src="'views/components/steps/basic.html'" ></div>
+
+            <div id="classes" class="h4 m-b-1 m-t-3">Classess</div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 200px;">Class</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>.steps-container</code></td>
+                        <td>Initializes the wizard containing <code>.steps</code>, <code>.steps-content</code> and navigation buttons.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.steps</code></td>
+                        <td>Indicates placement for step indicators and adds default styling.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.step-content</code></td>
+                        <td>Wrap all of the step panes</td>
+                    </tr>
+                    <tr>
+                        <td><code>.step-pane</code></td>
+                        <td>Use this class for each pane and <code>data-step</code> to indicate the sequence of the pane. For instance, <code>data-step="1"</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>.btn-next</code></td>
+                        <td>Indicates the next button</td>
+                    </tr>
+                    <tr>
+                        <td><code>.btn-prev</code></td>
+                        <td>Indicates the previous button</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <aside class="aside-md b-l hidden-md-down nav-sidebar bg-white">
+            <nav class="nav-scroll affix w-full" role="navigation" jumpmenu>
+                <div class="text-muted text-u-c hidden-nav padder m-t-1 m-b-1">On This Page:</div>
+                <ul class="nav nav-main" data-ride="collapse">
+                    <li class="nav-item active">
+                        <a href="javascript:void(0)" data-target="#basic" class="nav-link  active">Basic</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" data-target="#classes" class="nav-link ">Classes</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<ul id="menu">
+    <li class="k-state-highlight">Active</li>
+    <li>
+        Item
+    </li>
+    <li disabled="disabled">
+        News
+    </li>
+    <li>
+        More
+        <ul>
+            <li>
+                Item
+                <ul> <!-- moving the UL to the next line will cause an IE7 problem -->
+                    <li>Item</li>
+                    <li>Another Item</li>
+                </ul>
+            </li>
+            <li>Item</li>
+        </ul>
+    </li>
+</ul>
+<script>
+    $(document).ready(function() {
+        $("#menu").kendoMenu();
+    });
+</script>

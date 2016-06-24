@@ -1,0 +1,126 @@
+<div class="">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="p-x-3">
+            <h1 class="display-5">Activity Stream</h1>
+            <p class="lead">The activity stream displays upcoming, current, and past activities.</p>
+        </div>
+    </div>
+    <div class="hbox stretch">
+        <section class="p-x-3">
+            <div id="" class="h4 m-b-1 m-t-1">Overview</div>
+            <p>The Activity Stream is an event-based timeline meant to keep the user informed of activity within the application. Activity streams promote user engagement and expose messages, events and transactions that have recently been triggered by the system, user(s), or external applications. </p>
+
+            <div class="activity m-t-3">
+                <div class="media ">
+                    <div class="media-left"> <span class="fa-stack fa-lg bg-white"> <i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-list fa-stack-1x fa-inverse"></i> </span> </div>
+                    <div class="media-body">
+                        <h6 class="media-heading m-t-xs text-md l-h font-lg"> <a href="javascript:void(0)" class="font-bold">Madison Boyd</a> added a list <a href="javascript:void(0)">Review Items for Completion</a> </h6>
+                        <div class="text-sm text-muted m-t-xs">Feb 24, 2016 at 11:00 PM</div>
+                    </div>
+                    <div class="media-right">
+                        <div class="btn-group" role="group">
+                            <a href="javascript:void(0)" class="btn btn-secondary btn-sm btn-icon dropdown-toggle" data-toggle="dropdown"></a>
+                            <div class="dropdown-menu dropdown-menu-right" data-container="body"> <a class="dropdown-item" href="javascript:void(0)">Comment</a> <a class="dropdown-item" href="javascript:void(0)">Delete</a> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media">
+                    <div class="media-left"> <span class="fa-stack fa-lg text-info bg-white"> <i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-comment-o fa-stack-1x fa-inverse"></i> </span> </div>
+                    <div class="media-body">
+                        <h6 class="media-heading m-t-xs text-md l-h"> <a href="javascript:void(0)" class="font-bold">Rose Moreno</a> commented on <a href="javascript:void(0)">application234245.pdf</a> </h6>
+                        <div class="">Customer updated the application. Still awaiting final changes and seems interested in closing on the property very soon</div>
+                        <div class="text-sm text-muted m-t-xs">Feb 24, 2016 at 11:00 PM</div>
+                    </div>
+                    <div class="media-right">
+                        <div class="btn-group" role="group">
+                            <a href="javascript:void(0)" class="btn btn-secondary btn-sm btn-icon dropdown-toggle" data-toggle="dropdown"></a>
+                            <div class="dropdown-menu dropdown-menu-right" data-container="body"> <a class="dropdown-item" href="javascript:void(0)">Comment</a> <a class="dropdown-item" href="javascript:void(0)">Delete</a> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media">
+                    <div class="media-left"> <span class="fa-stack fa-lg text-warning bg-white"> <i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-pencil-square-o fa-stack-1x fa-inverse"></i> </span> </div>
+                    <div class="media-body">
+                        <h6 class="media-heading m-t-xs text-md l-h"> <a href="javascript:void(0)" class="font-bold">Austin Foster</a> changed the status of <a href="javascript:void(0)">Residential Mortgage 23423</a> to <strong>Review</strong> </h6>
+                        <div class="text-sm text-muted m-t-xs">Feb 24, 2016 at 11:00 PM</div>
+                    </div>
+                    <div class="media-right">
+                        <div class="btn-group" role="group">
+                            <a href="javascript:void(0)" class="btn btn-secondary btn-sm btn-icon dropdown-toggle" data-toggle="dropdown"></a>
+                            <div class="dropdown-menu dropdown-menu-right" data-container="body"> <a class="dropdown-item" href="javascript:void(0)">Comment</a> <a class="dropdown-item" href="javascript:void(0)">Delete</a> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media">
+                    <div class="media-left"> <span class="fa-stack fa-lg text-success bg-white"> <i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i> </span> </div>
+                    <div class="media-body">
+                        <h6 class="media-heading m-t-xs text-md l-h"> <a href="javascript:void(0)" class="font-bold">Deborah Schmidt</a> sent an email to <a href="javascript:void(0)">kduncan@homecompany.com</a> </h6>
+                        <div class="text-sm text-muted m-t-xs">Feb 24, 2016 at 11:00 PM</div>
+                    </div>
+                    <div class="media-right">
+                        <div class="btn-group" role="group">
+                            <a href="javascript:void(0)" class="btn btn-secondary btn-sm btn-icon dropdown-toggle" data-toggle="dropdown"></a>
+                            <div class="dropdown-menu dropdown-menu-right" data-container="body"> <a class="dropdown-item" href="javascript:void(0)">Comment</a> <a class="dropdown-item" href="javascript:void(0)">Delete</a> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="h6 font-bold m-t-3 m-b-1">Example markup</p>
+            <pre class="code pre-scrollable p-a-1 b-a bg-light bg-light" ng-include src="'views/components/activity-stream/activity-stream.html'" maketext></pre>
+
+            <p id="classes" class="h4 m-b-1 m-t-3">Classes</p>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 300px">Class</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>.activity</code></td>
+                        <td>Defines the activity stream component</td>
+                    </tr>
+                    <tr>
+                        <td><code>.activity.media</code></td>
+                        <td>Defines an item on the activity stream</td>
+                    </tr>
+                    <tr>
+                        <td><code>.activity.media-left</code></td>
+                        <td>Defines content on the left of a activity stream item</td>
+                    </tr>
+                    <tr>
+                        <td><code>.activity.media-right</code></td>
+                        <td>Defines content on the right of a activity stream item</td>
+                    </tr>
+                    <tr>
+                        <td><code>.activity.media-body</code></td>
+                        <td>Defines the main content of the activity stream item</td>
+                    </tr>
+                    <tr>
+                        <td><code>.media-top</code>, <code>.media-middle</code>, <code>.media-bottom</code></td>
+                        <td>Vertically aligns content in an activity stream item. Can be applied to a <code>.media-right</code> or <code>.media-left</code></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+        <aside class="aside-md b-l hidden-md-down nav-sidebar bg-white">
+            <nav class="nav-scroll affix w-full" role="navigation" jumpmenu>
+                <div class="text-muted text-u-c hidden-nav padder m-t-1 m-b-1">On This Page:</div>
+                <ul class="nav nav-main" data-ride="collapse">
+                    <li class="nav-item active">
+                        <a href="javascript:void(0)" data-target="#overview" class="nav-link  active">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" data-target="#activity" class="nav-link">Activity Stream</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" data-target="#classes" class="nav-link">Classes</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+</div>

@@ -1,0 +1,358 @@
+<div class="">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="p-x-3">
+            <h1 class="display-5">Grid system</h1>
+            <p class="lead">Bootstrap includes a powerful mobile-first grid system for building layouts of all shapes and sizes. It’s based on a 12 column layout and has multiple tiers, one for each media query range. You can use it with Sass mixins or our predefined classes.
+            </p>
+        </div>
+    </div>
+    <div class="hbox stretch">
+
+        <!--Begin Section-->
+        <section class="p-x-3">
+
+            <!--Begin quick start example -->
+            <h4 class="h4 m-b-1 m-t-1">Quick start example</h4>
+            <p class="m-b-md">If you’re using Bootstrap’s compiled CSS, this the example you’ll want to start with.
+            </p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 bg-light bg-light lt wrapper-sm b-a">
+                        One of three columns
+                    </div>
+                    <div class="col-sm-4 bg-light bg-light lt wrapper-sm b-a">
+                        One of three columns
+                    </div>
+                    <div class="col-sm-4 bg-light lt wrapper-sm b-a">
+                        One of three columns
+                    </div>
+                </div>
+            </div>
+            <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a" ng-include src="'views/styles/grid/example.html'" maketext></pre>
+            <p class="m-b-md">The above example creates three equal-width columns on small, medium, large, and extra large devices using our predefined grid classes. Those columns are centered in the page with the parent <code>.container</code>.
+            </p>
+
+            <!--End quick start example -->
+
+            <!--Begin grid options -->
+            <h4 id="gridoption" class="h4 m-b-1 m-t-1">Grid Options</h4>
+            <p class="m-b-md">While Bootstrap uses <code>ems</code> or <code>rems</code> for defining most sizes, <code>px</code> s are used for grid breakpoints and container widths. This is because the viewport width is in pixels and does not change with the font size.
+            </p>
+            <p class="m-b-md">See how aspects of the Bootstrap grid system work across multiple devices with a handy table.
+            </p>
+            <!--Begin grid options table -->
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th class="text-xs-center">
+                                Extra small
+                                <br>
+                                <small>&lt;544px</small>
+                            </th>
+                            <th class="text-xs-center">
+                                Small
+                                <br>
+                                <small>≥544px</small>
+                            </th>
+                            <th class="text-xs-center">
+                                Medium
+                                <br>
+                                <small>≥768px</small>
+                            </th>
+                            <th class="text-xs-center">
+                                Large
+                                <br>
+                                <small>≥992px</small>
+                            </th>
+                            <th class="text-xs-center">
+                                Extra large
+                                <br>
+                                <small>≥1200px</small>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="text-nowrap" scope="row">Grid behavior</th>
+                            <td>Horizontal at all times</td>
+                            <td colspan="4">Collapsed to start, horizontal above breakpoints</td>
+                        </tr>
+                        <tr>
+                            <th class="text-nowrap" scope="row">Container width</th>
+                            <td>None (auto)</td>
+                            <td>576px</td>
+                            <td>720px</td>
+                            <td>940px</td>
+                            <td>1140px</td>
+                        </tr>
+                        <tr>
+                            <th class="text-nowrap" scope="row">Class prefix</th>
+                            <td><code>.col-xs-</code></td>
+                            <td><code>.col-sm-</code></td>
+                            <td><code>.col-md-</code></td>
+                            <td><code>.col-lg-</code></td>
+                            <td><code>.col-xl-</code></td>
+                        </tr>
+                        <tr>
+                            <th class="text-nowrap" scope="row"># of columns</th>
+                            <td colspan="5">12</td>
+                        </tr>
+                        <tr>
+                            <th class="text-nowrap" scope="row">Gutter width</th>
+                            <td colspan="5">1.875rem / 30px (15px on each side of a column)</td>
+                        </tr>
+                        <tr>
+                            <th class="text-nowrap" scope="row">Nestable</th>
+                            <td colspan="5">Yes</td>
+                        </tr>
+                        <tr>
+                            <th class="text-nowrap" scope="row">Offsets</th>
+                            <td colspan="5">Yes</td>
+                        </tr>
+                        <tr>
+                            <th class="text-nowrap" scope="row">Column ordering</th>
+                            <td colspan="5">Yes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--End grid options table -->
+
+            <!--End grid options -->
+
+            <!--Begin sass mixins -->
+            <h4 id="sassmixin" class="h4 m-b-1 m-t-2">Sass mixins</h4>
+            <p class="m-b-md">When using Bootstrap’s source Sass files, you have the option of using Sass variables and mixins to create custom, semantic, and responsive page layouts. Our predefined grid classes use these same variables and mixins to provide a whole suite of ready-to-use classes for fast responsive layouts.</p>
+            <!--End sass mixins -->
+
+            <!--Begin variables -->
+            <h4 id="variables" class="h4 m-b-1 m-t-2">Variables</h4>
+            <p class="m-b-md">Variables determine the number of columns, the gutter width, and the media query point at which to begin floating columns. We use these to generate the predefined grid classes documented above, as well as for the custom mixins listed below.</p>
+            <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a" ng-include src="'views/styles/grid/variables.html'" maketext></pre>
+            <!--End variables -->
+
+            <!--Begin mixins -->
+            <h4 id="mixins" class="h4 m-b-1 m-t-2">Mixins</h4>
+            <p class="m-b-md">Mixins are used in conjunction with the grid variables to generate semantic CSS for individual grid columns.</p>
+            <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a" ng-include src="'views/styles/grid/mixins.html'" maketext></pre>
+            <!--End mixins -->
+
+            <!--Begin example usage -->
+            <h4 id="exampleusage" class="h4 m-b-1 m-t-2">Example usage</h4>
+            <p class="m-b-md">You can modify the variables to your own custom values, or just use the mixins with their default values. Here’s an example of using the default settings to create a two-column layout with a gap between.</p>
+            <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a" ng-include src="'views/styles/grid/exampleusage1.html'" maketext></pre>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a" ng-include src="'views/styles/grid/exampleusage2.html'" maketext></pre>
+            <!--End example usage -->
+
+            <!--Begin predefined classes -->
+            <h4 id="predefinedclasses" class="h4 m-b-1 m-t-2">Predefined classes</h4>
+            <p class="m-b-md">In addition to our semantic mixins, Bootstrap includes an extensive set of prebuilt classes for quickly creating grid columns. It includes options for device-based column sizing, reordering columns, and more.</p>
+
+            <!--Begin example stacked to horizontal -->
+            <h4 id="examplestackedhorizontal" class="h4 m-b-1 m-t-2">Example: Stacked-to-horizontal</h4>
+            <p class="m-b-md">Using a single set of <code>.col-md-*</code> grid classes, you can create a basic grid system that starts out stacked on mobile devices and tablet devices (the extra small to small range) before becoming horizontal on desktop (medium) devices. Place grid columns in any <code>.row</code>.</p>
+            <div class="row">
+                <div class="col-md-1 bg-light lt wrapper-sm b-a">.col-md-1</div>
+                <div class="col-md-1 bg-light lt wrapper-sm b-a">.col-md-1</div>
+                <div class="col-md-1 bg-light lt wrapper-sm b-a">.col-md-1</div>
+                <div class="col-md-1 bg-light lt wrapper-sm b-a">.col-md-1</div>
+                <div class="col-md-1 bg-light lt wrapper-sm b-a">.col-md-1</div>
+                <div class="col-md-1 bg-light lt wrapper-sm b-a">.col-md-1</div>
+                <div class="col-md-1 bg-light lt wrapper-sm b-a">.col-md-1</div>
+                <div class="col-md-1 bg-light lt wrapper-sm b-a">.col-md-1</div>
+                <div class="col-md-1 bg-light lt wrapper-sm b-a">.col-md-1</div>
+                <div class="col-md-1 bg-light lt wrapper-sm b-a">.col-md-1</div>
+                <div class="col-md-1 bg-light lt wrapper-sm b-a">.col-md-1</div>
+                <div class="col-md-1 bg-light lt wrapper-sm b-a">.col-md-1</div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 bg-light lt wrapper-sm b-a">.col-md-8</div>
+                <div class="col-md-4 bg-light lt wrapper-sm b-a">.col-md-4</div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 bg-light lt wrapper-sm b-a">.col-md-4</div>
+                <div class="col-md-4 bg-light lt wrapper-sm b-a">.col-md-4</div>
+                <div class="col-md-4 bg-light lt wrapper-sm b-a">.col-md-4</div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 bg-light lt wrapper-sm b-a">.col-md-6</div>
+                <div class="col-md-6 bg-light lt wrapper-sm b-a">.col-md-6</div>
+            </div>
+            <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a" ng-include src="'views/styles/grid/example_stackedhorizontal.html'" maketext></pre>
+            <!--End example stacked to horizontal -->
+
+            <!--Begin example mobile and desktop -->
+            <h4 id="examplemobiledesktop" class="h4 m-b-1 m-t-2">Example: Mobile and desktop</h4>
+            <p class="m-b-md">Don’t want your columns to simply stack in smaller devices? Use the extra small and medium device grid classes by adding <code>.col-xs-*</code> and <code>.col-md-*</code> to your columns. See the example below for a better idea of how it all works.</p>
+            <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+            <div class="row">
+                <div class="col-xs-12 col-md-8 bg-light lt wrapper-sm b-a">.col-xs-12 .col-md-8</div>
+                <div class="col-xs-6 col-md-4 bg-light lt wrapper-sm b-a">.col-xs-6 .col-md-4</div>
+            </div>
+            <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+            <div class="row">
+                <div class="col-xs-6 col-md-4 bg-light lt wrapper-sm b-a">.col-xs-6 .col-md-4</div>
+                <div class="col-xs-6 col-md-4 bg-light lt wrapper-sm b-a">.col-xs-6 .col-md-4</div>
+                <div class="col-xs-6 col-md-4 bg-light lt wrapper-sm b-a">.col-xs-6 .col-md-4</div>
+            </div>
+            <!-- Columns are always 50% wide, on mobile and desktop -->
+            <div class="row">
+                <div class="col-xs-6 bg-light lt wrapper-sm b-a">.col-xs-6</div>
+                <div class="col-xs-6 bg-light lt wrapper-sm b-a">.col-xs-6</div>
+            </div>
+            <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a" ng-include src="'views/styles/grid/example_mobiledesktop.html'" maketext></pre>
+            <!--End example mobile and desktop -->
+
+            <!--Begin example mobile, tablet, desktop -->
+            <h4 id="examplemobiletabletdesktop" class="h4 m-b-1 m-t-2">Example: Mobile, tablet, desktop</h4>
+            <p class="m-b-md">Build on the previous example by creating even more dynamic and powerful layouts with tablet <code>.col-sm-*</code> classes.</p>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-8 bg-light lt wrapper-sm b-a">.col-xs-12 .col-sm-6 .col-md-8</div>
+                <div class="col-xs-6 col-md-4 bg-light lt wrapper-sm b-a">.col-xs-6 .col-md-4</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-sm-4 bg-light lt wrapper-sm b-a">.col-xs-6 .col-sm-4</div>
+                <div class="col-xs-6 col-sm-4 bg-light lt wrapper-sm b-a">.col-xs-6 .col-sm-4</div>
+                <!-- Optional: clear the XS cols if their content doesn't match in height -->
+                <div class="clearfix hidden-sm-up"></div>
+                <div class="col-xs-6 col-sm-4 bg-light lt wrapper-sm b-a">.col-xs-6 .col-sm-4</div>
+            </div>
+            <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a" ng-include src="'views/styles/grid/example_mobiletabletdesktop.html'" maketext></pre>
+            <!--End  example mobile, tablet, desktop -->
+
+            <!--Begin example column wrapping -->
+            <h4 id="examplecolumnwrap" class="h4 m-b-1 m-t-2">Example: Column wrapping</h4>
+            <p class="m-b-md">If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.</p>
+            <div class="row">
+                <div class="col-xs-9 bg-light lt wrapper-sm b-a">.col-xs-9</div>
+                <div class="col-xs-4 bg-light lt wrapper-sm b-a">.col-xs-4
+                    <br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
+                <div class="col-xs-6 bg-light lt wrapper-sm b-a">.col-xs-6
+                    <br>Subsequent columns continue along the new line.</div>
+            </div>
+            <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a" ng-include src="'views/styles/grid/example_columnwrapping.html'" maketext></pre>
+            <!--End  example mobile, tablet, desktop -->
+
+            <!--Begin example responsive column resets -->
+            <h4 id="examplecolumnreset" class="h4 m-b-1 m-t-2">Example: Responsive column resets</h4>
+            <p class="m-b-md">With the four tiers of grids available you’re bound to run into issues where, at certain breakpoints, your columns don’t clear quite right as one is taller than the other. To fix that, use a combination of a <code>.clearfix</code> and our responsive utility classes.</p>
+            <div class="row">
+                <div class="col-xs-6 col-sm-3 bg-light lt wrapper-sm b-a">.col-xs-6 .col-sm-3</div>
+                <div class="col-xs-6 col-sm-3 bg-light lt wrapper-sm b-a">.col-xs-6 .col-sm-3</div>
+                <!-- Add the extra clearfix for only the required viewport -->
+                <div class="clearfix hidden-sm-up"></div>
+                <div class="col-xs-6 col-sm-3 bg-light lt wrapper-sm b-a">.col-xs-6 .col-sm-3</div>
+                <div class="col-xs-6 col-sm-3 bg-light lt wrapper-sm b-a">.col-xs-6 .col-sm-3</div>
+            </div>
+            <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a" ng-include src="'views/styles/grid/example_columnreset.html'" maketext></pre>
+            <p class="m-b-md">In addition to column clearing at responsive breakpoints, you may need to <strong>reset offsets, pushes, or pulls</strong>. See this in action in the grid example.</p>
+            <div class="row">
+                <div class="col-sm-5 col-md-6 bg-light lt wrapper-sm b-a">.col-sm-5 .col-md-6</div>
+                <div class="col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0 bg-light lt wrapper-sm b-a">.col-sm-5 .col-sm-offset-2 .col-md-6 .col-md-offset-0</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-5 col-lg-6 bg-light lt wrapper-sm b-a">.col-sm-6 .col-md-5 .col-lg-6</div>
+                <div class="col-sm-6 col-md-5 col-md-offset-2 col-lg-6 col-lg-offset-0 bg-light lt wrapper-sm b-a">.col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0</div>
+            </div>
+            <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a" ng-include src="'views/styles/grid/example_columnreset2.html'" maketext></pre>
+            <!--End example responsive column resets -->
+
+            <!--Begin example offsetting columns -->
+            <h4 id="examplecolumnoffset" class="h4 m-b-1 m-t-2">Example: Offsetting columns</h4>
+            <p class="m-b-md">Move columns to the right using <code>col-md-offset-*</code> classes. hese classes increase the left margin of a column by <code>*</code> columns. For example,
+                <code>.col-md-offset-4</code> moves <code>.col-md-4</code> over four columns.</p>
+            <div class="row">
+                <div class="col-md-4 bg-light lt wrapper-sm b-a">.col-md-4</div>
+                <div class="col-md-4 col-md-offset-4 bg-light lt wrapper-sm b-a">.col-md-4 .col-md-offset-4</div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-md-offset-3 bg-light lt wrapper-sm b-a">.col-md-3 .col-md-offset-3</div>
+                <div class="col-md-3 col-md-offset-3 bg-light lt wrapper-sm b-a">.col-md-3 .col-md-offset-3</div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 bg-light lt wrapper-sm b-a">.col-md-6 .col-md-offset-3</div>
+            </div>
+            <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a" ng-include src="'views/styles/grid/example_columnoffset.html'" maketext></pre>
+            <!--End example offsetting columns -->
+
+            <!--TO DO Begin example nesting columns -->
+            <h4 id="examplecolumnnest" class="h4 m-b-1 m-t-2">Example: Nesting columns</h4>
+            <p class="m-b-md">To nest your content with the default grid, add a new <code>.row</code> and set of <code>.col-sm-*</code> columns within an existing
+                <code>.col-sm-*</code> column. Nested rows should include a set of columns that add up to 12 or fewer (it is not required that you use all 12 available columns).</p>
+            <div class="row">
+                <div class="col-sm-9  bg-light lt wrapper-sm b-a">
+                    Level 1: .col-sm-9
+                    <div class="row">
+                        <div class="col-xs-8 col-sm-6  bg-light dk wrapper-sm b-a">
+                            Level 2: .col-xs-8 .col-sm-6
+                        </div>
+                        <div class="col-xs-4 col-sm-6  bg-light dk wrapper-sm b-a m-b-1">
+                            Level 2: .col-xs-4 .col-sm-6
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a" ng-include src="'views/styles/grid/example_columnnest.html'" maketext></pre>
+            <!--End example nesting columns -->
+
+            <!--TO DO Begin example column ordering -->
+            <h4 id="examplecolumnorder" class="h4 m-b-1 m-t-2">Example: Column ordering</h4>
+            <p class="m-b-md">Easily change the order of our built-in grid columns with <code>.col-md-push-*</code> and <code>.col-md-pull-*</code> modifier classes.</p>
+            <div class="row">
+                <div class="col-md-9 col-md-push-3 bg-light lt wrapper-sm b-a">.col-md-9 .col-md-push-3</div>
+                <div class="col-md-3 col-md-pull-9 bg-light lt wrapper-sm b-a">.col-md-3 .col-md-pull-9</div>
+            </div>
+            <div class="h6 font-bold m-t-2 m-b-1">Example Markup</div>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a m-b-3" ng-include src="'views/styles/grid/example_columnorder.html'" maketext></pre>
+            <!--End example column ordering -->
+
+            <!--End predefined classes -->
+
+        </section>
+        <!--End section-->
+
+        <!-- Begin aside left navigation -->
+        <aside class="aside-md b-l hidden-md-down nav-sidebar bg-white">
+            <nav class="nav-scroll affix w-full" role="navigation" jumpmenu>
+                <div class="text-muted text-u-c hidden-nav padder m-t-1 m-b-1">On This Page:</div>
+                <ul class="nav nav-main" data-ride="collapse">
+                    <li class="nav-item active"><a href="javascript:void(0)" data-target="#gridoption" class="nav-link active">Grid Options</a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#sassmixin" class="nav-link">Sass Mixins</a></li>
+                    <ul>
+                        <li class="nav-item"><a href="javascript:void(0)" data-target="#variables" class="nav-link">Variables</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)" data-target="#mixins" class="nav-link">Mixins</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)" data-target="#exampleusage" class="nav-link">Example Usage</a></li>
+                    </ul>
+                    <li class="nav-item "><a href="javascript:void(0)" data-target="#predefinedclasses" class="nav-link">Predefined Classes</a></li>
+                    <ul>
+                        <li class="nav-item"><a href="javascript:void(0)" data-target="#examplestackedhorizontal" class="nav-link">Example: Stacked-to-Horizontal</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)" data-target="#examplemobiledesktop" class="nav-link">Example: Mobile and Desktop</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)" data-target="#examplemobiletabletdesktop" class="nav-link">Example: Mobile, tablet, desktop</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)" data-target="#examplecolumnwrap" class="nav-link">Example: Column Wrapping</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)" data-target="#examplecolumnreset" class="nav-link">Example: Responsive Column Resets</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)" data-target="#examplecolumnoffset" class="nav-link">Example: Offsetting Columns</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)" data-target="#examplecolumnnest" class="nav-link">Example: Nesting Columns</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)" data-target="#examplecolumnorder" class="nav-link">Example: Column Ordering</a></li>
+                    </ul>
+
+                </ul>
+            </nav>
+        </aside>
+        <!-- End left navigation -->
+    </div>
+
+</div>

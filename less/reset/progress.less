@@ -1,0 +1,48 @@
+.progress, .progress-bar{
+  .box-shadow(none);
+  &[value]::-webkit-progress-value {
+    background-color: darken(@border-color, 20%);
+    border-radius: @border-radius-base;
+  }
+
+  &[value]::-moz-progress-bar {
+    background-color: @border-color;
+    border-radius: @border-radius-base;
+  }
+}
+
+// Sizes
+
+.progress-xs{ height: .75rem }
+
+.progress-sm{
+  height: .85rem;
+  .progress-bar{
+    font-size: 10px;line-height: 1em
+  }
+}
+
+.progress-lg{ height: 1.4rem }
+.progress-xl{ height: 1.8rem }
+
+
+// Variations
+
+.progress-primary {
+  .progress-variant(@brand-primary);
+}
+.progress-success {
+  .progress-variant(@brand-success);
+}
+.progress-info {
+  .progress-variant(@brand-info);
+}
+.progress-warning {
+  .progress-variant(@brand-warning);
+}
+.progress-danger {
+  .progress-variant(@brand-danger);
+}
+.progress-dark {
+  .progress-variant(@brand-dark);
+}

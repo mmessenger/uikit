@@ -1,0 +1,138 @@
+.steps {
+  
+  .steps-container{
+    background-color: @brand-light !important;
+    border: 1px solid @border-color;
+    border-radius: @border-radius-base;
+    overflow: hidden;
+  }
+  .step-content{
+    margin-top: 1rem !important;
+    padding: 1.25rem;
+    background-color: @brand-light !important;
+    border: 1px solid @border-color;
+    border-radius: @border-radius-base;
+    .step-pane{
+      display: none;
+      &.active{
+        display: inline-block;
+        width: 100%;
+      }
+    }
+  }
+
+}
+
+.step{
+  float:left;
+  position: relative;
+  padding: 0 .5rem 0 2rem;
+  line-height: 3.35rem;
+  font-weight: 700;   
+  cursor: pointer;
+  color:#fff;
+  .step-number{
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 50%;
+    margin-right: .5rem;
+    background-color: #fff;
+  }
+  .text{
+    display: inline-block;
+  }
+  .icon{
+    display: none;
+  }
+  .step-arrow{
+    border: 25px solid transparent;
+    border-left: 15px solid @border-color;
+    border-right: 0;
+    display: block;
+    position: absolute;
+    right: -15px;
+    top: -1.5px;
+    z-index: 1;
+  }
+
+  .step-arrow:before {
+    border: 25px solid transparent;
+    border-right: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    right: 1px;
+    top: -25px;
+  }
+  &.active {
+    color: #fff;
+  }
+}
+.step:first-child {
+  padding-left: 1rem;
+}
+
+
+@disabled-color: @brand-light;
+@active-color: @brand-primary;
+
+&.required{
+  .step{
+    background-color: darken(@disabled-color, 5%);
+    color: @text-color;
+
+    .step-number{
+      color: @text-color;
+      background: darken(@disabled-color, 15%, 5%);
+      text-align: center;
+    }
+
+    .step-arrow:before {
+      border-left: 15px solid darken(@disabled-color, 5%);
+    }
+
+    &.active {
+      background: @active-color;
+      color: #fff;
+      .step-number{
+        background-color: #fff;
+        color: @active-color;
+      }
+      .step-arrow:before {
+        border-left: 15px solid @active-color;
+      }
+    }
+    &.complete{
+      background-color: lighten(@active-color, 15%);
+      color: #fff;
+      .text{
+        display: none;
+      }
+
+      .icon{
+        display: inline-block;
+      }
+      .step-number{
+        background-color: #fff;
+        color: lighten(@active-color, 15%);
+      }
+
+      .step-arrow:before {
+        border-left: 15px solid lighten(@active-color, 15%);
+      }
+    }
+    &.disabled {
+      cursor: not-allowed;
+    }
+
+  }
+
+}
+
+

@@ -1,0 +1,52 @@
+<form class="composer comment-composer b-a wrapper r" method="post" action="">
+    <textarea class="form-control m-b-1" placeholder="Write a comment..." rows="3"></textarea>
+    <div class="pull-right pos-rlt" style="z-index: 2;">
+        <button type="Add Comment" class="btn btn-info btn-sm pull-right">Add Comment</button>
+        <button class="btn btn-link text-dark text-sm pull-right " data-toggle="button" aria-pressed="false">
+            <span class="text"> <i class="fa fa-lock text-info"></i> Private</span>
+            <span class="text-active">
+            <i class="fa fa-unlock-alt"></i> Public</span>
+        </button>
+    </div>
+    <div class="pos-rlt" style="z-index: 1;">
+        <input id="kendoUpload" class="no-border" type="file" />
+        <script id="fileTemplate" type="text/x-kendo-template">
+            <span class='k-progress'></span>
+            <div class='file-wrapper'>
+                <span class='fa fa-file-#=addExtensionClass(files[0].extension)# fa-lg text-primary'></span>
+                <span class='file-heading file-name-heading m-l-sm'>#=name#</span>
+                <button type='button' class='k-upload-action pull-right m-t-xs m-r l-h-2x'></button>
+            </div>
+        </script>
+        <script type="text/javascript">
+            $("#kendoUpload").kendoUpload({
+                multiple: true,
+                template: kendo.template($('#fileTemplate').html())
+            });
+            $("#kendoUpload").closest(".k-upload").find("span").html('<i class="fa fa-paperclip "></i>');
+
+            function addExtensionClass(extension) {
+                switch (extension) {
+                    case '.jpg':
+                    case '.img':
+                    case '.png':
+                    case '.gif':
+                        return "image-o";
+                    case '.doc':
+                    case '.docx':
+                        return "word-o";
+                    case '.xls':
+                    case '.xlsx':
+                        return "excel-o";
+                    case '.pdf':
+                        return "pdf-o";
+                    case '.zip':
+                    case '.rar':
+                        return "archive-o";
+                    default:
+                        return "text-o";
+                }
+            }
+        </script>
+    </div>
+</form>

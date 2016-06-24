@@ -1,0 +1,84 @@
+<div id="gridEx3" class="m-b"></div>
+<script type="text/x-kendo-template" id="template3">
+    <div class="row border-box">
+        <div class="col-sm-3 m-t m-b">
+            <div class="wrapper bg-white r text-xs-center" href="javascript:void(0)">
+                <span class=" fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa #=icon# fa-stack-1x fa-inverse"></i>
+                </span>
+                <h5 class="media-heading">#=name#</h5> #=phone#
+            </div>
+        </div>
+        <div class="col-sm-8 m-t">
+            <div class="row">
+                <div class="col-sm-4 font-bold">Transaction Date:</div>
+                <div class="col-sm-8">#=tran_date#</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 font-bold">Posted Date:</div>
+                <div class="col-sm-8">#=posted_date#</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 font-bold">Type:</div>
+                <div class="col-sm-8">#=type#</div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-12">#=details#</div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-12"><a href="javascript:void(0)" class="text-info"><i class="fa fa-print"></i> Print</a></div>
+            </div>
+        </div>
+    </div>
+</script>
+<script>
+    $("#gridEx3").kendoGrid({
+        sortable: true,
+        pageable: false,
+        dataSource: {
+            data: [{
+                "tran_id": 11,
+                "tran_date": "12/16/2015",
+                "posted_date": "12/18/2015",
+                "type": "Restarant",
+                "name": "JCT Kitchen",
+                "phone": "(404) 123-4567",
+                "desc": "JCT Kitchen Smyrna GA",
+                "details": "Appears on your statement as: JCT KITCHEN SMYRNA GA 30080 USA",
+                "amount": "$324.87",
+                "icon": "fa-spoon"
+            }, {
+               "tran_id": 11,
+                "tran_date": "12/18/2015",
+                "posted_date": "12/19/2015",
+                "type": "Grocery",
+                "name": "Public",
+                "phone": "1(800) 111-4455",
+                "desc": "Public Atlanta GA",
+                "details": "Appears on your statement as: PUBLIX ATLANTA GA 30309 USA",
+                "amount": "$124.50",
+                "icon": "fa-shopping-basket"
+            }]
+        },
+        columns: [{
+            field: "tran_date",
+            title: "Date",
+            template: "#= kendo.toString(new Date(tran_date), 'MMM dd, yyyy') #"
+        }, {
+            field: "desc",
+            title: "Description"
+        }, {
+            field: "amount",
+            title: "Amount",
+            template: "<div class='text-right'> #=amount#</div>"
+        }],
+        detailTemplate: kendo.template($("#template3").html()),
+        detailInit: function(e) {
+            kendo.bind(e.detailRow, e.data);
+        },
+         dataBound: function(e) {
+          e.sender.expandRow(e.sender.tbody.find("tr.k-master-row").first());
+        }
+    })
+</script>

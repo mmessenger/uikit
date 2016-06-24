@@ -1,0 +1,78 @@
+<div id="gridEx1" class="m-b"></div>
+<script id="template1" type="text/x-kendo-tmpl">
+    <div class='btn-group' role='group' aria-label='Basic example'>
+        <button href='' class='btn btn-icon btn-sm btn-default'><i class='fa fa-pencil'></i></button>
+        <button href='' class='btn btn-icon btn-sm btn-default'><i class='fa fa-trash'></i></button>
+    </div>
+</script>
+<script>
+    $(document).ready(function () {
+        var ds = [
+            {
+                "id": 1,
+                "first_name": "Henry",
+                "last_name": "Elliott",
+                "email": "helliott0@slate.com",
+                "company": "Babbleopia",
+                "file": "lib/images/p1.png"
+            },
+            {
+                "id": 2,
+                "first_name": "Rebecca",
+                "last_name": "Ramirez",
+                "email": "rramirez1@auda.org.au",
+                "company": "Oyondu",
+                "file": "lib/images/p7.png"
+            },
+            {
+                "id": 3,
+                "first_name": "Max",
+                "last_name": "Pierce",
+                "email": "epierce2@businesswire.com",
+                "company": "Myworks",
+                "file": "lib/images/p9.png"
+            },
+            {
+                "id": 4,
+                "first_name": "Louise",
+                "last_name": "Snyder",
+                "email": "lsnyder3@booking.com",
+                "company": "Feedmix",
+                "file": "lib/images/p10.png"
+            },
+            {
+                "id": 5,
+                "first_name": "Nick",
+                "last_name": "Garcia",
+                "email": "ngarcia4@newsvine.com",
+                "company": "Shufflebeat",
+                "file": "lib/images/p4.png"
+            }
+        ]
+        var localds = new kendo.data.DataSource({
+            data: ds
+        });
+
+        $("#gridEx1").kendoGrid({
+            dataSource: localds,
+            sortable: true,
+            columns: [
+                {
+                    field: "file",
+                    title: "Contact Name",
+                    template: '<span class="avatar avatar-sm img-circle"><img class="img-fluid" src="/lib/images/avatar_default.jpg" alt="user" ></span><div class="inline m-l">#:first_name# #:last_name# </div>'
+                }, {
+                    field: "email",
+                    title: "Email"
+                }, {
+                    field: "company",
+                    title: "Company"
+                }, {
+                    field: "",
+                    title: "Actions",
+                    template: kendo.template($("#template1").html())
+                }
+            ]
+        });
+    });
+</script>

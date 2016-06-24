@@ -1,0 +1,89 @@
+<div class="alert alert-success alert-toast bg-white b-success m-b-1" role="alert">
+    <i class="fa fa-check-circle fa-2x fa-fw text-success pull-left"></i> Your new record was successfully created.
+</div>
+
+<div class="alert alert-warning alert-toast bg-white b-warning m-b-1" role="alert">
+    <i class="fa fa-warning fa-2x fa-fw text-warning pull-left"></i> Oops, you've missed some required form inputs.
+</div>
+
+<div class="alert alert-danger alert-toast bg-white b-danger m-b-1" role="alert">
+    <i class="fa fa-ban fa-2x fa-fw text-danger pull-left"></i> You've encountered some errors when trying to save edits.
+</div>
+
+
+<span id="notification" style="display:none;"></span>
+
+<h5 class="m-t">Try it!</h5>
+<button id="showSuccessNotification" class="btn btn-success-outline btn-w-md">Success</button>
+<button id="showWarningNotification" class="btn btn-warning-outline btn-w-md">Warning</button>
+<button id="showErrorNotification" class="btn btn-danger-outline btn-w-md">Error</button>
+
+<script id="successTemplate" type="text/x-kendo-template">
+    <div class="alert alert-success alert-toast bg-white b-success " role="alert">
+        <i class="fa fa-check-circle fa-2x fa-fw text-success pull-left"></i> #= message #
+    </div>
+</script>
+
+<script id="warningTemplate" type="text/x-kendo-template">
+    <div class="alert alert-warning alert-toast bg-white b-warning " role="alert">
+        <i class="fa fa-warning fa-2x fa-fw text-warning pull-left"></i> #= message #
+    </div>
+</script>
+
+<script id="errorTemplate" type="text/x-kendo-template">
+    <div class="alert alert-danger alert-toast bg-white b-danger " role="alert">
+        <i class="fa fa-ban fa-2x fa-fw text-danger pull-left"></i> #= message #
+    </div>
+</script>
+
+
+<script>
+    $(document).ready(function() {
+
+        var notification = $("#notification").kendoNotification({
+            position: {
+                pinned: true,
+                top: 30,
+                right: 30
+            },
+            autoHideAfter: 2000,
+            stacking: "down",
+            templates: [{
+                type: "upload-success",
+                template: $("#successTemplate").html()
+            }, {
+                type: "warning",
+                template: $("#warningTemplate").html()
+            }, {
+                type: "error",
+                template: $("#errorTemplate").html()
+            }]
+
+        }).data("kendoNotification");
+
+        $("#showSuccessNotification").click(function() {
+            notification.show({
+                message: "Your new record was successfully created."
+            }, "upload-success");
+        });
+
+        $("#showWarningNotification").click(function() {
+            notification.show({
+                message: "Oops, you've missed some required form inputs."
+            }, "warning");
+        });
+
+        $("#showErrorNotification").click(function() {
+            notification.show({
+                message: "You've encountered some errors when trying to save edits."
+            }, "error");
+        });
+
+        $(document).one("kendo:pageUnload", function() {
+            if (notification) {
+                notification.hide();
+            }
+        });
+
+    });
+</script>

@@ -1,0 +1,52 @@
+/* KENDO OVERRIDE */
+.k-grid-header {
+  padding: 0px !important;
+}
+.k-grid-content {
+  overflow-y: visible;
+}
+.k-grid-pager,
+.k-pager-wrap {
+  border: 0px;
+  padding: 0;
+  box-shadow: none;
+}
+.footer .k-grid-pager {
+  background-color: #fff!important;
+  outline: none;
+  box-shadow: none;
+}
+.k-grid.k-widget {
+  border-width: 0px!important;
+}
+.k-grid-toolbar {
+  padding: 0 0 10px 0 !important;
+}
+.k-grid-header .k-header {
+  /*background-color: #f4f6f9;*/
+  border-bottom-color: white;
+}
+.k-grid tbody td {
+  /*padding: 7px 8px;*/
+}
+.k-grid tbody tr:hover {
+  background-color: #f4f6f9;
+}
+.k-grid tbody tr.k-state-selected:hover {
+  background-color: #6EE429;
+}
+.k-detail-row {
+  background-color: #f4f6f9;
+}
+table.k-editor {
+  height: 80px!important;
+}
+/* removes lines from kend grid header */
+.k-grid-header th.k-header,
+.k-filter-row th {
+  border-left-width: 0;
+  background-color: #f4f6f9;
+}
+.k-grid tr td {
+  border-left-width: 0;
+}

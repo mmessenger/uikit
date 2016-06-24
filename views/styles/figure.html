@@ -1,0 +1,65 @@
+<div class="">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="p-x-3">
+            <h1 class="display-5">Figures</h1>
+            <p class="lead">Anytime you need to display a piece of content—like an image—with an optional caption, consider using a <code>figure</code>.</p>
+        </div>
+    </div>
+    <div class="hbox stretch">
+
+        <!--Begin Section-->
+        <section class="p-x-3">
+
+            <!--Begin Figure 1-->
+            <h4 class="h4 m-b-1 m-t-1">Figure example default left</h4>
+            <p class="m-b-md">Use the included <code>.figure</code> , <code>.figure-img</code> and <code>.figure-caption</code> classes to provide some baseline styles for the HTML5 <code>figure</code> and <code>figcaption</code> elements. Images in figures have no explicit size, so be sure to add the <code>.img-fluid</code> class to your <code>img</code> to make it responsive.
+            </p>
+
+
+            <figure class="figure">
+                <img data-src="holder.js/400x300" class="figure-img img-fluid img-rounded" alt="400x300" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22400%22%20height%3D%22300%22%20viewBox%3D%220%200%20400%20300%22%20preserveAspectRatio%3D%22none%22%3E%3C!--%0ASource%20URL%3A%20holder.js%2F400x300%0ACreated%20with%20Holder.js%202.8.2.%0ALearn%20more%20at%20http%3A%2F%2Fholderjs.com%0A(c)%202012-2015%20Ivan%20Malopinsky%20-%20http%3A%2F%2Fimsky.co%0A--%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B%23holder_154a18934d8%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A20pt%20%7D%20%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_154a18934d8%22%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%23777%22%2F%3E%3Cg%3E%3Ctext%20x%3D%22148.859375%22%20y%3D%22159.3%22%3E400x300%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="width: 400px; height: 300px;">
+                <figcaption class="figure-caption">A caption for the above image.</figcaption>
+            </figure>
+
+            <pre class="code pre-scrollable bg-light p-a-1 b-a m-b-2" ng-include src="'views/styles/figure/figure_left.html'" maketext></pre>
+
+            <!--End Figure 1-->
+
+            <!--Begin Figure 2-->
+            <h4 class="h4 m-b-1 m-t-1">Figure example flush right</h4>
+            <figure class="figure">
+                <img data-src="holder.js/400x300" class="figure-img img-fluid img-rounded" alt="400x300" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22400%22%20height%3D%22300%22%20viewBox%3D%220%200%20400%20300%22%20preserveAspectRatio%3D%22none%22%3E%3C!--%0ASource%20URL%3A%20holder.js%2F400x300%0ACreated%20with%20Holder.js%202.8.2.%0ALearn%20more%20at%20http%3A%2F%2Fholderjs.com%0A(c)%202012-2015%20Ivan%20Malopinsky%20-%20http%3A%2F%2Fimsky.co%0A--%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B%23holder_154a18934d8%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A20pt%20%7D%20%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_154a18934d8%22%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%23777%22%2F%3E%3Cg%3E%3Ctext%20x%3D%22148.859375%22%20y%3D%22159.3%22%3E400x300%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="width: 400px; height: 300px;">
+                <figcaption class="figure-caption text-xs-right">A caption for the above image.</figcaption>
+            </figure>
+
+            <pre class="code pre-scrollable bg-light p-a-1 b-a m-b-2" ng-include src="'views/styles/figure/figure_right.html'" maketext></pre>
+
+            <!--End Figure 1-->
+
+
+
+
+
+        </section>
+        <!--End section-->
+
+        <!-- Begin aside left navigation -->
+        <aside class="aside-md b-l hidden-md-down nav-sidebar bg-white">
+            <nav class="nav-scroll affix w-full" role="navigation" jumpmenu>
+
+                <!--Begin comment out left navigation content  
+                <div class="text-muted text-u-c hidden-nav padder m-t-1 m-b-1">On This Page:</div>
+                <ul class="nav nav-main" data-ride="collapse">
+                    <li class="nav-item active"><a href="javascript:void(0)" data-target="#size" class="nav-link active">Optional Sizes</a></li>
+                    <li class="nav-item active"><a href="javascript:void(0)" data-target="#animation" class="nav-link active">Remove Animation</a></li>
+                    <li class="nav-item active"><a href="javascript:void(0)" data-target="#gridsystem" class="nav-link active">Using the Grid System</a></li>
+                    <li class="nav-item active"><a href="javascript:void(0)" data-target="#triggerbutton" class="nav-link active">Varying Modal Content Based on Trigger Button</a></li>
+                    <li class="nav-item active"><a href="javascript:void(0)" data-target="#height" class="nav-link active">Dynamic Heights</a></li>
+                </ul>
+                 End comment out left navigation content  -->
+            </nav>
+        </aside>
+        <!-- End left navigation -->
+    </div>
+
+</div>

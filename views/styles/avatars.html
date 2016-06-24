@@ -1,0 +1,137 @@
+<div class="">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="p-x-3">
+            <h1 class="display-5">Avatars</h1>
+            <p class="lead">Avatars are used to provide a visual representation of a person or a group representing persons. When a personalized avatar isn’t available for a single object, the objects initials or placholder image will be displayed in it’s place.</p>
+        </div>
+    </div>
+    <div class="hbox stretch">
+        <section class="p-x-3">
+            <div id="overview" class="h4 m-b-1 m-t-1">Overview</div>
+            <p>An avatar can be square, circular or a rounded rectangle, depending on usage. The default is a cirlce. Use a circle for all people-oriented objects that could potentially render as avatars.</p>
+
+            <div class="p-a-1" ng-include src="'views/styles/avatars/avatars.html'" ></div>
+            <!--<a href="javascript:void(0" class="m-t-1 m-b-1 block" data-toggle="collapse" data-target="#overviewExample" aria-expanded="false" aria-controls="collapseExample">Example markup</a>-->
+            <p class="h6 font-bold m-t-1 m-b-1">Example markup</p>
+            <pre id="overviewExample" class="code pre-scrollable bg-light p-a-1 b-a " ng-include src="'views/styles/avatars/avatars.html'" maketext></pre>
+
+            <p id="size" class="h4 m-b-1 m-t-3">Size</p>
+            <div class="p-a-1" ng-include src="'views/styles/avatars/avatars-size.html'" ></div>
+            <p class="h6 font-bold m-t-1 m-b-1">Example markup</p>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a" ng-include src="'views/styles/avatars/avatars-size.html'" maketext></pre>
+
+
+            <p id="shape" class="h4 m-b-1 m-t-3">Shapes</p>
+            <div class="p-a-1" ng-include src="'views/styles/avatars/avatars-shape.html'" ></div>
+            <p class="h6 font-bold m-t-1 m-b-1">Example markup</p>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a" ng-include src="'views/styles/avatars/avatars-shape.html'" maketext></pre>
+
+            <p id="color" class="h4 m-b-1 m-t-3">Color</p>
+            <div class="p-a-1" ng-include src="'views/styles/avatars/avatars-color.html'" ></div>
+            <p class="h6 font-bold m-t-1 m-b-1">Example markup</p>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a" ng-include src="'views/styles/avatars/avatars-color.html'" maketext></pre>
+
+            <p id="indicator" class="h4 m-b-1 m-t-3">Indicator</p>
+            <div class="p-a-1" ng-include src="'views/styles/avatars/avatars-indicator.html'" ></div>
+            <p class="h6 font-bold m-t-1 m-b-1">Example markup</p>
+            <pre class="code pre-scrollable bg-light p-a-1 b-a" ng-include src="'views/styles/avatars/avatars-indicator.html'" maketext></pre>
+
+            <p id="classes" class="h4 m-b-1 m-t-3">Classes</p>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 20%">Class</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>.avatar</code></td>
+                        <td>Defines the avatar</td>
+                    </tr>
+                    <tr>
+                        <td><code>.avatar-text</code></td>
+                        <td>Applies styles to present user initials when no image </td>
+                    </tr>
+                    <tr>
+                        <td><code>.avatar-*</code></td>
+                        <td>Defines the size of the avatar. The default is 50x50 pixels. Availble in the following sizes: <code>-lg</code>, <code>-md</code>,<code>-sm</code>,<code>-xs</code> </td>
+                    </tr>
+                    <tr>
+                        <td><code>.bg-*</code></td>
+                        <td>Defines avatar background color. According to the custom color system, avatar background color can be changed to one of the available colors by adding a proper class.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.img-*</code></td>
+                        <td>Defines avatar size. The default is square. Availble in the following formats: <code>-rounded</code>, <code>-circle</code>,<code>-thumbnail</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>i</code></td>
+                        <td>Defines the avatar indicator. The indicator is automatically positioned top and left</td>
+                    </tr>
+                    <tr>
+                        <td><code>.bottom</code></td>
+                        <td>Positions the indicator at the bottom</td>
+                    </tr>
+                    <tr>
+                        <td><code>.top</code></td>
+                        <td>Positions the indicator at the top</td>
+                    </tr>
+                    <tr>
+                        <td><code>.right</code></td>
+                        <td>Positions the indicator at the right</td>
+                    </tr>
+                    <tr>
+                        <td><code>.left</code></td>
+                        <td>Positions the indicator at the left</td>
+                    </tr>
+                    <tr>
+                        <td><code>.md</code></td>
+                        <td>Increases the size of the indicator</td>
+                    </tr>
+                    <tr>
+                        <td><code>.on</code></td>
+                        <td>Colors indicator with <code>.bg-success</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>.off</code></td>
+                        <td>Colors indicator with <code>.text-muted</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>.away</code></td>
+                        <td>Colors indicator with <code>.bg-warning</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>.busy</code></td>
+                        <td>Colors indicator with <code>.bg-danger</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <aside class="aside-md b-l hidden-md-down nav-sidebar bg-white">
+            <nav class="nav-scroll affix w-full" role="navigation" jumpmenu>
+                <div class="text-muted text-u-c hidden-nav padder m-t-1 m-b-1">On This Page:</div>
+                <ul class="nav nav-main" data-ride="collapse">
+                    <li class="nav-item active">
+                        <a href="javascript:void(0)" data-target="#overview" class="nav-link  active">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" data-target="#size" class="nav-link ">Size</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" data-target="#shape" class="nav-link ">Shape</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" data-target="#color" class="nav-link ">Color</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" data-target="#indicator" class="nav-link ">Indicator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" data-target="#classes" class="nav-link ">Classes</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+</div>

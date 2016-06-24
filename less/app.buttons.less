@@ -1,0 +1,229 @@
+/*******************************
+            Buttons
+*******************************/
+
+// Extend Bootstrap button sizes
+.btn-xl {
+	font-size: 1.5rem;
+	padding: 1rem 1.5rem;
+}
+
+.btn-xs {
+	font-size: .75rem;
+	padding: .3em .5em;
+}
+
+// Extended Bootstrap button colors
+.btn-default{
+	.button-variant(@btn-default-color, @btn-default-bg, @btn-default-border);
+	border-bottom-color: darken(@btn-default-border, 2%);
+	.box-shadow(0 1px 1px rgba(90,90,90,0.1));
+	&.btn-bg{
+		border-color:rgba(0,0,0,0.1);
+		background-clip: padding-box;
+	}
+}
+
+// Button colors
+.btn-primary{
+	.button-variant(@btn-primary-color, @btn-primary-bg, @btn-primary-border);
+}
+
+.btn-secondary{
+	.button-variant(@btn-secondary-color, @btn-secondary-bg, @btn-secondary-border);
+}
+
+.btn-success{
+	.button-variant(@btn-success-color, @btn-success-bg, @btn-success-border);
+}
+
+.btn-info{
+	.button-variant(@btn-info-color, @btn-info-bg, @btn-info-border);
+}
+
+.btn-warning{
+	.button-variant(@btn-warning-color, @btn-warning-bg, @btn-warning-border);
+}
+
+.btn-danger{
+	.button-variant(@btn-danger-color, @btn-danger-bg, @btn-danger-border);
+}
+
+.btn-dark{
+	.button-variant(@btn-dark-color, @btn-dark-bg, @btn-dark-border);
+}
+
+.btn-white{
+	.button-variant(@btn-white-color, @btn-white-bg, @btn-white-border);
+}
+
+.btn-black{
+	.button-variant(@btn-black-color, @btn-black-bg, @btn-black-border);
+}
+
+//Button outline colors
+.btn-primary-outline {
+	.button-outline-variant(@btn-primary-bg, @btn-primary-bg, @btn-primary-border);
+}
+
+.btn-secondary-outline{
+	.button-outline-variant(@btn-secondary-color, @btn-secondary-bg, @btn-secondary-border);
+}
+
+.btn-success-outline {
+	.button-outline-variant(@btn-success-bg, @btn-success-bg, @btn-success-border);
+}
+
+.btn-info-outline {
+	.button-outline-variant(@btn-info-bg, @btn-info-bg, @btn-info-border);
+}
+
+.btn-warning-outline {
+	.button-outline-variant(@btn-warning-bg, @btn-warning-bg, @btn-warning-border);
+}
+
+.btn-danger-outline {
+	.button-outline-variant(@btn-danger-bg, @btn-danger-bg, @btn-danger-border);
+}
+
+.btn-default-outline {
+	.button-outline-variant(@text-color, transparent, @btn-default-border);
+}
+
+.btn-dark-outline {
+	.button-outline-variant(@btn-dark-bg, transparent, @btn-dark-border);
+}
+
+.btn-white-outline {
+	.button-outline-variant(@btn-white-bg, transparent, @btn-white-border);
+}
+
+.btn-black-outline {
+	.button-outline-variant(@btn-black-bg, transparent, @btn-black-border);
+}
+
+.btn-icon{
+	padding: 0;
+	width:2.4rem;
+	height:2.4rem;
+	line-height: 2.4rem;
+	text-align: center;
+	&.btn-xs{
+		width: 1.6rem;
+		height: 1.6rem;
+		line-height: 1.6rem;
+	}
+	&.btn-sm{
+		width: 2rem;
+		height: 2rem;
+		line-height: 2rem;
+	}
+	&.btn-lg{
+		width: 3rem;
+		height: 3rem;
+		line-height: 3rem;
+	}
+	&.btn-xl{
+		width: 4rem;
+		height: 4rem;
+		line-height: 4rem;
+	}
+}
+
+// Adding back in justified button, removed in bootstrap 4
+.btn-group-justified{
+	display: table;
+    width: 100%;
+    table-layout: fixed;
+    //border-collapse: collapse;
+    //position: static;
+    .btn, 
+    .btn-group {
+        display: table-cell;
+	    float: none;
+	    //width: 1%;
+    }
+    > .btn:not(:last-child) {
+		border-right-color: transparent;
+	}
+}
+
+.btn-block {
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+//Extending Bootstrap to include static button widths
+.btn-w-xs{min-width: 60px}
+.btn-w-sm{min-width: 100px}
+.btn-w-md{min-width: 150px}
+.btn-w-lg{min-width: 200px}
+.btn-w-xl{min-width: 250px}
+
+// Hides input using a select button dropdown
+.dropdown-select > li > a input{position: absolute;left: -9999em;}
+
+
+// Creates a star rating button
+.rating {
+    float:left;
+
+    &:not(:checked) {
+	    > input {
+		    clip: rect(0px, 0px, 0px, 0px);
+			height: 1px;
+			margin: -1px;
+			overflow: hidden;
+			padding: 0;
+			position: absolute;
+			width: 1px;
+		}
+		> label {
+			float: right;
+		    width: 1em;
+		    padding: 0 .1em;
+		    overflow: hidden;
+		    white-space: nowrap;
+		    cursor: pointer;
+		    font-family: FontAwesome;
+		    color: darken(@brand-light, 5%);
+
+		    &:hover,
+		    &:hover ~ label {
+			    content: "\f005";
+			    color: @brand-warning;
+			}
+
+		    &:before {
+			    content: "\f005";
+			}
+		}
+    }
+
+	> input {
+		&:checked {
+			~ label {
+			    content: "\f005";
+			    color: @brand-warning;
+			}
+		}
+	}
+	> label {
+		&:active {
+		    position:relative;
+		    top:2px;
+		    left:2px;
+		}
+	}
+
+}
+
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    content: "\f005";
+    color: @brand-warning;
+}

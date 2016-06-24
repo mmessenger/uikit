@@ -1,0 +1,101 @@
+<div class="">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="p-x-3">
+            <h1 class="display-5">Composers</h1>
+            <p class="lead">Text</p>
+        </div>
+    </div>
+    <div class="hbox stretch">
+        <section class="p-x-3">
+            <div id="" class="h4 m-b-1 m-t-1">Comment Composer</div>
+            <p>text</p>
+            <form class="comment-composer b-a wrapper r" method="post" action="">
+                <textarea class="form-control m-b-1" placeholder="Write a comment..." rows="3"></textarea>
+                <div class="pull-right pos-rlt" style="z-index: 2;">
+                    <button type="Add Comment" class="btn btn-primary btn-sm pull-right">Add Comment</button>
+                    <button class="btn btn-link text-dark text-sm pull-right " data-toggle="button" aria-pressed="false">
+                        <span class="text-active"><i class="fa fa-lock"></i> Private</span>
+                        <span class="text">
+                        <i class="fa fa-unlock-alt"></i> Public</span>
+                    </button>
+                </div>
+                <div class="pos-rlt" style="z-index: 1;">
+                    <input id="kendoUpload" class="no-border" type="file" />
+                    <script id="fileTemplate" type="text/x-kendo-template">
+                        <span class='k-progress'></span>
+                        <div class='file-wrapper'>
+                            <span class='fa fa-file-#=addExtensionClass(files[0].extension)# fa-lg text-primary'></span>
+                            <span class='file-heading file-name-heading m-l-sm'>#=name#</span>
+                            <button type='button' class='k-upload-action pull-right m-t-xs m-r l-h-2x'></button>
+                        </div>
+                    </script>
+                    <script type="text/javascript">
+                        $("#kendoUpload").kendoUpload({
+                            multiple: true,
+                            template: kendo.template($('#fileTemplate').html())
+                        });
+                        $("#kendoUpload").closest(".k-upload").find("span").html('<i class="fa fa-paperclip "></i>');
+
+                        function addExtensionClass(extension) {
+                            switch (extension) {
+                                case '.jpg':
+                                case '.img':
+                                case '.png':
+                                case '.gif':
+                                    return "image-o";
+                                case '.doc':
+                                case '.docx':
+                                    return "word-o";
+                                case '.xls':
+                                case '.xlsx':
+                                    return "excel-o";
+                                case '.pdf':
+                                    return "pdf-o";
+                                case '.zip':
+                                case '.rar':
+                                    return "archive-o";
+                                default:
+                                    return "text-o";
+                            }
+                        }
+                    </script>
+                </div>
+                <div style="clear: both;"></div>
+            </form>
+
+            <p class="h6 font-bold m-t-3 m-b-1">Classes</p>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 300px">Class</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>.comment-composer</code></td>
+                        <td>Defines the comment composer component</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div id="" class="h4 m-b-1 m-t-1">Email Composer</div>
+            <p>text</p>
+            <div class="p-a-1 b-a" ng-include src="'views/components/composers/email-composer.html'" ></div>
+
+        </section>
+        <aside class="aside-md b-l hidden-md-down nav-sidebar bg-white">
+            <nav class="nav-scroll affix w-full" role="navigation" jumpmenu>
+                <div class="text-muted text-u-c hidden-nav padder m-t-1 m-b-1">On This Page:</div>
+                <ul class="nav nav-main" data-ride="collapse">
+                    <li class="nav-item active">
+                        <a href="javascript:void(0)" data-target="#test" class="nav-link  active">Comment Composer</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="javascript:void(0)" data-target="#test" class="nav-link ">Email Composer</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+</div>

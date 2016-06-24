@@ -1,0 +1,9 @@
+
+
+Upgraded to bootstrap 4.0
+
+
+NEW
+- Breadcrumb Arrow using class .breadcrumb-arrow
+- Added alert notices
+- nav-primary has been changed to nav-sidebar

@@ -1,0 +1,180 @@
+<div class="">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="p-x-3">
+            <h1 class="display-5">Menus</h1>
+            <p class="lead">A menu displays grouped navigation actions</p>
+        </div>
+    </div>
+    <div class="hbox stretch">
+        <section class="p-x-3">
+            <div id="overview" class="h4 m-b-1 m-t-1">Overview</div>
+            <p>The menu is a flexible, all-purpose component for navigation. The menu bar is a wrapper of the menu and can be oriented horizontally or vertically and positioned off-screen.</p>
+            <div class="h6 font-bold m-b-1 m-t-3">When to use:</div>
+            <ul>
+                <li>To access all main high-level sections of application.</li>
+                <li>To access to Home/top-level of the application.</li>
+                <li>To provide sense of place to the user (display the depth and breadth of the app/site.)</li>
+            </ul>
+
+            <div id="basic" class="h4 m-b-1 m-t-3">Basic</div>
+            <div class="" ng-include src="'views/styles/menu/basic.html'" ></div>
+
+            <div id="text" class="h4 m-b-1 m-t-3">Text</div>
+            <p>A menu can be formatted for text content</p>
+            <div class="" ng-include src="'views/styles/menu/text.html'" ></div>
+
+            <div id="pills" class="h4 m-b-1 m-t-3">Pills</div>
+            <p>A menu can be formatted for text content</p>
+            <div class="" ng-include src="'views/styles/menu/pills.html'" ></div>
+
+            <div id="stacked" class="h4 m-b-1 m-t-3">Stacked</div>
+            <div class="" ng-include src="'views/styles/menu/vertical.html'" ></div>
+
+            <div id="basicMenuBar" class="h4 m-b-1 m-t-3">Menu Bar</div>
+            <div class="" ng-include src="'views/styles/menu/menubar.html'" ></div>
+
+            <div id="header" class="h4 m-b-1 m-t-3">Within Header</div>
+            <header class="header p-x-0" ng-include src="'views/styles/menu/horizontalMenuBar.html'" ></header>
+
+            <div id="size" class="h4 m-b-1 m-t-3">Size</div>
+            <header class="header header-md p-x-0" ng-include src="'views/styles/menu/size.html'" ></header>
+
+            <div id="colors" class="h4 m-b-1 m-t-3">Colors</div>
+            <nav class="navbar navbar-header bg-white m-t" ng-include src="'views/styles/menu/color.html'" ></nav>
+            <nav class="navbar navbar-header bg-faded m-t" ng-include src="'views/styles/menu/color.html'" ></nav>
+            <nav class="navbar navbar-header bg-light m-t" ng-include src="'views/styles/menu/color.html'" ></nav>
+            <nav class="navbar navbar-header bg-primary m-t" ng-include src="'views/styles/menu/color.html'" ></nav>
+            <nav class="navbar navbar-header bg-danger m-t" ng-include src="'views/styles/menu/color.html'" ></nav>
+            <nav class="navbar navbar-header bg-info m-t" ng-include src="'views/styles/menu/color.html'" ></nav>
+            <nav class="navbar navbar-header bg-warning m-t" ng-include src="'views/styles/menu/color.html'" ></nav>
+            <nav class="navbar navbar-header bg-success m-t" ng-include src="'views/styles/menu/color.html'" ></nav>
+            <nav class="navbar navbar-header bg-dark m-t" ng-include src="'views/styles/menu/color.html'" ></nav>
+            <nav class="navbar navbar-header bg-inverse m-t" ng-include src="'views/styles/menu/color.html'" ></nav>
+            <nav class="navbar navbar-header bg-black m-t" ng-include src="'views/styles/menu/color.html'" ></nav>
+
+            <div id="sidebar" class="h4 m-b-1 m-t-3">Vertical Menu Bar</div>
+            <div class="aside" ng-include src="'views/styles/menu/verticalMenuBar.html'" ></div>
+
+            <div id="kendoHorzMenu" class="h4 m-b-1 m-t-3">Kendo Horizontal Menu Bar</div>
+            <div class="" ng-include src="'views/styles/menu/kmenu.html'" ></div>
+
+            <div id="kendoVertMenu" class="h4 m-b-1 m-t-3">Kendo Vertical Menu Bar</div>
+            <div class="aside" ng-include src="'views/styles/menu/kmenu-vertical.html'" ></div>
+
+            <p id="classes" class="h4 m-b-1 m-t-3">Classes</p>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 20%">Class</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>.nav</code></td>
+                        <td>Initializes default nav. Responsible for basic navigation styling.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.nav-item</code></td>
+                        <td>Styles each list item as a menu item.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.nav-link</code></td>
+                        <td>Styles each link element in the menu item</td>
+                    </tr>
+                    <tr>
+                        <td><code>.nav-inline</code></td>
+                        <td>Space out nav links in a horizontal band</td>
+                    </tr>
+                    <tr>
+                        <td><code>.nav-inline</code></td>
+                        <td>Space out nav links or items in a horizontal band</td>
+                    </tr>
+                    <tr>
+                        <td><code>.nav-pills</code></td>
+                        <td>Styles each nav link or item in rounded blocks. Provides active and hover states</td>
+                    </tr>
+                    <tr>
+                        <td><code>.nav-stacked</code></td>
+                        <td>Vertically orientation for the default nav</td>
+                    </tr>
+                    <tr>
+                        <td><code>.navbar</code></td>
+                        <td>Initializes default navbar.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.navbar-header</code></td>
+                        <td>Navbar can be placed in a header. Adds active states and makes menu item flush.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.header-md .navbar</code></td>
+                        <td>Increases the height of the horizontal navbar to 60px</td>
+                    </tr>
+                    <tr>
+                        <td><code>.navbar.bg-*</code></td>
+                        <td>Defines navbar background color. According to the custom color system, navbar background color can be changed to one of the available colors by adding a proper class to the main navbar container.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.navbar-sidebar</code></td>
+                        <td>Navbar can be placed in a sidebar.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.nav-off-screen</code></td>
+                        <td>Makes the nav visible as an off-screen sidebar.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.disable</code></td>
+                        <td>Disable any navbar navigation item.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.active</code></td>
+                        <td>Applies active state to menu item.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.dropdown</code></td>
+                        <td>Place a nav inside a default dropdown</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <aside class="aside-md b-l hidden-md-down nav-sidebar bg-white">
+            <nav class="nav-scroll affix w-full" role="navigation" jumpmenu>
+                <div class="text-muted text-u-c hidden-nav padder m-t-1 m-b-1">On This Page:</div>
+                <ul class="nav nav-main" data-ride="collapse">
+                    <li class="nav-item active">
+                        <a href="javascript:void(0)" data-target="#overview" class="nav-link  active">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" class="nav-link active">Menu</a>
+                        <ul class="nav">
+                            <li class="nav-item"><a href="javascript:void(0)" data-target="#basic" class="nav-link">Basic</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)" data-target="#text" class="nav-link active">Text</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)" data-target="#pills" class="nav-link active">Pills</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)" data-target="#stacked" class="nav-link active">Stacked</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" class="nav-link active">Menu Bar</a>
+                        <ul class="nav">
+                            <li class="nav-item"><a href="javascript:void(0)" data-target="#basicMenuBar" class="nav-link">Basic</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)" data-target="#header" class="nav-link">Within Header</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)" data-target="#size" class="nav-link active">Size</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)" data-target="#colors" class="nav-link active">Colors</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)" data-target="#sidebar" class="nav-link active">Sidebar</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" class="nav-link active">Kendo Menu Bar</a>
+                        <ul class="nav">
+                            <li class="nav-item"><a href="javascript:void(0)" data-target="#kendoHorzMenu" class="nav-link">Horizontal Menu Bar</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)" data-target="#kendoVertMenu" class="nav-link">Vertical Menu Bar</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" data-target="#classes" class="nav-link ">Classes</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+</div>
